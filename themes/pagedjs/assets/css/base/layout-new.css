@@ -1,0 +1,156 @@
+html {
+  /* background: url(http://www.emoisetbois.com/wp-content/uploads/2015/02/aratika-Parquet-EmoisetBois_V.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+  * {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  * {
+    box-sizing: border-box;
+  }
+  box-sizing: border-box;
+  display: grid;
+  width: calc(100vh - 4em);
+  grid-template-columns: [sidebar] 27vw [start] 65vw [end];
+  grid-gap: 3vw;
+  padding: 2em;
+  background: var(--color-background);
+  margin: 0;
+}
+
+.sidebar {
+  position: fixed;
+  grid-column-start: sidebar;
+  height: calc(100vh - 4em);
+  width: 15vw;
+  max-width: 190px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3em;
+  justify-content: space-between;
+  button {
+    justify-self: flex-start;
+  }
+}
+
+main {
+  &::before {
+    position: absolute;
+    top: -2em;
+    left: -2em;
+    right: -2em;
+    bottom: -2em;
+    background: var(--color-paper, white);
+    box-shadow: var(--shadow);
+    content: " ";
+    z-index: -2;
+  }
+  transform: rotate(-0.2deg);
+  grid-column-start: start;
+  grid-column-end: end;
+  width: 80%;
+  margin-top: auto;
+  margin-top: 5em;
+  position: relative;
+
+  header {
+    padding-bottom: 1.5em;
+    margin-top: -4em;
+    padding-top: 4em;
+    margin-left: -4em;
+    margin-right: -4em;
+    padding-left: 4em;
+    padding-right: 4em;
+
+    h1#title {
+      text-align: left;
+      max-width: 100%;
+      font-size: 4em;
+      line-height: 1.1;
+      text-transform: none;
+    }
+
+    .intro {
+      font-size: 1.2em;
+    }
+  }
+}
+
+article {
+  background: var(--color-paper);
+  border: 10px solid var(--color-paper);
+  margin: 0;
+  position: relative;
+  padding: 1em;
+}
+
+.crop-marks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+
+/* cropmarks 
+----------------------------------------*/
+.crop-mark {
+  position: absolute;
+  border: solid var(--color-cropmark);
+}
+
+.crop-mark.vertical {
+  position: absolute;
+  top: -25px;
+  left: 20px;
+  right: 20px;
+  bottom: -25px;
+  border-width: 0 1px;
+}
+
+.crop-mark.horizontal {
+  position: absolute;
+  top: 20px;
+  left: -25px;
+  right: -25px;
+  bottom: 20px;
+  border-width: 1px 0;
+}
+
+
+/* footer
+--------------------------------------------- */
+footer {
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 4em;
+  margin-right: 0;
+  font-size: 0.9em;
+}
+
+main article aside {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 3em;
+
+  a {
+    font-family: var(--font-sans);
+    color: red;
+  }
+
+  .previous {
+    &::before {
+      content: "← ";
+    }
+  }
+
+  .next::after {
+    content: " →";
+  }
+}

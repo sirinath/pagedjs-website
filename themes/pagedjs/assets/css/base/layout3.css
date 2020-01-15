@@ -1,0 +1,5 @@
+body {
+    background: var(--color-lightest-grey);
+    margin: 0;
+    padding: 0;
+}

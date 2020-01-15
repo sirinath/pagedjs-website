@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="articleList">
+    <div class="header">
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+    </div>
+    {{ range .Pages }}
+    <a href="{{ .Permalink }}" class="article">
+        {{/*  {{ partial "cropmarks.html" . }}  */}}
+        {{/*  <img src="{{ .Params.cover }}" alt="" class="cover">  */}}
+        <img src="https://images.unsplash.com/photo-1512331455279-c8ae8178f586?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80" alt="" class="cover">
+
+        <div class="paper">
+            {{/*  <p class="date">{{ dateFormat "2/1/2006" .Date  }}</p>  */}}
+            <h2>{{ .Title }}</h2>
+            <p class="intro">{{ .Params.intro | markdownify }}</p>
+        </div>
+    </a>
+    {{ end }}
+</div>
+{{ end }}

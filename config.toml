@@ -1,0 +1,34 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "pagedjs, house of HTML printing" 
+theme = "pagedjs"
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menu]
+
+  [[menu.main]]
+    identifier = "blog"
+    name = "Journal"
+    url = "/posts/"
+    weight= 2
+
+  [[menu.main]]
+    identifier = "documentation"
+    name = "Documentation"
+    url = "/documentation/"
+    weight= 2
+
+  [[menu.main]]
+    identifier = "code"
+    name = "Code of Conduct"
+    url = "/codeOfConduct/"
+    weight= 3
+
+  [[menu.main]]
+    identifier = "colophon"
+    name = "Colophon"
+    url = "/colophon.html"
+    weight= 4 

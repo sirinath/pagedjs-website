@@ -1,0 +1,22 @@
+{{ define "headScripts"  }}
+{{ $js := resources.Get "js/glfx.js" }}
+<script src="{{ $js.Permalink }}"></script>
+{{ partial "js-halftone.html" }}
+{{ end }}
+{{ define "main" }}
+<main>
+    {{ partial "cropmarks.html" }}
+    <article>
+{{/*  
+        {{ if .Params.header }}
+        <header>
+            <h1>{{ .Params.header}}</h1>
+        </header>
+        {{ end }}  */}}
+        {{ .Content }}
+    </article>
+</main>
+{{ end }}
+{{ define "footer"  }}
+<p></p>
+{{ end }}

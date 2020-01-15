@@ -1,0 +1,17 @@
+<aside class="menu">
+    <div class="menu-logos">
+    {{ partial "paged-logo.html" }}
+    {{ partial "baseline" . }}
+    </div>
+    <nav role="main">
+        <ul>
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+            <li {{ if $currentPage.HasMenuCurrent "main" . }}class="active"{{ end }}>
+                <a href="{{.URL}}">
+                    <span>{{ .Name }}</span>
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+    </nav>

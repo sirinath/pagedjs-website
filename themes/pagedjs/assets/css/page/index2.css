@@ -1,0 +1,48 @@
+.homepage {
+  .menu {
+    transform: none;
+    padding-bottom: 2em;
+
+    &::before {
+      background: white;
+    }
+  }
+
+  main {
+    margin-top: 5em;
+  }
+
+  article {
+    padding: 2em;
+  }
+
+  .print-machine {
+    background: var(--color-paper);
+    height: 50vh;
+    margin: 0 auto;
+    position: relative;
+    float: left;
+    margin-right: 1ch;
+
+    img {
+      mix-blend-mode: multiply;
+      height: 100%;
+    }
+  }
+
+  .menu svg path {
+    fill: var(--color-primary, black);
+  }
+
+  .baseline {
+    color: var(--color-primary);
+  }
+
+  footer {
+    max-width: 60%;
+    margin: 0 auto;
+    margin-top: 4em;
+    left: 0;
+    font-size: 0.9em;
+  }
+}

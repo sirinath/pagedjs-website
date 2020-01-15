@@ -1,0 +1,73 @@
+html {
+  margin: 0;
+  padding: 0;
+  * {
+    box-sizing: border-box;
+  }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  /* background: var(--color-background); */
+
+  .layout{
+  display: grid;
+  width: 100% ;
+  grid-template-columns: minmax(400px, 30%) 1fr;
+  width: calc(100vw - 3em * 2);
+  /* height: calc(100vh - 3em * 2); */
+  margin: 3em;
+  column-gap: 3em;
+    background: var(--color-background);
+    &::after {
+      background: white;
+      content: ' ';
+      display: block;
+      position: absolute;
+      height: 3em;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: 1;
+    }
+}
+}
+
+header {
+  background: var(--color-background);
+  align-items: center;
+  display: grid;
+  grid-template-columns: 2px repeat(4, 1fr);
+  grid-template-rows: 2px repeat(3, 1fr);
+  grid-gap: 20px;
+  grid-template-areas:
+    ". . . . ."
+    ". a a . ."
+    ". . b b b"
+    ". . b b b";
+  max-height: calc(100vh - 6em);
+  align-items: end;
+  background: var(--color-background);
+  z-index: 5;
+}
+
+main {
+  grid-column: 2;
+  padding-bottom: 4em;
+  min-height: 200vh;
+  background: white;
+  margin: 3em;
+  /* padding: 2em 3em ; */
+  position:relative;
+  z-index: 6;
+}
+
+
+.listintro {
+  columns: 3;
+}

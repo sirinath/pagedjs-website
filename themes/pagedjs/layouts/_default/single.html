@@ -1,0 +1,24 @@
+
+{{ define "main" }}
+<main>
+  {{ partial "cropmarks.html" }}
+  <article>
+    
+      {{ if .Params.intro }}
+    <header>
+      <h1 id="title">{{ .Title }}</h1>
+      {{ if .Params.intro }}<p class="intro">{{ .Params.intro }}</p>{{end}}
+          </header>
+    {{ end }}
+    {{ .Content }}
+    <aside>
+      {{ with .PrevInSection }}
+      <a class="previous" href="{{.Permalink}}">{{.Title}}</a>
+      {{ end }}
+      {{ with .NextInSection }}
+      <a class="next" href="{{.Permalink}}">{{.Title}}</a>
+      {{ end }}
+    </aside>
+  </article>
+</main>
+{{ end }}

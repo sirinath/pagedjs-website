@@ -1,0 +1,33 @@
+footer {
+  display: grid;
+  grid-template-columns: [logo] 20% [foot] 75% [end];
+  grid-column-gap: 5%;
+  font-size: 1.2em;
+  grid-row-gap: 30px;
+  margin-top: 10em;
+  font-family: var(--font-sans);
+  grid-column-start: start;
+
+  p {
+    width: 100%;
+  }
+
+  a {
+    color: var(--color-primary);
+  }
+
+  .foot-content {
+    grid-column-start: foot;
+  }
+
+  figure {
+    float: left;
+    margin-top: 0;
+    display: inline-block;
+    margin-top: 10mm;
+  }
+
+  figure svg {
+    width: 100%;
+  }
+}

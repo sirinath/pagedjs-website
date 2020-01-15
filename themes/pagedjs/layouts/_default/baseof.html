@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>{{ block "title" . }}
+      {{ .Site.Title }}
+      {{ end }}</title>
+    {{ $css := resources.Get "./css/main.css" | resources.PostCSS (dict "config" "./assets/css/postcss.config.js" "noMap" true) | minify  | resources.Fingerprint "md5" }}
+    <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}">
+    <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" />
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/caladea" type="text/css" />
+    {{ block "headScripts" . }}
+    {{ end }}
+  </head>
+
+  <body {{ if .Params.class }} class="{{ .Params.class }}" {{end}} style="{{ if .Params.colorPaper }}  --color-paper:{{ .Params.colorPaper }} {{ end }}">
+    {{ block "sidebar" .}}
+    <div class="sidebar">
+      <button class="menuToggle">
+        <a href="{{ .Site.BaseURL }}">{{ partial "paged-monogram.html" . }} </a>
+      </button>
+      <!-- {{ partial "header.html" . }} -->
+      {{ partial "menu.html" . }}
+    </div>
+    {{ end }}
+    {{ block "main" . }}
+
+  
+    {{ end }}
+
+    {{ block "footer" . }}
+    {{ partial "footer.html" . }}
+    {{ end }}
+  </body>
+
+</html>

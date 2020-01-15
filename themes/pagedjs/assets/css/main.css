@@ -1,0 +1,17 @@
+@import "themes/pagedjs/assets/css/base/variables.css";
+@import "themes/pagedjs/assets/css/base/fonts.css";
+@import "themes/pagedjs/assets/css/base/type.css";
+@import "themes/pagedjs/assets/css/base/menu.css";
+@import "themes/pagedjs/assets/css/base/prism.css";
+@import "themes/pagedjs/assets/css/base/images.css";
+@import "themes/pagedjs/assets/css/base/footer.css";
+@import "themes/pagedjs/assets/css/base/postit.css";
+
+@import "themes/pagedjs/assets/css/base/blog-list.css";
+
+@import "themes/pagedjs/assets/css/base/layout-new.css";
+
+@import "themes/pagedjs/assets/css/page/index2.css";
+
+/* page specific 
+@import "themes/pagedjs/assets/css/page/doc.css"; */
