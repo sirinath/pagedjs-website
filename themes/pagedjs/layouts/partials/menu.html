@@ -1,17 +1,18 @@
 <aside class="menu">
-    <div class="menu-logos">
+    <a href="{{ .Site.BaseURL }}" class="menu-logos">
     {{ partial "paged-logo.html" }}
     {{ partial "baseline" . }}
-    </div>
+    </a>
     <nav role="main">
         <ul>
             {{ $currentPage := . }}
             {{ range .Site.Menus.main }}
             <li {{ if $currentPage.HasMenuCurrent "main" . }}class="active"{{ end }}>
-                <a href="{{.URL}}">
+                <a href="{{ .URL }}">
                     <span>{{ .Name }}</span>
                 </a>
             </li>
             {{ end }}
         </ul>
     </nav>
+</aside>

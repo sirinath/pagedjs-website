@@ -14,21 +14,37 @@
     {{ end }}
   </head>
 
-  <body {{ if .Params.class }} class="{{ .Params.class }}" {{end}} style="{{ if .Params.colorPaper }}  --color-paper:{{ .Params.colorPaper }} {{ end }}">
+  <body {{ if .Params.class }} class="{{ .Params.class }}" {{ end }}>
     {{ block "sidebar" .}}
     <div class="sidebar">
       <button class="menuToggle">
         <a href="{{ .Site.BaseURL }}">{{ partial "paged-monogram.html" . }} </a>
       </button>
-      <!-- {{ partial "header.html" . }} -->
       {{ partial "menu.html" . }}
     </div>
     {{ end }}
     {{ block "main" . }}
-
-  
+    <main   style="{{ if .Params.colorPaper }} --color-paper:{{ .Params.colorPaper }} {{ end }}">
+      {{ partial "cropmarks.html" }}
+      <article>
+        {{ if .Params.intro }}
+        <header>
+          <h1 id="title">{{ .Title }}</h1>
+          {{ if .Params.intro }}<p class="intro">{{ .Params.intro }}</p>{{end}}
+        </header>
+        {{ end }}
+        {{ .Content }}
+        <aside>
+          {{ with .PrevInSection }}
+          <a class="previous" href="{{.Permalink}}">{{.Title}}</a>
+          {{ end }}
+          {{ with .NextInSection }}
+          <a class="next" href="{{.Permalink}}">{{.Title}}</a>
+          {{ end }}
+        </aside>
+      </article>
+    </main>
     {{ end }}
-
     {{ block "footer" . }}
     {{ partial "footer.html" . }}
     {{ end }}

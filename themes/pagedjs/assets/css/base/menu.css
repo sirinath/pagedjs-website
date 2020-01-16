@@ -1,7 +1,4 @@
 .menu::before {
-  /* --tint: 200; */
-  /* --light: 30%; */
-  /* --saturation: 50%; */
   content: " ";
   position: absolute;
   top: -3em;
@@ -13,15 +10,9 @@
   transform: rotate(3deg);
   box-shadow: var(--shadow);
   background: var(--color-paper, white);
-  /* color: white; */
 }
 
 .menu {
-  /* position: relative; */
-  /* transform: translateX(-120%); */
-  /* transition: all 300ms; */
-  /* background: inherit; */
-
   svg {
     path {
       fill: var(--color-primary);
@@ -33,14 +24,11 @@
     font-size: 1em;
     text-transform: uppercase;
     font-family: var(--font-sans);
+    color: var(--color-primary);
   }
 }
 
 .menu:hover {
-  /* bottom: 0; */
-  /* transform: translateX(0); */
-  /* background: white; */
-
 }
 
 button.menuToggle {
@@ -65,9 +53,10 @@ nav[role="main"] {
     padding: 0;
     font-family: var(--font-sans);
     /* margin-left: 1em; */
-    li {  
+    li {
       line-height: 1.1;
-      margin-bottom: 0.8em;
+      margin-bottom: 1.2em;
+      font-size: 0.9em;
     }
 
     a {
@@ -82,6 +71,27 @@ nav[role="main"] {
   margin-bottom: 2em;
 }
 
-.active::before  {
-content: " → ";
+.active::before {
+  content: " → ";
 }
+
+.sub {
+  /* position: absolute; */
+  /* display: none; */
+  position: relative;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    top: -3em;
+    left: -15ch;
+    bottom: -5em;
+    right: -5ch;
+    background: white;
+    z-index: -2;
+    transform: rotate(3deg);
+    box-shadow: var(--shadow);
+    background: red;
+  }
+}
+

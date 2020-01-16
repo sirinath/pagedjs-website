@@ -2,6 +2,7 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "pagedjs, house of HTML printing" 
 theme = "pagedjs"
+# relativeURLs = true
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -10,10 +11,16 @@ theme = "pagedjs"
 [menu]
 
   [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about"
+    weight= 1
+
+  [[menu.main]]
     identifier = "blog"
     name = "Journal"
     url = "/posts/"
-    weight= 2
+    weight= 1
 
   [[menu.main]]
     identifier = "documentation"
@@ -22,13 +29,19 @@ theme = "pagedjs"
     weight= 2
 
   [[menu.main]]
-    identifier = "code"
+    identifier = "cookbook"
+    name = "Cook book"
+    url = "/cookbook/"
+    weight= 2
+
+  [[menu.main]]
+    identifier = "codeofconduct"
     name = "Code of Conduct"
-    url = "/codeOfConduct/"
+    url = "/code-of-conduct.html"
     weight= 3
 
   [[menu.main]]
     identifier = "colophon"
     name = "Colophon"
-    url = "/colophon.html"
+    url = "/colophon/"
     weight= 4 

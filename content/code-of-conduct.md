@@ -1,5 +1,5 @@
 ---
-title: "Code"
+title: "Code of conduct"
 date: 2019-11-01T00:08:22+01:00
 draft: true
 ---

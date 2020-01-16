@@ -1,10 +1,8 @@
 ---
-title: "Getting Started with Paged.js"
+title: "Getting Started with Paged.js"
 date: 2019-09-03T18:23:22+02:00
 draft: true
 part: 1 
-layout: doc-single
-menu: "documentation"
 weight: 1
 intro: "in this section, you'll see what paged.js is about and how you can use all the powers of HTML and CSS to make great book" 
 cover: "images/chuncker-1.png"

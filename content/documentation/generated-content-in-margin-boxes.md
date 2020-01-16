@@ -3,9 +3,9 @@ title: "Generated Content in Margin Boxes"
 date: 2019-09-03T18:23:22+02:00
 draft: true
 part: 6
-layout: doc-single
-menu: "documentation"
 weight: 6
+colorPrimary: "#aaa"
+colorHeading: "white"
 ---
 
 

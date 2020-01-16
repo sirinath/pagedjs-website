@@ -3,9 +3,7 @@ title: "Generated Content"
 date: 2019-09-03T18:23:22+02:00
 draft: true
 part: 5
-layout: doc-single
 intro: "Content automatically created by Paged.js, based on your content, and you can put it in margins!"  
-menu: "documentation"
 weight: 5
 ---
 

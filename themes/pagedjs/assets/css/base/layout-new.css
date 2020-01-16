@@ -44,7 +44,7 @@ main {
     right: -2em;
     bottom: -2em;
     background: var(--color-paper, white);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-main);
     content: " ";
     z-index: -2;
   }
@@ -106,18 +106,18 @@ article {
 
 .crop-mark.vertical {
   position: absolute;
-  top: -25px;
+  top: -15px;
   left: 20px;
   right: 20px;
-  bottom: -25px;
+  bottom: -15px;
   border-width: 0 1px;
 }
 
 .crop-mark.horizontal {
   position: absolute;
   top: 20px;
-  left: -25px;
-  right: -25px;
+  left: -15px;
+  right: -15px;
   bottom: 20px;
   border-width: 1px 0;
 }

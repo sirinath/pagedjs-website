@@ -3,9 +3,7 @@ title: "Global Layout"
 date: 2019-09-03T18:23:22+02:00
 draft: true
 part: 4
-layout: doc-single
 intro: "If you want to start designing your own book, now is the perfect time!"
-menu: "documentation"
 weight: 4
 ---
 

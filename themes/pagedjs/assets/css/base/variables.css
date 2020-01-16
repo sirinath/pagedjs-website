@@ -2,14 +2,18 @@
   --tint: 200;
   --light: 30%;
   --saturation: 50%;
-  --color-background: hsl(0, 0%, 90%);
+  /* --color-background: hsl(0, 0%, 90%); */
+  --color-background: hsl(0, 0%, 100%);
   --color-lightest-grey: rgb(245, 245, 245);
   --color-primary: hsl(var(--tint), var(--light), var(--saturation));
   --shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
+  --shadow-main: var(--shadow);
+  --shadow-main: none;
   --color-body: hsl(var(--tint), 20%, 20%);
   --color-paper: white;
   /* --font-serif: "Minipax Variable", serif; */
-  --font-serif: "Inria Serif", serif;
+  --font-serif: "Inria Serif", 
+  serif;
   --font-sans: "Jost", sans-serif;
   --font-size: 16px;
   --color-cropmark: black;

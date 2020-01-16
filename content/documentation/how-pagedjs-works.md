@@ -3,9 +3,7 @@ title: "How paged.js works"
 date: 2019-09-03T18:23:22+02:00
 draft: true
 part: 2
-layout: doc-single
 weight: 2
-menu: "documentation"
 intro: "Implementing CSS for the print is not an easy task. Here is an overview of what Paged.js is doing without you being aware of that."  
 ---
 

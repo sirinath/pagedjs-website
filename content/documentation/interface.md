@@ -4,8 +4,6 @@ date: 2019-09-03T18:23:22+02:00
 draft: true
 part: 3
 weight: 3
-layout: doc-single
-menu: "documentation"
 ---
 
 

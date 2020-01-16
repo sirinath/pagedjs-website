@@ -14,23 +14,39 @@
   }
 
   .article {
+    --color-cover: orange;
+    --color-heading: yellow;  
+
     position: relative;
-    padding: 3em;
     margin-right: 3%;
     margin-bottom: 3%;
-    background: var(--color-paper, smokewhite);
+    background: var(--color-cover);
     width: 30%;
+    filter: grayscale();
+    .crop-marks {
+      display: none;
+    }
 
     &:hover {
-      box-shadow: 0 0 0 10px var(--color-primary);
+      /* box-shadow: 0 0 0 10px var(--color-primary); */
+      .crop-marks {
+        display: block;
+      }
+      filter: none;
     }
 
     .cover {
         object-fit: cover;
+        /* filter: grayscale(); */
     }
 
     .paper {
-      background: var(--color-paper);
+      padding: 0 2em 2em;
+      font-size: 0.9em;
+      font-family: var(--font-sans);
+      font-weight: 400;
+      background: var(--color-cover);
+
     }
 
     a {
@@ -48,11 +64,11 @@
     }
 
     h2 {
-      color: var(--color-primary);
+      color: var(--color-heading);
       margin: 0;
+      margin-top: 1em;
       font-weight: 600;
       line-height: 1.12;
-      border-bottom: 1px solid var(--color-primary);
       margin-bottom: 0.5em;
     }
 
