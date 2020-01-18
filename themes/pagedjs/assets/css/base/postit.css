@@ -2,15 +2,13 @@
   line-height: 1;
   text-align: center;
   width: 275px;
-  margin: 25px;
+  /* margin: 25px; */
   min-height: 250px;
   max-height: 250px;
-  padding-top: 35px;
+  /* padding-top: 35px; */
   position: relative;
   border: 1px solid #e8e8e8;
-  border-top: 60px solid #fdfd86;
-  font-family: 'Reenie Beanie';
-  font-size: 22px;
+  border-left: 15px solid #fdfd86;
   border-bottom-right-radius: 60px 5px;
   display: inline-block;
   background: #ffff88; /* Old browsers */
@@ -23,7 +21,11 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff88', endColorstr='#ffffc6', GradientType=1); /* IE6-9 fallback on horizontal gradient */
 }
 
-.postit:after {
+/* .yellow {
+  rgba(200,120,84,0.2) 
+} */
+
+.postit::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -33,9 +35,11 @@
   height: 25px;
   background: rgba(0, 0, 0, 0.2);
   box-shadow: 2px 15px 5px rgba(0, 0, 0, 0.40);
-  -moz-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+  /* -moz-transform: matrix(-1, -0.1, 0, 1, 0, 0);
   -webkit-transform: matriX(-1, -0.1, 0, 1, 0, 0);
   -o-transform: matrix(-1, -0.1, 0, 1, 0, 0);
   -ms-transform: matriX(-1, -0.1, 0, 1, 0, 0);
+  transform: matrix(-1, -0.1, 0, 1, 0, 0); */
   transform: matrix(-1, -0.1, 0, 1, 0, 0);
+
 }

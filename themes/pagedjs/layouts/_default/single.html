@@ -3,13 +3,11 @@
 <main>
   {{ partial "cropmarks.html" }}
   <article>
-    
-      {{ if .Params.intro }}
+    {{ partial "breadcrumb.html" . }}
     <header>
       <h1 id="title">{{ .Title }}</h1>
-      {{ if .Params.intro }}<p class="intro">{{ .Params.intro }}</p>{{end}}
+      {{ if .Params.intro  }}<p class="intro">{{ .Params.intro | markdownify }}</p>{{end}}
           </header>
-    {{ end }}
     {{ .Content }}
     <aside>
       {{ with .PrevInSection }}

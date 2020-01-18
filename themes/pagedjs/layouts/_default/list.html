@@ -6,16 +6,20 @@
     </div>
     {{ range .Pages }}
     <a href="{{ .Permalink }}" class="article" style="{{ if .Params.colorPrimary }}--color-cover:{{.Params.colorPrimary}};{{ end }} {{ if .Params.colorHeading }}--color-heading:{{.Params.colorHeading}};{{ end }}">
-        {{ partial "cropmarks.html" . }}  
-        {{/*  <img src="{{ .Params.cover }}" alt="" class="cover">  */}}
-        <img src="https://images.unsplash.com/photo-1512331455279-c8ae8178f586?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80" alt="" class="cover">
-
+        {{ partial "cropmarks.html" . }}
+        {{/*  <img src="{{ .Params.cover }}" alt="" class="cover"> */}}
+        <!-- <img src="https://images.unsplash.com/photo-1512331455279-c8ae8178f586?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80" alt="" class="cover"> -->
         <div class="paper">
-            {{/*  <p class="date">{{ dateFormat "2/1/2006" .Date  }}</p>  */}}
+            {{/*  <p class="date">{{ dateFormat "2/1/2006" .Date  }}</p> */}}
             <h2>{{ .Title }}</h2>
             <p class="intro">{{ .Params.intro | markdownify }}</p>
+            <a class="post-tag post-tag-{{ . | urlize }}" href="/tags/{{ . | urlize }}">{{ . }}</a>
         </div>
     </a>
     {{ end }}
+    <!-- {{ range .Site.Taxonomies.tags }}
+    <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
+    {{ end }} -->
+    </ul>
 </div>
 {{ end }}

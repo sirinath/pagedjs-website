@@ -1,33 +1,61 @@
 footer {
-  display: grid;
-  grid-template-columns: [logo] 20% [foot] 75% [end];
-  grid-column-gap: 5%;
-  font-size: 1.2em;
-  grid-row-gap: 30px;
-  margin-top: 10em;
+  z-index: -1;
+  position: relative;
+  left: -40%;
   font-family: var(--font-sans);
-  grid-column-start: start;
+  max-height: unset;
+  transform: rotate(10deg);
+  z-index: 3;
+  transition: left 0.5s;
+
+  &.show {
+    left: 10%;
+  }
 
   p {
     width: 100%;
+    line-height: 1.4;
   }
 
   a {
     color: var(--color-primary);
+    margin-left: .6em;
   }
 
   .foot-content {
     grid-column-start: foot;
+    color:darkblue;
+    font-family: cursive;
   }
 
-  figure {
-    float: left;
-    margin-top: 0;
-    display: inline-block;
-    margin-top: 10mm;
+  svg {
+    /* --color-primary: rgba(200, 120, 84, 0.2); */
+    /* background: rgba(200,200,200,0.2); */
+    opacity: 0.8;
+    padding: 1em;
+    transform: rotate(-2deg);
+    /* z-index: 3; */
+    margin-top: -1.2em;
+    width: 60%;
+    /* box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.2); */
+
+    path {
+      fill: darkblue;
+    }
+
+    &:hover  {
+      background: rgba(200, 120, 84, 0.2);
+      path {
+        /* fill: white; */
+      }
+      
+    }
   }
 
-  figure svg {
-    width: 100%;
+  .postit {
+    /* padding-bottom: 3em; */
+    border-left-width: 0;
+    max-height: unset;
+    position: relative;
   }
 }

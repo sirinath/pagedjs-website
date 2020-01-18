@@ -1,0 +1,22 @@
+{{/*
+<p class="tagslist">
+{{ with .Params.tags }}
+    <span>Tags</span>
+    {{ $sort := sort . }}
+    {{ $links := apply $sort "partial" "post-tag-link.html" "." }}
+    {{ $clean := apply $links "chomp" "." }}
+    {{ delimit $clean " / " }}
+    {{ end }}
+</p>
+*/}}
+
+
+{{ range first 1 . }}
+<a href="{{ "/tags/" | relURL }}{{ . | urlize }}">#{{ . }}</a>
+{{ end }}
+
+{{ if gt (len .) 1 }}
+  {{ range after 1 . }}
+  | <a href="{{ "/tags/" | relURL }}{{ . | urlize }}">#{{ . }}</a>
+  {{ end }}
+{{ end }}

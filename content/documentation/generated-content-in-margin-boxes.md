@@ -1,15 +1,15 @@
 ---
-title: "Generated Content in Margin Boxes"
+title: "Generated Content in Margin Boxes"
 date: 2019-09-03T18:23:22+02:00
 draft: true
 part: 6
 weight: 6
 colorPrimary: "#aaa"
 colorHeading: "white"
+intro: "CSS modules for paged media add the possibility to use the `content` property in special area of the pages: the margin boxes. In addition, combinations of syntaxes and properties create elements needed to design a book: page number and running headers and footers."
 ---
 
 
-CSS modules for paged media add the possibility to use the `content` property in special area of the pages: the margin boxes. In addition, combinations of syntaxes and properties create elements needed to design a book:  page number and running headers and footers.
 
 
 
@@ -32,13 +32,13 @@ You can select this margins boxes in  the `@page` rules with rules such as `@top
 
 The code below put your title in the `@top-right` margin box of all right pages:
 
-```CSS
+{{< highlight css "linenos=table, linenostart=1" >}}
 @page:right {
   @top-right {
     content: "My title";
   }
 }
-```
+{{< / highlight >}}
 
 List of the margin boxes:
 

@@ -7,6 +7,22 @@ theme = "pagedjs"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    # lineNos = true
+    lineNumbersInTable = false
+    noClasses = true
+    style = "pastie"
+    tabWidth = 4
+
+
+[taxonomies]
+  # category = "categories"
+  tag = "tags"
+
 
 [menu]
 
@@ -32,13 +48,13 @@ theme = "pagedjs"
     identifier = "cookbook"
     name = "Cook book"
     url = "/cookbook/"
-    weight= 2
-
-  [[menu.main]]
-    identifier = "codeofconduct"
-    name = "Code of Conduct"
-    url = "/code-of-conduct.html"
     weight= 3
+
+  # [[menu.main]]
+  #   identifier = "codeofconduct"
+  #   name = "Code of Conduct"
+  #   url = "/code-of-conduct.html"
+  #   weight= 3
 
   [[menu.main]]
     identifier = "colophon"

@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div class="articleList">
+    <div class="header">
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+    </div>
+    {{ range .Pages }}
+    <a href="{{ .Permalink }}" class="article">
+        {{ partial "cropmarks.html" . }}
+            <div class="content">
+            <p class="date">{{ dateFormat "2/1/2006" .Date  }}</p>
+            <h2>{{ .Title }}</h2>
+            <p class="intro">{{ .Params.intro | markdownify }}</p>
+            {{ if .Params.tags }}
+            {{ partial "tag-list" .Params.tags }}
+            {{ end }}
+        </div>
+    </a>
+    {{ end }}
+  
+</div>
+{{ end }}

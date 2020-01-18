@@ -1,73 +1,147 @@
 html {
-  margin: 0;
-  padding: 0;
+  /* background: url(http://www.emoisetbois.com/wp-content/uploads/2015/02/aratika-Parquet-EmoisetBois_V.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
   * {
     box-sizing: border-box;
   }
 }
 
-* {
-    box-sizing: border-box;
-}
-
 body {
-  padding: 0;
+  * {
+    box-sizing: border-box;
+  }
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: [sidebar] 27vw [start] 65vw [end];
+  grid-gap: 3vw;
+  padding: 2em;
+  background: var(--color-background);
   margin: 0;
-  /* background: var(--color-background); */
-
-  .layout{
-  display: grid;
-  width: 100% ;
-  grid-template-columns: minmax(400px, 30%) 1fr;
-  width: calc(100vw - 3em * 2);
-  /* height: calc(100vh - 3em * 2); */
-  margin: 3em;
-  column-gap: 3em;
-    background: var(--color-background);
-    &::after {
-      background: white;
-      content: ' ';
-      display: block;
-      position: absolute;
-      height: 3em;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      z-index: 1;
-    }
-}
 }
 
-header {
-  background: var(--color-background);
-  align-items: center;
-  display: grid;
-  grid-template-columns: 2px repeat(4, 1fr);
-  grid-template-rows: 2px repeat(3, 1fr);
-  grid-gap: 20px;
-  grid-template-areas:
-    ". . . . ."
-    ". a a . ."
-    ". . b b b"
-    ". . b b b";
-  max-height: calc(100vh - 6em);
-  align-items: end;
-  background: var(--color-background);
-  z-index: 5;
+.sidebar {
+  position: fixed;
+  grid-column-start: sidebar;
+  height: calc(100vh - 4em);
+  width: 15vw;
+  max-width: 190px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3em;
+  justify-content: space-between;
+  button {
+    justify-self: flex-start;
+  }
+  z-index: 4;
 }
 
 main {
-  grid-column: 2;
-  padding-bottom: 4em;
-  min-height: 200vh;
-  background: white;
-  margin: 3em;
-  /* padding: 2em 3em ; */
-  position:relative;
-  z-index: 6;
+  &::before {
+    position: absolute;
+    top: -2em;
+    left: -2em;
+    right: -2em;
+    bottom: -2em;
+    background: var(--color-paper, white);
+    box-shadow: var(--shadow-main);
+    content: " ";
+    z-index: -2;
+  }
+  transform: rotate(0deg);
+  grid-column-start: start;
+  grid-column-end: end;
+  width: 80%;
+  margin-top: auto;
+  margin-top: 5em;
+  position: relative;
+  header {
+    padding-bottom: 1.5em;
+    margin-top: -4em;
+    padding-top: 4em;
+    margin-left: -4em;
+    margin-right: -4em;
+    padding-left: 4em;
+    padding-right: 4em;
+
+
+  }
+}
+
+article {
+  background: var(--color-paper);
+  border: 10px solid var(--color-paper);
+  margin: 0;
+  position: relative;
+  padding: 1em;
+  padding-bottom: 2em;
+
+}
+
+.crop-marks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 
-.listintro {
-  columns: 3;
+/* cropmarks 
+----------------------------------------*/
+.crop-mark {
+  position: absolute;
+  border: solid var(--color-cropmark);
+}
+
+.crop-mark.vertical {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  right: 20px;
+  bottom: -15px;
+  border-width: 0 1px;
+}
+
+.crop-mark.horizontal {
+  position: absolute;
+  top: 20px;
+  left: -15px;
+  right: -15px;
+  bottom: 20px;
+  border-width: 1px 0;
+}
+
+
+/* footer
+--------------------------------------------- */
+footer {
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 4em;
+  margin-right: 0;
+  font-size: 0.9em;
+}
+
+main article aside {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 3em;
+
+  a {
+    font-family: var(--font-sans);
+    color: red;
+  }
+
+  .previous {
+    &::before {
+      content: "← ";
+    }
+  }
+
+  .next::after {
+    content: " →";
+  }
 }
