@@ -4,9 +4,9 @@ date: 2019-09-03T18:23:22+02:00
 draft: true
 part: 6
 weight: 6
-colorPrimary: "#aaa"
-colorHeading: "white"
-intro: "CSS modules for paged media add the possibility to use the `content` property in special area of the pages: the margin boxes. In addition, combinations of syntaxes and properties create elements needed to design a book: page number and running headers and footers."
+# colorPrimary: "#aaa"
+# colorHeading: "white"
+intro: "Running headers, footnotes, stuff in margins and so on."
 ---
 
 

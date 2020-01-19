@@ -3,22 +3,17 @@ title: "Getting Started with Paged.js"
 date: 2019-09-03T18:23:22+02:00
 draft: true
 part: 1 
-weight: 1
+weight: 100
 intro: "in this section, you'll see what paged.js is about and how you can use all the powers of HTML and CSS to make great book" 
 cover: "images/chuncker-1.png"
 ---
 
-## A quick introduction of paged.js
+<!-- ## A quick introduction to Paged.js -->
 
-Paged.js is a free and open-source library to paginate content in the browser to create PDF output from any HTML content based on the W3C specifications.
+Paged.js is a free and open-source library that paginates any HTML content to produce nice and print-ready PDF.
+The library fragment the content, read your css print declarations and present a paginated preview in your browser that you can save as PDF.
+Since the tool is following the W3C specifications, it can adapt to any workflow.
 
-With Paged.js you can do automated typesetting that is adaptable to any workflow. The library will fragment your content, read and apply your print declarations and present a paginated rendering of the HTML document.
-
-### Visual preview and command line version
-
-With paginated content in the browser, Paged.js makes it possible to have a visual preview of the printed rendering directly in web browsers with a graphical interface. This allows designers to access development tools to make changes on the fly and control the rendering of the composition (easy debugging). It's also possible to insert Paged.js into other tools and to propose to users to configure their graphical rendering by adding functionalities.
-
-Paged.js can easily be inserted into automated workflows thanks to the command line interface version (using an headless browser) that can generate a PDF from scriptable and automated commands.
 
 ### W3C specifications
 
@@ -30,6 +25,8 @@ W3C CSS modules implemented by paged.js :
 - [CSS Generated Content for Paged Media Module](https://www.w3.org/TR/css-gcpm-3/)
 - [CSS Fragmentation Module Level 3](https://www.w3.org/TR/css-break-3/)
 
+
+
 ### A community
 
 The code of paged.js is open-source with a MIT license and the development is community-driven. Everyone is invited to join us!
@@ -37,6 +34,18 @@ The code of paged.js is open-source with a MIT license and the development is co
 You can find the source code of paged.js on the repo of our self-healing gitlab: https://gitlab.pagedmedia.org/tools/pagedjs
 
 We have several tools to help designers and to discuss the addition of new features. You can add issues to the repo to suggest new features or simply report problems. But the easiest way to talk to us (if you're not using gitlab) is to join us on our self-hosted chat: https://mattermost.pagedmedia.org/
+
+
+
+<!-- ### Visual preview and command line version -->
+
+By paginating content in the browser, Paged.js shows a preview of the PDF output in web browsers. This allows designers to access browsers development tools to make changes on the fly and control the rendering of the typesetting. 
+
+It's also possible to insert Paged.js into other tools and to propose to users to configure their graphical rendering by adding functionalities.
+
+Paged.js can easily be inserted into automated workflows thanks to the command line interface version (using an headless browser) that can generate a PDF from scriptable and automated commands.
+
+
 
 ## Running paged.js
 

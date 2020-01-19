@@ -33,6 +33,7 @@ article {
     font-size: 4em;
     line-height: 1.1;
     text-transform: none;
+    margin-bottom: 0;
   }
 
   .intro {

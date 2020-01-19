@@ -9,14 +9,11 @@
     {{ end }}
 </p>
 */}}
-
-
-{{ range first 1 . }}
-<a href="{{ "/tags/" | relURL }}{{ . | urlize }}">#{{ . }}</a>
-{{ end }}
-
-{{ if gt (len .) 1 }}
-  {{ range after 1 . }}
-  | <a href="{{ "/tags/" | relURL }}{{ . | urlize }}">#{{ . }}</a>
-  {{ end }}
-{{ end }}
+{{- if .Params.tags -}}
+<p class="tags">
+    {{- range .Params.tags -}}
+    {{- $url := print "/tags/" ( . | urlize) "/" -}}
+    <a class="tag" href="{{- $url | relLangURL -}}">{{- . -}}</a>
+    {{- end -}}
+</p>
+{{- end -}}

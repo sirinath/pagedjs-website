@@ -1,11 +1,9 @@
 ---
-title: "About"
+title: "About Paged.js"
 date: 2019-11-02T00:08:22+01:00
 draft: true
 class: "about"
 ---
-
-# About Paged.js
 
 After years of trying a lot of solutions to make books out of HTML, and frustrated by the issues we found with each one of them, we ended up by building one of our own, following some mandatory principles.
 
