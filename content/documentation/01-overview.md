@@ -1,14 +1,17 @@
 ---
-title: "Getting Started with Paged.js"
+title: "The big picture"
 date: 2019-09-03T18:23:22+02:00
 draft: true
 part: 1 
-weight: 100
-intro: "in this section, you'll see what paged.js is about and how you can use all the powers of HTML and CSS to make great book" 
+weight: 1
+tocEmoji: " 🖼"
+intro: "Heard about Paged.js but don’t know where to start? " 
 cover: "images/chuncker-1.png"
+class: documentation
+
 ---
 
-<!-- ## A quick introduction to Paged.js -->
+# Getting started with Paged.js
 
 Paged.js is a free and open-source library that paginates any HTML content to produce nice and print-ready PDF.
 The library fragment the content, read your css print declarations and present a paginated preview in your browser that you can save as PDF.

@@ -1,5 +1,5 @@
 ---
-title: "Table of content"
+title: " A Table of Content"
 subtitle: "Find your way in your book!"
 class: "cookbook"
 colorPaper: "gold"
@@ -8,10 +8,6 @@ header: "tryout"
 
 ---
 
-
-
-
-# A table of contents
 
 Nostrud aliqua et nulla qui enim deserunt exercitation aliquip fugiat. Laboris veniam exercitation minim nisi consectetur esse aliqua tempor aliquip et. Dolore enim esse consectetur irure adipisicing voluptate laboris et do. Elit sit ut qui cupidatat nulla officia fugiat.
 

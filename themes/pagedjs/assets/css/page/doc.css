@@ -1,34 +1,97 @@
-.doc-menu {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  width: 100%;
- /* display: grid;
- grid-template-columns: repeat(2, 1fr);
- grid-gap: 3em; */
-
-  display: flex; 
+.doc-list {
+  background: white;
+  grid-column: start;
+  display: flex;
   flex-direction: column;
- /* align-items: stretch; */
-  li {
-    position: unset;
-    /* display: grid; */
-    margin-top: 2em;
-
-  }
+  padding: 3em;
+  counter-reset: doc;
   a {
-    display: block;
-    position: unset;
-    font-size:  0.9em;
     text-decoration: none;
-    
-    h2 {
-      text-transform: uppercase;
-      font-family: var(--font-serif);
-      font-variation-settings: "wght" 200;
-      font-weight: 400;
-      margin: 0;
-      /* color: var(--color-primary); */
+    background: none;
+  }
+
+  * {
+    max-width: unset;
+  }
+
+  ul li {
+    list-style-type: none;
+    > ul {
+      margin-left: 3ch;
+      border-left: 1px solid black;
+      padding-left: 2ch;
     }
+    &::before {
+      content: none;
+    }
+
+    &:hover {
+      &::before {
+        color: var(--color-accent);
+      }
+    }
+  }
+
+  p {
+    max-width: 45ch;
+    font-size: 1em;
+    font-family: var(--font-sans);
+    
+  }
+
+  span {
+    font-family: var(--font-serif);
+    font-size: 0.9em;
+  }
+.intro {
+  padding-left: 1em;
+  border-left: 2px solid currentcolor;
+
+}
+  .article h2 {
+    width: 100%;
+    margin-top: 2em;
+position: relative;
+
+    &::before {
+      content: ".................................................................................................................................................";
+      text-align: right;
+      color: #ccc;
+      font-size: 0.8em;
+      bottom: 2px;
+      position: absolute;
+      width: 98%;
+      padding-left: 5px;
+      letter-spacing: 2px;
+      overflow: hidden;
+    }
+
+    a {
+      counter-increment: doc;
+      background: white;
+      position: relative;
+      z-index: 100;
+      padding-right: 0.5ch;
+      &::after {
+        line-height: 1.2em;
+        padding-left: 1ch;
+        content: counter(doc);
+        float: right;
+        background: var(--color-paper);
+      }
+
+    }
+
+    .toc-emoji {
+      float: right;
+      position: relative; 
+      background: var(--color-paper);
+      padding-left: 1ch;
+
+    }
+  }
+
+  header {
+    color: red;
   }
 }

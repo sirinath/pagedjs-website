@@ -1,0 +1,73 @@
+.toc {
+  transition: right .8s;
+  color: var(--color-primary);
+  font-family: var(--font-sans);
+  width: 30vw;
+  margin-top: 0;
+  margin-left: 3em;
+  right: -28vw;
+  background: white;
+  padding: 1em;
+  box-shadow: var(--shadow);
+  position: fixed;
+  bottom: 3vh;
+  z-index: 9;
+  border: 8px double var(--color-primary);
+
+  .title {
+    text-transform: uppercase;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    left: -30px;
+    width: 3ch;
+    background: white;
+    box-shadow: var(--shadow);
+    padding: 0.2em 0.2em;
+    position: absolute;
+    min-height: 15ch;
+    text-align: center;
+    background: var(--color-primary);
+    color: white;
+    cursor: pointer;
+  }
+
+  &.show {
+    right: 1em;
+  }
+
+  ul,
+  li {
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+
+    &::before {
+      content: none;
+    }
+
+    ul,
+    ol {
+      /* margin-left: 3ch; */
+      border-left: 1px solid var(--color-primary);
+      padding-left: 1ch;
+      margin-bottom: 1em;
+
+      > li {
+        &::before {
+          content: "—";
+          margin-left: -0.5ch;
+          left: -6px;
+          position: relative;
+        }
+      }
+    }
+  }
+
+  > ul {
+    /* margin-top: 0; */
+  }
+
+  a {
+    color: inherit;
+  }
+}

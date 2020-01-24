@@ -6,13 +6,16 @@
 @import "themes/pagedjs/assets/css/base/images.css";
 @import "themes/pagedjs/assets/css/base/footer.css";
 @import "themes/pagedjs/assets/css/base/postit.css";
+@import "themes/pagedjs/assets/css/base/toc.css";
 
 
 @import "themes/pagedjs/assets/css/base/layout.css";
 @import "themes/pagedjs/assets/css/page/index.css";
+@import "themes/pagedjs/assets/css/page/doc.css";
 @import "themes/pagedjs/assets/css/page/cookbook.css";
 @import "themes/pagedjs/assets/css/page/about.css";
 @import "themes/pagedjs/assets/css/page/journal.css";
+@import "themes/pagedjs/assets/css/page/single.css";
 
 /* page specific 
 @import "themes/pagedjs/assets/css/page/doc.css"; */

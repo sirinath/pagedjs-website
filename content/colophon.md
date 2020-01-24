@@ -5,12 +5,6 @@ draft: true
 footer: true
 ---
 
----
-title: "Colophon"
-date: 2019-10-23T17:25:43+02:00
-draft: true
----
-
 # Colophon
 
 Paged.js logo was designed by Anton Moglia and Julie Blanc in a train back from Les Rencontres de Lure.

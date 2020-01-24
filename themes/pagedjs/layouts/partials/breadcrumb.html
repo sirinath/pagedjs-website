@@ -1,8 +1,24 @@
-<div id="breadcrumbs">
+<!-- <div id="breadcrumbs">
     <a href="/">Home</a>
-    {{ range (split .URL "/") }}
-        {{ if gt (len . ) 0 }}
-              /  <a href="/{{ . }}">{{ humanize (replace . "posts" "blog") }}</a>
+    {{ range (split .URL "/") last }}
+        {{ if gt (len . ) 1 }}
+            / <a href="/{{ . }}">{{ humanize (replace . "posts" "blog") }}</a>
         {{ end }}
     {{ end }}
+    / <span>{{ .Page.Title }}</span>
+</div> -->
+<div id="breadcrumbs">
+    {{ template "breadcrumb" dict "currentPage" .Page "id" .UniqueID }}
 </div>
+<!-- templates -->
+{{ define "breadcrumb" }}
+{{ if .currentPage.Parent }}
+{{ template "breadcrumb" dict "currentPage" .currentPage.Parent }} 
+<span class="delimiter"> ☛ </span>
+{{ end }}
+{{ if eq .id .currentPage.UniqueID }}
+{{ .currentPage.Title }}
+{{ else }}
+<a href="{{ .currentPage.URL }}">{{ .currentPage.Title }}</a>
+{{ end }}
+{{ end }}

@@ -1,5 +1,6 @@
 .menu::before {
-  content: " ";
+  /* add a small bar to the left */
+  /* content: " "; */
   position: absolute;
   top: -3em;
   left: -15ch;
@@ -26,9 +27,6 @@
     font-family: var(--font-sans);
     color: var(--color-primary);
   }
-}
-
-.menu:hover {
 }
 
 button.menuToggle {

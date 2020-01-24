@@ -7,16 +7,12 @@
 <main>
     {{ partial "cropmarks.html" }}
     <article>
-{{/*  
-        {{ if .Params.header }}
-        <header>
-            <h1>{{ .Params.header}}</h1>
-        </header>
-        {{ end }}  */}}
+       {{ if .Params.cover }} <img class="print-machine" src="{{.Params.cover}}" /> {{end}}
+        <div class="text">
         {{ .Content }}
+    </div>
     </article>
 </main>
 {{ end }}
 {{ define "footer"  }}
-<p></p>
 {{ end }}

@@ -14,22 +14,27 @@
 
   article {
     padding: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+justify-content: center;
+    .text {
+      margin-left: 4ch;
+      max-width: 30ch;
+    }
   }
 
   .print-machine {
     background: var(--color-paper);
     height: 50vh;
-    margin: 0 auto;
-    position: relative;
-    float: left;
-    margin-right: 1ch;
 
     img {
       mix-blend-mode: multiply;
       height: 100%;
     }
-  }
 
+  }
+  
   .menu svg path {
     fill: var(--color-primary, black);
   }
@@ -38,11 +43,4 @@
     color: var(--color-primary);
   }
 
-  footer {
-    max-width: 60%;
-    margin: 0 auto;
-    margin-top: 4em;
-    left: 0;
-    font-size: 0.9em;
-  }
 }

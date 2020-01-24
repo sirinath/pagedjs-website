@@ -10,10 +10,14 @@
   --shadow-main: var(--shadow);
   --shadow-main: none;
   --color-body: hsl(var(--tint), 20%, 20%);
+  --color-link: currentcolor;
   --color-paper: white;
+  --color-accent: var(--color-primary);
+
   --font-serif: "Minipax Variable", serif;
   /* --font-serif: "Inria Serif",  serif; */
   --font-sans: "Jost", sans-serif;
+  --font-mono: "Victor Mono"; 
   --font-size: 16px;
   --color-cropmark: black;
 

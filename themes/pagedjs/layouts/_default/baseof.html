@@ -52,7 +52,11 @@
     {{ block "script" . }}
     {{ $js := resources.Get "/js/scripts.js" }} 
       <script src="{{$js.Permalink}}"></script>
-    {{ end }}
+            {{ $smooth := resources.Get "/js/smoothscroll.js" }} 
+            <script src="{{$smooth.Permalink}}"></script>
+            <script>smoothscroll.polyfill();</script>
+
+      {{ end }}
   </body>
 
 </html>

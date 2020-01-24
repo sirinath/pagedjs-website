@@ -3,7 +3,7 @@ title: "How paged.js works"
 date: 2019-09-03T18:23:22+02:00
 draft: true
 part: 2
-weight: 2
+weight: 4
 intro: "Implementing CSS for the print is not an easy task. Here is an overview of what Paged.js is doing without you being aware of that."  
 ---
 
@@ -12,27 +12,7 @@ If you have ever tried to lay out a website for printing or to publish a book in
 
 ![Transform flux into pages](https://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/flux-page.png)
 
-## W3C CSS modules
 
-For printing pages you need very different rules from those used to display content in the browser. For example, you’ll want to declare fixed sized pages rather than lay out a continuous flow of text. Books also need many specific elements for the printed layout: margins, running headers, page numbers, a table of contents, and so on.
-
-Fortunately the work on CSS at the W3C has resulted in special modules of the CSS standard for managing the layout of a HTML document during printing. These modules can be used in a print stylesheet with the media query `@media print{}` and will only be applied when
-the web page is printed from the browser print dialog to create a PDF.
-
-- [CSS Paged Media Module Level 3](https://www.w3.org/TR/css3-page/) “describes the page model that partitions a flow into pages. (…) It adds functionality for pagination, page margins, page size and orientation, headers and footers, widows and orphans, and image orientation.”
-- [CSS Generated Content for Paged Media Module](https://www.w3.org/TR/css-gcpm-3/) defines many special requirements for the display of printed document content: running headers and footers, footnotes, generated text for cross-references or table of contents, PDF bookmarks, etc.
-- [CSS Fragmentation Module Level 3](https://www.w3.org/TR/css-break-3/) defines how and where CSS boxes can be fragmented, including across page breaks. (This module is not specific for print.)
-- [ CSS page floats](https://www.w3.org/TR/css-page-floats-3/) defines how an element is to be removed from the normal flow and instead be placed into a different place depends on page. ([see the article “Page Media approaches: page floats”](https://www.pagedmedia.org/page-floats/))
-
-## Support of W3C specifications in browsers
-
-The previous CSS standard modules were written by the World Wide Web Consortium (W3C). W3C publishes documents that define Web technologies (including CSS) which are considered Web Standards. W3C modules are published publicly throughout the process of their development until they are finally released as a [W3C Recommendation](https://www.w3.org/2018/Process-20180201/#rec-publication). The modules we need for pagined media are at various stages of the process, but most are still in the [Working Draft](https://www.w3.org/2018/Process-20180201/#revised-wd) stage.
-
-Browser developers can start implementing these recommendations at any point, knowing they may change later, but the developers are not obliged to implement all the CSS specifications until they become W3C Recommendations.
-
-Thankfully, browser developers have already taken some interest in implementing parts of the Paged Media Working Draft standards and [@page rules have partial support](https://caniuse.com/#search=%40page) in Chrome, Firefox and IE. But it’s still difficult to use these browsers effectively for the output of paginated content.
-
-So when it comes to producing paginated content from the browser, this is where we are today: the rules for printing web pages from a browser are written, and even standardised, but we can’t as yet use them effectively.
 
 ## The paged.js library
 
@@ -73,8 +53,7 @@ This doesn't prevent you from using the CSS column property in your content
 ## The Polisher: polyfilling the print declarations
 
 With the polisher part, Paged.js also builds new boxes to create page layouts and and places your content boxes on these pages.
-
-![](https://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/div-pages.png)
+{{< figure src="https://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/div-pages.png" title="" >}}
 
 In parallel, the script reads your CSS file to have information about the print styles and transforms your `@page` rules into classes that your browser understand today. We use the CSS tree library to parse the CSS from text and replace `@page` rules with classes. The polisher also replaces calls such as running headers, page counters, or CSS generated content functions with variables from the DOM.
 

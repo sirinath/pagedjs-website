@@ -2,6 +2,8 @@ html {
   /* background: url(http://www.emoisetbois.com/wp-content/uploads/2015/02/aratika-Parquet-EmoisetBois_V.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed; */
+  scroll-behavior: smooth;
+
   * {
     box-sizing: border-box;
   }
@@ -13,7 +15,7 @@ body {
   }
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: [sidebar] 27vw [start] 65vw [end];
+  grid-template-columns: [sidebar] 22vw [start] 70vw [end];
   grid-gap: 3vw;
   padding: 2em;
   background: var(--color-background);
@@ -38,23 +40,26 @@ body {
 
 main {
   &::before {
+    /* shadow for the main article */
     position: absolute;
     top: -2em;
     left: -2em;
     right: -2em;
     bottom: -2em;
     background: var(--color-paper, white);
-    box-shadow: var(--shadow-main);
+    box-shadow: var(--shadow);
     content: " ";
     z-index: -2;
   }
   transform: rotate(0deg);
   grid-column-start: start;
   grid-column-end: end;
-  width: 80%;
+  width: 90%;
+  justify-self: center;
   margin-top: auto;
   margin-top: 5em;
   position: relative;
+  
   header {
     padding-bottom: 1.5em;
     margin-top: -4em;
@@ -69,12 +74,13 @@ main {
 }
 
 article {
+  min-height: 560px;
   background: var(--color-paper);
   border: 10px solid var(--color-paper);
   margin: 0;
   position: relative;
-  padding: 1em;
-  padding-bottom: 2em;
+  padding: 2.5em; 
+  padding-bottom: 4em;
 
 }
 
@@ -114,17 +120,8 @@ article {
 }
 
 
-/* footer
---------------------------------------------- */
-footer {
-  max-width: 100%;
-  margin: 0 auto;
-  margin-top: 4em;
-  margin-right: 0;
-  font-size: 0.9em;
-}
 
-main article aside {
+main article .menu {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -132,7 +129,7 @@ main article aside {
 
   a {
     font-family: var(--font-sans);
-    color: red;
+    /* color: red; */
   }
 
   .previous {
