@@ -43,7 +43,7 @@ footer {
 
   .postit {
     /* padding-bottom: 3em; */
-    border-left-width: 0;
+    border-left-width: 0;
     max-height: unset;
     position: relative;
   }

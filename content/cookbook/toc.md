@@ -3,7 +3,7 @@ title: " A Table of Content"
 subtitle: "Find your way in your book!"
 class: "cookbook"
 colorPaper: "gold"
-baseline: "the library that prints the web"
+baseline: "the library that prints the web"
 header: "tryout"
 
 ---

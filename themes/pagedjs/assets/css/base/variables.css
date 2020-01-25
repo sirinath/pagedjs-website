@@ -10,11 +10,13 @@
   --shadow-main: var(--shadow);
   --shadow-main: none;
   --color-body: hsl(var(--tint), 20%, 20%);
-  --color-link: currentcolor;
+  --color-link: var(--color-primary);
   --color-paper: white;
   --color-accent: var(--color-primary);
 
-  --font-serif: "Minipax Variable", serif;
+  /* --font-serif: "Minipax Variable", serif; */
+  --font-serif: "Fanwood Text", serif;
+
   /* --font-serif: "Inria Serif",  serif; */
   --font-sans: "Jost", sans-serif;
   --font-mono: "Victor Mono"; 

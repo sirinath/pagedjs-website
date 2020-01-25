@@ -4,7 +4,7 @@ date: 2019-10-03T18:23:22+02:00
 draft: true
 part: 2
 weight: 3
-intro: "W3C is thinking about everything."  
+intro: "W3C is thinking about everything."  
 ---
 
 
@@ -19,6 +19,10 @@ the web page is printed from the browser print dialog to create a PDF.
 - [CSS Generated Content for Paged Media Module](https://www.w3.org/TR/css-gcpm-3/) defines many special requirements for the display of printed document content: running headers and footers, footnotes, generated text for cross-references or table of contents, PDF bookmarks, etc.
 - [CSS Fragmentation Module Level 3](https://www.w3.org/TR/css-break-3/) defines how and where CSS boxes can be fragmented, including across page breaks. (This module is not specific for print.)
 - [ CSS page floats](https://www.w3.org/TR/css-page-floats-3/) defines how an element is to be removed from the normal flow and instead be placed into a different place depends on page. ([see the article “Page Media approaches: page floats”](https://www.pagedmedia.org/page-floats/))
+
+We try to respect the specifications as much as possible, but sometimes, they can be unclear or leave a certain degree of indeterminacy. Thus, paged.js implementation is made of our own interpretation and when the rules will be implemented by the browsers, they may differ from what we would have built. 
+
+At some point, we’ll need things that are not yet thought of by the W3C. Therefore, we may develop our own rules, based on what the community of users needs. We’ll try to take the most appropriate  technically to meet the expectations of typographers and designers. In that case, we’ll write down the specifications and share those with the other W3C members.
 
 ## Support of W3C specifications in browsers
 

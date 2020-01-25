@@ -8,7 +8,7 @@ The command line version of paged.js uses a headless browser (that is, one witho
 
 First, download and install pagedjs-cli with your terminal (you need to have git and npm installed):
 
-```
+```bash {linenos=table,linenostart=1}
 $ git clone https://gitlab.pagedmedia.org/tools/pagedjs-cli.git
 $ cd pagedjs-cli
 $ npm install -g pagedjs-cli
@@ -16,13 +16,14 @@ $ npm install -g pagedjs-cli
 
 Then, in a new terminal window, go to the folder where the code of your document is located (use the `cd` command) and generate your PDF with the following command:
 
-```
+```bash {linenos=table,linenostart=1}
 $ pagedjs-cli index.html -o result.pdf
 ```
 
+
 Some options to generate the PDF:
 
-```
+```bash {linenos=table,linenostart=1}
 -h, --help                  output usage information
 -V, --version               output the version number
 -i, --inputs [inputs]       Inputs
@@ -39,3 +40,4 @@ Some options to generate the PDF:
 -e, --encoding [type]       Set the encoding of the input html, defaults to "utf-8"
 -t, --timeout [ms]          Set a max timeout of [ms]
 ```
+

@@ -8,18 +8,20 @@ draft: true
 
 To get set up with the development version, clone the repository and run the project using npm (you need to have git and npm installed):
 
-```
+```bash {linenos=table,linenostart=1}
 $ git clone https://gitlab.pagedmedia.org/tools/pagedjs.git
 $ cd pagedjs
 $ npm install
 $ npm start
 ```
 
+
 Link the script with your document:
 
-```
+```html
 <script src="http://localhost:9090/dist/paged.polyfill.js"></script>
 ```
+
 
 All you need to know about setup, development and testing with the local dev-server is available in the README.md of the repo.
 

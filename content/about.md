@@ -8,7 +8,7 @@ class: "about"
 After years of trying a lot of solutions to make books out of HTML, and frustrated by the issues we found with each one of them, we ended up by building one of our own, following some mandatory principles.
 
 1. We’ll follow the standards of the W3C. Standards is in the DNA of what we’re doing. If we want to add some feature, we'll write down the specifications and discuss with all the members of the W3C to see how it would make sense for them and we are open to anyone who want to share their thoughs.
-2. We’ll always put the community needs first: we have a [mattermost](https://mattermost.pagedmedia.org) that we use to discuss. The whole development is available through our [gitlab](https://gitlab.pagedmedia.org) and the issues are all read and answered as fast as possible.
+2. We’ll always put the community needs first: we have a [mattermost](https://mattermost.pagedmedia.org) that we use to discuss. The whole development is available through our [gitlab](https://gitlab.pagedmedia.org) and the issues are all read and answered as fast as possible.
 3. Paged.js comes either as a paginated preview or as a command line interface (<small>CLI</small>) to produce the pdf.
 4. Paged.js being a community driven project, we’ll make sure that the anyone feels just like at home, newcomers and old friends alike. To be sure that everyone is on the same page here, we’ll refer to the Contributor Convenant’s [Code of conduct]({{< ref "/code-of-conduct.md" >}}).
 
