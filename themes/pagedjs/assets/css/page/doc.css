@@ -6,6 +6,7 @@
   padding: 3em;
   counter-reset: doc;
 
+
   a {
     text-decoration: none;
     background: none;
@@ -58,7 +59,7 @@
 
   .article h2 {
     width: 100%;
-    margin-top: 2em;
+    margin-top: 0;
     position: relative;
 
     &::before {

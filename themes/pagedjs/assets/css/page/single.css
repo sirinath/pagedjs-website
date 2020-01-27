@@ -1,59 +1,96 @@
-article header {
+article {
+  header {
     margin-bottom: 6em;
     font-weight: 700;
 
     #title {
-        margin-top: 0.3em;
-        margin-bottom: 0;
-        font-weight: 700;
+      margin-top: 0.3em;
+      margin-bottom: 0;
+      font-weight: 900;
     }
 
     .intro {
-        font-family: var(--font-sans);
-        font-size: 1.3em;
-        max-width: 40ch;
+      font-family: var(--font-sans);
+      font-size: 1.3em;
+      max-width: 40ch;
     }
+    p, ul, ol, h2, h4, h5,h6  {
+        margin-left: 0;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+
+  }
+
 }
+
+
 
 /* breadcrumb */
 #breadcrumbs {
-    font-family: var(--font-sans);
-    .delimiter {
-        color: inherit;
-        font-weight: 400;
+  font-family: var(--font-sans);
+
+  .delimiter {
+    color: inherit;
+    font-weight: 400;
+  }
+  padding-bottom: .7em;
+  color: grey;
+
+  a {
+    color: inherit;
+    background: white;
+
+    &::after {
+      content: none;
     }
-    padding-bottom: .7em;
-    color: grey;
 
- a {
-     color: inherit;
-     background: white;
-     &::after {
-         content: none;
-     }
-     &:last-child {
-         color: black;
-     }
-     &:hover {
-         color:  var(--color-accent);
-     }
- }
+    &:last-child {
+      color: black;
+    }
 
-
-
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
 }
 
 article .note {
-    /* width: 30%; */
-    /* float: right; */
-    
-    padding-left: 1em;
-    font-size: 0.8em;
-    margin-left: 2em;
-    border-left: 2px solid var(--color-primary);
-    font-family: var(--font-sans);
-    grid-column: note;
-    
-    :first-child {padding-top: 0;}
+  /* width: 30%; */
+  /* float: right; */
 
+  padding-left: 1em;
+  font-size: 0.8em;
+  margin-left: 2em;
+  border-left: 2px solid var(--color-primary);
+  font-family: var(--font-sans);
+  grid-column: note;
+
+  :first-child {
+    padding-top: 0;
+  }
+}
+
+
+
+article {
+    display: grid;
+    grid-template-columns: [left] 20% [main] 80% [end];
+    #breadcrumbs {
+        grid-column: left/end;
+    }
+    header {
+        grid-column: left/end;
+    }
+    figure {
+        grid-column: left/end;
+    }
+    p, ul, ol , h1, h2, h3, h4, h5, h6 {
+        grid-column: main/end;
+    }
+    pre, blockquote, table, .highlight {
+        grid-column: left/end
+    }
+     
 }

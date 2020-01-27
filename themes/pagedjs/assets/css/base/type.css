@@ -2,7 +2,6 @@ body {
   font-family: var(--font-serif);
   font-size: var(--font-size);
   line-height: 1.6;
-  font-variation-settings: "wght" 200;
   color: var(--color-body);
   letter-spacing: 0.2px;
   font-variant-ligatures: common-ligatures;
@@ -99,8 +98,7 @@ article {
   h5,
   h6 {
     margin: 0;
-    font-weight: 200;
-    /* font-variation-settings: "wght" 200; */
+    font-weight: 400;
     font-family: var(--font-sans);
     line-height: 1.2;
     margin-top: 1.8em;
@@ -150,7 +148,9 @@ article {
   margin: 1em 0 2em 0;
 }
 pre {
-  /* font-family: var(--font-mono); */
+  padding: 0em 0.5em;
+
+  font-weight: 400;
   /* font-size: .85em; */
   padding: 0.2em 0.5em;
   border: 1px solid lightgrey;
@@ -163,13 +163,16 @@ pre {
 code {
   /* font-family: var(--font-mono); */
   font-size: .85em;
-  padding: 0em 0.5em;
+  font-family: var(--font-mono);
+  line-height: 1.2em;
 }
 
-:not(pre) code {
-  padding: 0;
-}
 
+
+article h2 :not(pre) code {
+  font-weight: 600;
+  font-size: .8em;
+}
 
 /* table */
 table {

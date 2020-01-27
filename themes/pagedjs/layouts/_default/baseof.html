@@ -8,7 +8,7 @@
       {{ end }}</title>
     {{ $css := resources.Get "./css/main.css" | resources.PostCSS (dict "config" "./assets/css/postcss.config.js" "noMap" true) | minify  | resources.Fingerprint "md5" }}
     <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}">
-    <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" />
+    {{/*  <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" />  */}}
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/caladea" type="text/css" />
     {{ block "headScripts" . }}
     {{ end }}

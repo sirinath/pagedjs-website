@@ -1,35 +1,14 @@
 {{ define "main" }}
-<div class="toc">
-  <h3>{{ .Title }}</h3>
 
-  {{ .TableOfContents }}
-
-  <aside>
-    {{ with .NextInSection }}
-    <p><span class="next">next section </span>
-    <a class="next" href="{{.Permalink}}">{{.Title}}</a>
-  </p>
-  {{ end }}
-
-  {{ with .PrevInSection }}
-    <a class="previous" href="{{.Permalink}}">{{.Title}}</a>
-    {{ end }}
-  
-  </aside>
-  </div> 
 <main>
   {{ partial "cropmarks.html" }}
-
   <article>
     {{ partial "breadcrumb.html" . }}
     <header>
       <h1 id="title">{{ .Title }}</h1>
       {{ if .Params.intro  }}<p class="intro">{{ .Params.intro | markdownify }}</p>{{end}}
-   
-          </header>
-
+    </header>
     {{ .Content }}
-   
   </article>
 </main>
 {{ end }}

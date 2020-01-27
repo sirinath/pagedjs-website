@@ -205,6 +205,8 @@ main article .menu {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-end;
+  grid-column: left/end;
+
   &.both {
     justify-content: space-between;
   }

@@ -18,6 +18,8 @@ The library fragment the content, read your css print declarations and present a
 
 By paginating content in the browser, Paged.js shows a preview of the PDF output in web browsers. This allows designers to access browsers development tools to make changes on the fly and control the rendering of the typesetting. 
 
+
+
 It's also possible to insert Paged.js into other tools and to propose to users to configure their graphical rendering by adding functionalities.
 
 As Paged.js follows the W3C standards, it can easily be a part of an automated workflows thanks to the command line interface version (using an headless browser) that can generate a PDF from scriptable and automated commands.
