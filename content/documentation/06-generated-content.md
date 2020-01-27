@@ -111,8 +111,8 @@ a::after {
 
 ## Generated content for paged media
 
-The use of generated content is possible without paged.js; `content` is a CSS property implemented in all browsers.
+The use of generated content is possible without Paged.js; `content` is a CSS property implemented in all browsers.
 
 But to design a book (or a paginated content) you need some elements added to help readers navigate between pages: running heads and footers, page numbers, table of content, index, cross-references, etc.
 
-These elements don’t exist in the HTML as a content, you need to create them automatically. To do that you can use  a combination of syntaxes and properties that paged.js implements called Generated Content for Paged Media.
+These elements don’t exist in the HTML as a content, you need to create them automatically. To do that you can use  a combination of syntaxes and properties that Paged.js implements called Generated Content for Paged Media.

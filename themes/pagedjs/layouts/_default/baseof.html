@@ -16,12 +16,11 @@
 
   <body {{ if .Params.class }} class="{{ .Params.class }}" {{ end }}>
     {{ block "sidebar" .}}
-    <div class="sidebar">
-      <button class="menuToggle">
-        <a href="{{ .Site.BaseURL }}">{{ partial "paged-monogram.html" . }} </a>
-      </button>
+    <button id="toggleMenu" class="menuToggle">
+      {{ partial "paged-monogram.html" . }}
+    </button>
+  
       {{ partial "menu.html" . }}
-    </div>
     {{ end }}
     {{ block "main" . }}
     <main style="{{ if .Params.colorPaper }} --color-paper:{{ .Params.colorPaper }} {{ end }}">
@@ -52,9 +51,9 @@
     {{ block "script" . }}
     {{ $js := resources.Get "/js/scripts.js" }} 
       <script src="{{$js.Permalink}}"></script>
-            {{ $smooth := resources.Get "/js/smoothscroll.js" }} 
+            <!-- {{ $smooth := resources.Get "/js/smoothscroll.js" }} 
             <script src="{{$smooth.Permalink}}"></script>
-            <script>smoothscroll.polyfill();</script>
+            <script>smoothscroll.polyfill();</script> -->
 
       {{ end }}
   </body>

@@ -14,7 +14,7 @@ intro: "Running headers, footnotes, stuff in margins and so on."
 
 A page box consists of two types of area: page area and page margin boxes.
 
-The **page area** is the content area of a page box. It is the  space into which all your HTML content will flow. When this content runs out of room, another page will be automatically created. It's what the chuncker part of paged.js do.
+The **page area** is the content area of a page box. It is the  space into which all your HTML content will flow. When this content runs out of room, another page will be automatically created. It's what the chuncker part of Paged.js do.
 
 The margins of a page are divided into sixteen boxes where you can put generated content like page number and running heads. These boxes are called **margin boxes**. 
 
@@ -65,7 +65,7 @@ List of the margin boxes:
 
 ## Page Counter
 
-To define page numbers, paged.js uses a CSS counter that gets incremented for each new page.
+To define page numbers, Paged.js uses a CSS counter that gets incremented for each new page.
 
 To insert a page number on a page or retrieve the total number of  pages in a document, the W3C proposes a specific counter named `page`. The counters declaration must be used within a `content` property in the margin-boxes declaration. The following example declares the page number in the bottom-left box:
 
@@ -91,7 +91,7 @@ You can also add a bit of text before the page number:
 
 
 
-To tally the total number of pages in your document, write this:
+To tally the total number of pages in your document, you can write this:
 
 ```css {linenos=table,linenostart=1}
 @page {
@@ -107,7 +107,7 @@ To tally the total number of pages in your document, write this:
 
 **Reset the page counter**
 
-Don't work correctly in paged.js for now. [Issue #31](https://gitlab.pagedmedia.org/tools/pagedjs/issues/91)
+Right now, reseting the page count to 1 is the only possible options. Check [Issue #31](https://gitlab.pagedmedia.org/tools/pagedjs/issues/91) to keep track of that option.
 
 
 
@@ -147,7 +147,7 @@ The string property act like a variable. It read your DOM and each time a new ti
 
 ### Select content of string-set
 
-This part don't work correctly in paged.js for now. Issues [#45](https://gitlab.pagedmedia.org/tools/pagedjs/issues/45), [#42](https://gitlab.pagedmedia.org/tools/pagedjs/issues/42)
+This part don't work correctly in Paged.js for now. Issues [#45](https://gitlab.pagedmedia.org/tools/pagedjs/issues/45), [#42](https://gitlab.pagedmedia.org/tools/pagedjs/issues/42)
 
 The documentation need to be finish.
 
@@ -334,7 +334,7 @@ You can see that the paragraph is kept in the margin as well as all its content.
 
 ## Select element of the page for running title/headers
 
-This part don't work correctly in paged.js for now. [Issue #38](https://gitlab.pagedmedia.org/tools/pagedjs/issues/38)
+This part don't work correctly in Paged.js for now. [Issue #38](https://gitlab.pagedmedia.org/tools/pagedjs/issues/38)
 
 The documentation need to be finish.
 
@@ -449,7 +449,7 @@ If you have used `position: running`, the styles applying to the generated conte
 
 **With string-set**
 
-If you have used `string-set`, all styles are declared in the margin box and therefore applied to the margin box. If you want certain rules to apply only to the text and not to the entire margin box, you will have to use the classes created by paged.js to reach the text.
+If you have used `string-set`, all styles are declared in the margin box and therefore applied to the margin box. If you want certain rules to apply only to the text and not to the entire margin box, you will have to use the classes created by Paged.js to reach the text.
 
 For example, if you use background-color and padding into the at-rules for page-margin box, the style are applied on the margin box.
 
@@ -475,7 +475,7 @@ Result:
 
 
 
-If you want to applied this background-color and padding only on the generated content, you need to applied the style on a special div create by paged.js: `pagedjs_margin-content`.
+If you want to applied this background-color and padding only on the generated content, you need to applied the style on a special div create by Paged.js: `pagedjs_margin-content`.
 
 
 
@@ -500,7 +500,7 @@ Result:
 
 ### Define width and height of margin boxes
 
-The height and width of the margin boxes are automatically computed by paged.js (see "Rendering of margin boxes" below) but you can easily define the size you want using relative (`%`) or absolute values (`mm`, `in`, `px`).
+The height and width of the margin boxes are automatically computed by Paged.js (see "Rendering of margin boxes" below) but you can easily define the size you want using relative (`%`) or absolute values (`mm`, `in`, `px`).
 
 ```css {linenos=table,linenostart=1}
 @page {
@@ -547,7 +547,7 @@ Result:
 
 
 
-## Rendering of margin boxes with paged.js
+## Rendering of margin boxes with Paged.js
 
 Paged.js use CSS grid and flexbox to create the margin boxes of the page. The figures below represent how margin boxes are placed with the div classes used.
 
@@ -556,7 +556,7 @@ Paged.js use CSS grid and flexbox to create the margin boxes of the page. The fi
 
 {{< figure src="https://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/margin-boxes_grid_01.png" >}}
 
-The page consists of four corner margins and four groups of margins placed on a grid with three columns and three rows. The grid use margin variables created by paged.js based on your margin and page size declarations to set the size of items.
+The page consists of four corner margins and four groups of margins placed on a grid with three columns and three rows. The grid use margin variables created by Paged.js based on your margin and page size declarations to set the size of items.
 
 **Template of the grid**
 

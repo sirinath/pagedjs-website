@@ -1,5 +1,5 @@
 ---
-title: "How paged.js works"
+title: "How Paged.js works"
 date: 2019-09-03T18:23:22+02:00
 draft: true
 part: 2
@@ -50,7 +50,7 @@ We will see that it is possible to control page breaks and change the size of th
 
 ## The Polisher: polyfilling the print declarations
 
-The Polisher is the part of paged.js that translate the CSS rules for each of your page. It builds new boxes to create page layouts and places your content in these pages. We use the CSS tree library to parse the CSS from text and replace `@page` rules with classes. The polisher also replaces calls such as running headers, page counters, or CSS generated content functions with variables from the DOM.
+The Polisher is the part of Paged.js that translate the CSS rules for each of your page. It builds new boxes to create page layouts and places your content in these pages. We use the CSS tree library to parse the CSS from text and replace `@page` rules with classes. The polisher also replaces calls such as running headers, page counters, or CSS generated content functions with variables from the DOM.
 
 {{< figure src="https://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/div-pages.png" >}}
 
@@ -132,10 +132,10 @@ Across this documentation, we will specify the CSS properties we implement and t
 
 ## The Previewer: rendering the paginated document
 
-The preview module of paged.js loads the modules, uses the polisher and the chunker to layout the content. It builds the preview of your document in your browser, so you can see exactly how things are going to look and then adjust your content accordingly.
+The preview module of Paged.js loads the modules, uses the polisher and the chunker to layout the content. It builds the preview of your document in your browser, so you can see exactly how things are going to look and then adjust your content accordingly.
 
 Behind the curtains, Paged.js modifies the DOM structure by adding some HTML elements to build and render your layout. Those modifications are made during the rendering, there is no modification of your original HTML document.
 
 It also adds references to every node (for example, it adds classes to differentiate right or left pages). This gives us complete control over the page layout without any hacks.
 
-This documentation will specify for each CSS property, the modifications of the DOM needed to build and render your book. You can also access these elements in Javascript directly with their classes if you want to go further with paged.js and add your own functions.
+This documentation will specify for each CSS property, the modifications of the DOM needed to build and render your book. You can also access these elements in Javascript directly with their classes if you want to go further with Paged.js and add your own functions.

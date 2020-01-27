@@ -17,11 +17,12 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-justify-content: center;
-    .text {
-      margin-left: 4ch;
-      max-width: 30ch;
-    }
+    justify-content: center;
+  }
+
+  .text {
+    margin-left: 4ch;
+    max-width: 30ch;
   }
 
   .print-machine {
@@ -32,9 +33,8 @@ justify-content: center;
       mix-blend-mode: multiply;
       height: 100%;
     }
-
   }
-  
+
   .menu svg path {
     fill: var(--color-primary, black);
   }
@@ -42,5 +42,23 @@ justify-content: center;
   .baseline {
     color: var(--color-primary);
   }
+}
 
+
+
+@media screen and (max-width: 1200px) {
+  .homepage article {
+    flex-direction: column;
+  }
+
+  .homepage {
+    img {
+      object-fit: contain;
+    }
+
+    .text {
+      margin-left: 0;
+      max-width: 100%;
+    }
+  }
 }

@@ -4,13 +4,13 @@ date: 2019-09-03T18:23:22+02:00
 draft: true
 part: 1 
 weight: 2
-intro: "The basics to run paged.js" 
+intro: "The basics to run Paged.js" 
 cover: "images/chuncker-1.png"
 class: documentation
 
 ---
 
-## Starting paged.js
+## Starting Paged.js
 
 Paged.js comes in two flavours: a polyfill that will automatically run when you starts the browser and a npm module that you can run. Both can be adapted to your need pretty easily, but feel free to use what’s the more convenient for you, but in this chapter, we’ll focus on the polyfill. You can find more about the esm version [here !! PLEASE ADD A LINK]()
 
@@ -41,7 +41,7 @@ You can also download that file and call it from the head of your HTML file:
 ```
 
 
-As soon as your browser has loaded everything your HTML needs to be shown on screen (including images, font files, etc.), the script will start paginating the content and pages will appear on your screen. If you need a previous version of paged.js you can check the releases on [unpgk.com](https://unpkg.com/browse/pagedjs/). Please notice the button top right to get to older versions.
+As soon as your browser has loaded everything your HTML needs to be shown on screen (including images, font files, etc.), the script will start paginating the content and pages will appear on your screen. If you need a previous version of Paged.js you can check the releases on [unpgk.com](https://unpkg.com/browse/pagedjs/). Please notice the button top right to get to older versions.
 
 ### Preview your work
 
@@ -55,7 +55,7 @@ Once Paged.js has done its work, you can generate the PDF using the Save as PDF 
 
 2. Change the _Destination_ to "Save as a PDF file”.
 
-3. In the avanced settings, as paged.js is not using any of those options, you need to be sure the that the following statements are right:
+3. In the avanced settings, as Paged.js is not using any of those options, you need to be sure the that the following statements are right:
    - _Margins_ are set to “none”,
    - “Headers and footers” is unchecked or set to none,
    - “Background graphics” is checked.

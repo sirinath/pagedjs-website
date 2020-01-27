@@ -20,7 +20,7 @@ the web page is printed from the browser print dialog to create a PDF.
 - [CSS Fragmentation Module Level 3](https://www.w3.org/TR/css-break-3/) defines how and where CSS boxes can be fragmented, including across page breaks. (This module is not specific for print.)
 - [ CSS page floats](https://www.w3.org/TR/css-page-floats-3/) defines how an element is to be removed from the normal flow and instead be placed into a different place depends on page. ([see the article “Page Media approaches: page floats”](https://www.pagedmedia.org/page-floats/))
 
-We try to respect the specifications as much as possible, but sometimes, they can be unclear or leave a certain degree of indeterminacy. Thus, paged.js implementation is made of our own interpretation and when the rules will be implemented by the browsers, they may differ from what we would have built. 
+We try to respect the specifications as much as possible, but sometimes, they can be unclear or leave a certain degree of indeterminacy. Thus, Paged.js implementation is made of our own interpretation and when the rules will be implemented by the browsers, they may differ from what we would have built. 
 
 At some point, we’ll need things that are not yet thought of by the W3C. Therefore, we may develop our own rules, based on what the community of users needs. We’ll try to take the most appropriate  technically to meet the expectations of typographers and designers. In that case, we’ll write down the specifications and share those with the other W3C members.
 
@@ -38,7 +38,7 @@ So when it comes to producing paginated content from the browser, this is where 
 
 ### Which browser to use?
 
-We really want paged.js to work perfectly with all the browsers around, but as we’re writing those words, some are more suitable than others. It depends on the features you want to have for your documents (CSS flexbox, hyphens…). But you also maybe need a browser that take into account the size property to generate PDFs. Here are some explanations to help you choose.
+We really want Paged.js to work perfectly with all the browsers around, but as we’re writing those words, some are more suitable than others. It depends on the features you want to have for your documents (CSS flexbox, hyphens…). But you also maybe need a browser that take into account the size property to generate PDFs. Here are some explanations to help you choose.
 
 #### Support of @page { size }
 
@@ -49,7 +49,7 @@ Paged.js acts like a sort of polyfill but there is one thing we can't manage tha
 - Brave
 - Opera
 
-We know that many of you are attached to Mozilla Firefox (and so are we). It is still possible to use paged.js with it but you will have to manually change the PDF size when you generate it (in the custom sizes). Be careful to calculate bleeds and crop marks if you need to add those.
+We know that many of you are attached to Mozilla Firefox (and so are we). It is still possible to use Paged.js with it but you will have to manually change the PDF size when you generate it (in the custom sizes). Be careful to calculate bleeds and crop marks if you need to add those.
 
 #### Support of CSS grid
 

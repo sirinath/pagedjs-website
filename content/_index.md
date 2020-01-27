@@ -19,7 +19,7 @@ cover: "img/1139e889a554ab3a295840.jpg" #link to the printing machine we can upd
 
 <!-- {{<img class="print-machine" src="img/1139e889a554ab3a295840.jpg">}} -->
 
-**paged.js** is an open source and free library to paginate content in the browser, to turn webpages in beautiful PDF. If it's your first encounter with the project, you may want to [read a bit about how it came to life](about). You may also want to [test the library in our Codepen](codepen) or [follow the documentation](doc).
+**Paged.js** is an open source and free library to paginate content in the browser, to turn webpages in beautiful PDF. If it's your first encounter with the project, you may want to [read a bit about how it came to life](about). You may also want to [test the library in our Codepen](codepen) or [follow the documentation](doc).
 
-Or maybe, you want to read the [latest news](blog/) around paged.js and CSS print.
+Or maybe, you want to read the [latest news](blog/) around Paged.js and CSS print.
 

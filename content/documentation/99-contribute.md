@@ -4,7 +4,7 @@ date: 2020-01-24T15:47:43+01:00
 draft: true
 ---
 
-### Collaborating on paged.js aka accessing the developer branch
+### Collaborating on Paged.js aka accessing the developer branch
 
 To get set up with the development version, clone the repository and run the project using npm (you need to have git and npm installed):
 
@@ -36,7 +36,7 @@ You can find all the documentation on their respective websites. Broadly, what y
 3. Start the local server.
 4. In your favorite browser, go to the local address provided by your application (like `http://localhost:8888`).
 
-Note: With some browsers and some operating systems, you may not need a local server for paged.js to work. To find out, simply open your HTML page (linked to the polyfill). If the paginated content appears, you don't need a local server.
+Note: With some browsers and some operating systems, you may not need a local server for Paged.js to work. To find out, simply open your HTML page (linked to the polyfill). If the paginated content appears, you don't need a local server.
 
 
 
@@ -45,7 +45,7 @@ Note: With some browsers and some operating systems, you may not need a local se
 Paged.js transforms your content so that it can be viewed in a browser. PDF generation can be done in two ways:
 
 - using the print features of your browser,
-- using the [pagedjs-cli](https://gitlab.pagedmedia.org/tools/pagedjs-cli) tool based on paged.js and [Puppeteer](https://github.com/GoogleChrome/puppeteer).
+- using the [pagedjs-cli](https://gitlab.pagedmedia.org/tools/pagedjs-cli) tool based on Paged.js and [Puppeteer](https://github.com/GoogleChrome/puppeteer).
 
 
 

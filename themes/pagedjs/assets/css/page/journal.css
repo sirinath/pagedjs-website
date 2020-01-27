@@ -16,10 +16,10 @@
     background: url(https://images.unsplash.com/photo-1512331455279-c8ae8178f586?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80);
     background: var(--color-paper);
     background-size: cover;
-    width: 30%;
+    max-width: 30%;
     filter: grayscale();
     padding: 2em;
-
+    min-width: 300px;
     .crop-marks {
       display: none;
     }
@@ -103,6 +103,7 @@
       }
     }
   }
+
   &:hover h2 {
     color: var(--color-accent);
   }

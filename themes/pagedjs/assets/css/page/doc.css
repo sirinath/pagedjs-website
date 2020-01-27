@@ -5,9 +5,11 @@
   flex-direction: column;
   padding: 3em;
   counter-reset: doc;
+
   a {
     text-decoration: none;
     background: none;
+    font-style: normal;
   }
 
   * {
@@ -16,11 +18,13 @@
 
   ul li {
     list-style-type: none;
+
     > ul {
       margin-left: 3ch;
       border-left: 1px solid black;
       padding-left: 2ch;
     }
+
     &::before {
       content: none;
     }
@@ -36,22 +40,26 @@
     max-width: 45ch;
     font-size: 1em;
     font-family: var(--font-sans);
-    
   }
 
   span {
     font-family: var(--font-serif);
     font-size: 0.9em;
   }
-.intro {
-  padding-left: 1em;
-  border-left: 2px solid currentcolor;
 
-}
+  .intro {
+    padding-left: 1em;
+    border-left: 2px solid currentcolor;
+  }
+
+  .article {
+    margin-left: 0;
+  }
+
   .article h2 {
     width: 100%;
     margin-top: 2em;
-position: relative;
+    position: relative;
 
     &::before {
       content: ".................................................................................................................................................";
@@ -72,6 +80,7 @@ position: relative;
       position: relative;
       z-index: 100;
       padding-right: 0.5ch;
+
       &::after {
         line-height: 1.2em;
         padding-left: 1ch;
@@ -79,19 +88,16 @@ position: relative;
         float: right;
         background: var(--color-paper);
       }
-
     }
 
     .toc-emoji {
       float: right;
-      position: relative; 
+      position: relative;
       background: var(--color-paper);
       padding-left: 1ch;
-
     }
   }
 
-  header {
-    color: red;
-  }
 }
+
+

@@ -51,6 +51,11 @@ article {
     max-width: 60ch;
   }
 
+  li { 
+    max-width: calc(60ch - 10ch);
+    margin-left: 5ch;
+  } 
+
   a {
     text-decoration: none;
     border: 0;
@@ -215,3 +220,4 @@ table {
   display: none;
 }
 }
+

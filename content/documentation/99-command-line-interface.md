@@ -1,10 +1,10 @@
 ---
-title: "99 Command Line Interface"
+title: "Command Line Interface"
 date: 2020-01-24T15:48:36+01:00
 draft: true
 ---
 
-The command line version of paged.js uses a headless browser (that is, one without a graphical interface) to generate a PDF. The browser used is Chromium. This means that you can use paged.js in fully automated workflows. With the command line version, you don't need to call the paged.js script in your document: it will be done automatically.
+The command line version of Paged.js uses a headless browser (that is, one without a graphical interface) to generate a PDF. The browser used is Chromium. This means that you can use Paged.js in fully automated workflows. With the command line version, you don't need to call the Paged.js script in your document: it will be done automatically.
 
 First, download and install pagedjs-cli with your terminal (you need to have git and npm installed):
 

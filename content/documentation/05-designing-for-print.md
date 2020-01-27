@@ -21,7 +21,7 @@ weight: 5
 
 ## The `@media print` query
 
-Responsive design is made possible by the use of media queries: a set of CSS properties that you can use to define the styles when your web page is rendered on a tablet terminal, a phone, a TV screen, etc. One of those media queries, the `@media print` was specifically made to print a webpage. For example, you can remove menu, icons, change the way the hyperlinks will appear, etc. As a polyfill, paged.js will use the CSS rules under that media queries to define the styles of your book:
+Responsive design is made possible by the use of media queries: a set of CSS properties that you can use to define the styles when your web page is rendered on a tablet terminal, a phone, a TV screen, etc. One of those media queries, the `@media print` was specifically made to print a webpage. For example, you can remove menu, icons, change the way the hyperlinks will appear, etc. As a polyfill, Paged.js will use the CSS rules under that media queries to define the styles of your book:
 
 ```css {linenos=table,linenostart=1}
 @media print {
@@ -29,7 +29,7 @@ Responsive design is made possible by the use of media queries: a set of CSS pro
 }
 ```
 
-If you don’t use paged.js, the styles declared in this media query will only be applied when the web page is printed (or saved as PDF) from the browser print dialog. For example, the font-size may vary from the screens to the printer or images might be removed (with `display:none`) to save some ink. If you use Paged.js, you’ll be able to see in your browser a preview of how your styles will appear when printing.
+If you don’t use Paged.js, the styles declared in this media query will only be applied when the web page is printed (or saved as PDF) from the browser print dialog. For example, the font-size may vary from the screens to the printer or images might be removed (with `display:none`) to save some ink. If you use Paged.js, you’ll be able to see in your browser a preview of how your styles will appear when printing.
 
 ## @page rule
 
@@ -37,7 +37,7 @@ The @page rule lets you specify various aspects of your page model such as dimen
 
 ### Page size property
 
-The `size` property specifies the size of your page (excluding bleeds). This fixed size can be declared by length units in centimeters (`cm`) millimeters (`mm`) or inches (`in`). The first number is the width of your document and the second number is the height. By default, paged.js uses the letter size (8.5in × 11in).
+The `size` property specifies the size of your page (excluding bleeds). This fixed size can be declared by length units in centimeters (`cm`) millimeters (`mm`) or inches (`in`). The first number is the width of your document and the second number is the height. By default, Paged.js uses the letter size (8.5in × 11in).
 It's also possible to specify the page size by using keywords that can be combined with page orientation (`portrait` or `landscape`). By default, your page will always be printed as portrait.
 
 
