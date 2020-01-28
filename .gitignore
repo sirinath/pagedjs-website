@@ -2,3 +2,5 @@ node_modules
 .vscode
 public
 resources
+# Local Netlify folder
+.netlify
