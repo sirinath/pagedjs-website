@@ -89,7 +89,7 @@ article {
     p, ul, ol , h1, h2, h3, h4, h5, h6 , blockquote {
         grid-column: main/end;
     }
-    pre,  table, .highlight {
+    pre,  table, .highlight, .talkyard-comments {
         grid-column: left/end
     }
      .signature {
@@ -135,4 +135,8 @@ article {
      }
 
      
+}
+
+.talkyard-comments {
+  margin-top: 100px !important;
 }
