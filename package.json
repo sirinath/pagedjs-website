@@ -1,0 +1,22 @@
+{
+  "name": "pagedjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "postcss": "^7.0.26",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.2.1",
+    "postcss-url": "^8.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.pagedmedia.org:julientaq/pagedjs-website.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
