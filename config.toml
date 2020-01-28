@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://hungry-boyd-59d45a.netlify.com/"
 languageCode = "en-us"
 title = "pagedjs, house of HTML printing" 
 theme = "pagedjs"
