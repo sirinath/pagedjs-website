@@ -86,7 +86,7 @@ article {
     figure {
         grid-column: left/end;
     }
-    p, ul, ol , h1, h2, h3, h4, h5, h6 , blockquote{
+    p, ul, ol , h1, h2, h3, h4, h5, h6 , blockquote {
         grid-column: main/end;
     }
     pre,  table, .highlight {

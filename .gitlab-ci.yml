@@ -1,19 +1,15 @@
-image: registry.gitlab.com/pages/hugo:latest
+stages:
+  - deploy
 
-variables:
-  GIT_SUBMODULE_STRATEGY: recursive
-
-test:
-  script:
-  - /home/linuxbrew/.linuxbrew/bin/hugo
-  except:
-  - master
-
-pages:
-  script:
-  - /home/linuxbrew/.linuxbrew/bin/hugo
-  artifacts:
-    paths:
-    - public
+deploy:
+  stage: deploy
+  environment:
+    name: production
+    url: https://www.pagedjs.org
   only:
-  - master
+    - master
+  script:
+    - npm i
+    # your build command
+    - hugo
+    - npx netlify-cli deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod
