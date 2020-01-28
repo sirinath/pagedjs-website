@@ -1,7 +1,7 @@
 ---
 title: "W3C specifications for printing"
 date: 2019-10-03T18:23:22+02:00
-draft: true
+draft: false
 part: 2
 weight: 3
 intro: "W3C is thinking about everything."  

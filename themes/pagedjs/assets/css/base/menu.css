@@ -42,7 +42,7 @@ button.menuToggle {
     display: flex;
     border: 0;
     box-shadow: 0;
-    background: var(--color-background);
+    background: transparent;
   svg {
     path {
       fill: var(--color-primary);

@@ -1,7 +1,7 @@
 ---
 title: "The big picture"
 date: 2019-09-03T18:23:22+02:00
-draft: true
+draft: false
 part: 1 
 weight: 1
 tocEmoji: " 🖼"

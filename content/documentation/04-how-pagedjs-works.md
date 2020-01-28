@@ -1,7 +1,7 @@
 ---
 title: "How Paged.js works"
 date: 2019-09-03T18:23:22+02:00
-draft: true
+draft: false
 part: 2
 weight: 4
 intro: "If you have ever tried to lay out a website for printing or to publish a book in HTML, you’ll have experienced the limitations of styling meant for displaying scrolling text on screens. Paged.js helps make it possible to produce paginated material from your browser."  
@@ -56,7 +56,7 @@ The Polisher is the part of Paged.js that translate the CSS rules for each of yo
 
 Let's take the following CSS as an example:
 
-```css {linenos=table,linenostart=1}
+```css 
 @page {
   size: 148mm 210mm;
   margin-top: 10mm;
@@ -84,7 +84,7 @@ h1#title {
 
 Paged.js transforms this into CSS that is understandable to the browser:
 
-```css {linenos=table,linenostart=1}
+```css 
 .pagedjs_page {
 	--pagedjs-string-title: "Moby Dick";
 	margin-top: 10mm;

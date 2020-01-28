@@ -86,11 +86,53 @@ article {
     figure {
         grid-column: left/end;
     }
-    p, ul, ol , h1, h2, h3, h4, h5, h6 {
+    p, ul, ol , h1, h2, h3, h4, h5, h6 , blockquote{
         grid-column: main/end;
     }
-    pre, blockquote, table, .highlight {
+    pre,  table, .highlight {
         grid-column: left/end
     }
+     .signature {
+         grid-column: main/end;
+         font-family: var(--font-sans);
+         margin-top: 2em;
+         font-size: 0.8em;
+         max-width: 60%;
+         /* margin: 5em 0 auto auto; */
+         line-height: 1.6em;
+         .name {
+             border-bottom: 1px solid var(--color-primary);
+         }
+     }
+
+     .signature img {
+         float: left;
+         display: block;
+         width: 73px;
+         margin-left: -90px;
+                  height: auto;
+         margin-right: 1em;
+        border-radius: 50%;
+        /* box-shadow: 0 0 0 5px var(--color-primary); */
+     }
+
+
+     .meta {
+         font-family: var(--font-sans);
+         border-bottom: 1px solid grey;
+         a {
+             font-style: normal;
+             margin-left: 2ch;
+             font-weight: 400;
+             background: transparent;
+         }
+     }
+     .date {
+         grid-column: left;
+         font-family: var(--font-sans);
+         font-size: 0.8em;
+         padding-top: 2px;
+     }
+
      
 }

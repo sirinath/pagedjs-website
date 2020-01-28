@@ -3,12 +3,33 @@
 <main>
   {{ partial "cropmarks.html" }}
   <article>
-    {{ partial "breadcrumb.html" . }}
+    {{/*  {{ partial "breadcrumb.html" . }}  */}}
     <header>
+      <div class="meta">
+      <span class="date">{{ dateFormat "2/1/2006" .Date  }}</span>
+    {{ partial "tag-coma.html" . }}
+  </div>
       <h1 id="title">{{ .Title }}</h1>
       {{ if .Params.intro  }}<p class="intro">{{ .Params.intro | markdownify }}</p>{{end}}
     </header>
+    
+
     {{ .Content }}
+    <aside class="paginator {{ if and .NextInSection .PrevInSection }} both{{ end }}">
+      {{ with .NextInSection }}
+        <a class="previous" href="{{.Permalink}}">{{.Title}}</a>
+      {{ end }}
+      {{ if .NextInSection }}
+        {{ with .PrevInSection }}
+          <a class="next" href="{{.Permalink}}">{{.Title}}</a>
+        {{ end }}
+        {{ else }}
+          {{ with .PrevInSection }}
+            <a class="next alone" href="{{.Permalink}}">{{.Title}}</a>
+          {{ end }}
+        {{ end }}
+        
+    </aside>
   </article>
 </main>
 {{ end }}

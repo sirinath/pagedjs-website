@@ -2,25 +2,236 @@
 title: " A Table of Content"
 subtitle: "Find your way in your book!"
 class: "cookbook"
+date: 2019-12-12T15:56:54+01:00
 colorPaper: "gold"
 baseline: "the library that prints the web"
 header: "tryout"
-
+intro: "You got some HTML content you want to make a book with, but it would takes too much time to set the ids and hyperlinks? We got you covered!" 
 ---
 
 
-Nostrud aliqua et nulla qui enim deserunt exercitation aliquip fugiat. Laboris veniam exercitation minim nisi consectetur esse aliqua tempor aliquip et. Dolore enim esse consectetur irure adipisicing voluptate laboris et do. Elit sit ut qui cupidatat nulla officia fugiat.
+In this part of the doc, we'll show you how to build a table of content using a custom script and the css  function `target-counter()` for the `content` property.
 
-Do anim excepteur ea duis qui. Nostrud est incididunt aute fugiat nulla exercitation occaecat dolore deserunt. Veniam dolore eu consectetur proident et elit velit laboris eiusmod labore dolore qui id in. Adipisicing occaecat incididunt culpa proident fugiat Lorem ipsum.
 
-Eiusmod consequat dolore dolore velit veniam eu culpa non adipisicing. Amet officia fugiat consectetur pariatur reprehenderit laborum. Incididunt duis nostrud nostrud cupidatat voluptate. Tempor do nulla sunt est proident exercitation laborum amet labore culpa veniam. Et ut incididunt fugiat et veniam cillum commodo quis duis excepteur proident cillum. Id commodo ea velit duis et sit.
+## Build the table of content from your html
 
-Elit nulla adipisicing id qui ex laborum elit tempor veniam commodo. Est esse et sit enim minim do commodo adipisicing deserunt laborum dolor est eiusmod. Id ut duis laborum aliqua quis Lorem commodo pariatur sint Lorem nostrud anim. Id ea officia mollit esse pariatur do. Amet ea magna proident sit nostrud ullamco aute consequat eu consectetur. Ut quis eiusmod veniam aliquip eu amet do non qui pariatur magna. Laboris voluptate quis officia enim labore reprehenderit in ipsum anim ut.
+In HTML, a table of content is a `<nav>` elements that contain a list of the reveleant titles of your document with a link to the unique identifier of each. This part can be done with your own tool/generator but here is an exemple of a script to generate a table of content in vanilla javascript: 
 
-Commodo cillum consequat cillum veniam sit ullamco officia est sint enim et. Ipsum nisi non id anim irure. Dolore reprehenderit ipsum Lorem ea mollit proident aliqua do ad reprehenderit. Officia minim sunt enim minim consequat elit veniam et. Ullamco dolor voluptate commodo aliqua irure deserunt elit non eiusmod tempor cillum adipisicing culpa. Veniam reprehenderit aliquip fugiat laborum proident elit sit qui sunt.
+```js
+function createToc(config){
+    const content = config.content;
+    const tocElement = config.tocElement;
+    const titleElements = config.titleElements;
+    
+    let tocElementDiv = content.querySelector(tocElement);
+    let tocUl = document.createElement("ul");
+    tocUl.id = "list-toc-generated";
+    tocElementDiv.appendChild(tocUl); 
 
-Sit laboris id Lorem est magna nisi fugiat incididunt sunt esse. Ut esse ad sunt eu sit consectetur nulla sit labore non excepteur. Qui fugiat consequat occaecat sunt eu magna ipsum dolor irure pariatur voluptate dolore ea.
+    // add class to all title elements
+    let tocElementNbr = 0;
+    for(var i= 0; i < titleElements.length; i++){
+        
+        let titleHierarchy = i + 1;
+        let titleElement = content.querySelectorAll(titleElements[i]);    
+        
 
-Adipisicing cillum consectetur ex enim adipisicing velit ullamco id. Non minim proident elit labore elit commodo esse veniam duis tempor pariatur elit voluptate eiusmod. Ullamco quis occaecat Lorem non aliquip minim. Mollit eiusmod id sunt ex labore adipisicing anim. Lorem sint eiusmod sint laboris aliquip officia nostrud nulla. Sint eu non anim ipsum quis adipisicing.
+        titleElement.forEach(function(element) {
 
-Dolore exercitation Lorem consequat amet magna id voluptate Lorem esse ut sint deserunt aute est. Nostrud consectetur minim adipisicing ex exercitation excepteur nostrud dolore. Sunt nulla ullamco cillum esse consectetur laboris in quis sunt fugiat enim eiusmod ad irure.
+            // add classes to the element
+            element.classList.add("title-element");
+            element.setAttribute("data-title-level", titleHierarchy);
+
+            // add id if doesn't exist
+            tocElementNbr++;
+            idElement = element.id;
+            if(idElement == ''){
+                element.id = 'title-element-' + tocElementNbr;
+            } 
+            let newIdElement = element.id;
+
+        });
+
+    }
+
+    // create toc list
+    let tocElements = content.querySelectorAll(".title-element");  
+
+    for(var i= 0; i < tocElements.length; i++){
+        let tocElement = tocElements[i];
+        let tocNewLi = document.createElement("li");
+        tocNewLi.classList.add("toc-element");
+        tocNewLi.classList.add("toc-element-level-" + tocElement.dataset.titleLevel);
+        tocNewLi.innerHTML = '<a href="#' + tocElement.id + '">' + tocElement.innerHTML + '</a>';
+        tocUl.appendChild(tocNewLi);  
+    }
+
+}
+```
+
+
+
+Copy this script to a `.js` and link this file to your document.
+
+
+
+The table of content need to be generated before paged.js fragment the content into pages. Therefore, you need to register the handler `beforeParsed()` and call the table of content script inside.   
+
+Add this code in the `head` of you html document after the call for paged.js script:
+
+
+
+```html
+<script>
+  class handlers extends Paged.Handler {
+    constructor(chunker, polisher, caller) {
+      super(chunker, polisher, caller);
+    }
+
+    beforeParsed(content){          
+      createToc({
+        content: content,
+        tocElement: '#my-toc-content',
+        titleElements: [ '.mw-content-ltr h2', 'h3' ]
+      });
+    }
+    
+  }
+  Paged.registerHandlers(handlers);
+</script>
+```
+
+
+
+### Configuring the script
+
+
+`tocElement`: define the id element where the toc list will be created
+
+`titleElements`: array of the title element you want in the your table of content. You can add as many as you want and the elements can be selected like any css, for example: `.title-1` or `.my-content h1`
+
+
+
+
+
+## Generate page numbers
+
+Thanks to the previous script, your content is now structured using `id` for the heading, and the table of contents we created use hyperlinks to those `#id`:
+
+```html
+<!-- the headings in the text-->
+<h1 id="pre-digital_era" class="title-element" data-title-level="h1">Pre-digital era</h1>
+<p>Content...</p>
+<h1 id="digital_era" class="title-element" data-title-level="h1">Digital era</h1>
+<p>Content...</p>
+```
+
+```html
+<!-- the table of contents-->
+<ul id="toc">
+  <li><a href="#pre-digital_era">Pre-digital era</a></li>
+  <li><a href="#digital_era">Digital era</a></li>
+</ul>
+```
+
+In the CSS, the `target-counter` property is used within `::before` and `::after` pseudo-elements, using the `content` property. It can be translated as: find the counter named `page` that appears where you find the element we’re targetting with the attribute `href`:
+
+```CSS
+#toc li a::after{
+	content: target-counter(attr(href), page);
+  float: right;
+}
+```
+
+
+
+## Add styles to the table of contents
+
+If you need to add counters or leaders to your table of content generated above, here is an exemple of CSS you can use:
+
+
+
+```css
+/* set the style for the list numbering to none */
+#list-toc-generated{ list-style: none;}
+
+#list-toc-generated .toc-element a::after{
+    content: " p. " target-counter(attr(href), page);
+    float: right;
+}
+
+#list-toc-generated .toc-element-level-1{
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+#list-toc-generated .toc-element-level-2{
+    margin-left: 25px;
+}
+
+
+
+/* counters */
+
+#list-toc-generated{ 
+    counter-reset: counterTocLevel1; 
+}
+
+#list-toc-generated .toc-element-level-1{ 
+    counter-increment: counterTocLevel1; 
+    counter-reset: counterTocLevel2; 
+}
+
+#list-toc-generated .toc-element-level-1::before{ 
+    content: counter(counterTocLevel1) ". ";
+    padding-right: 5px;
+}
+
+#list-toc-generated .toc-element-level-2{ 
+    counter-increment: counterTocLevel2; 
+}
+
+#list-toc-generated .toc-element-level-2::before{ 
+    content: counter(counterTocLevel1) ". " counter(counterTocLevel2) ". ";
+    padding-right: 5px;
+}
+
+
+
+/* hack for leaders */
+
+#list-toc-generated{
+    overflow-x: hidden;
+}
+
+/* fake leading */
+#list-toc-generated .toc-element::after{
+    content: 
+        ".............................................."
+        ".............................................."
+        ".............................................."  
+        "........";
+    float: left;
+    width: 0;
+    padding-left: 5px;
+    letter-spacing: 2px;
+}
+
+#list-toc-generated .toc-element{
+    display: flex; 
+}
+
+#list-toc-generated .toc-element a::after{
+    position: absolute;
+    right: 0;
+    background-color: white;
+    padding-left: 6px;
+}
+
+#list-toc-generated .toc-element a{
+    right: 0;
+}
+```
+
+And *voilà*!
+All the files (scripts, CSS, HTML exemples) to create a table of content are available on gitlab: [https://gitlab.pagedmedia.org/tools/experiments/tree/master/table-of-content](https://gitlab.pagedmedia.org/tools/experiments/tree/master/table-of-content).

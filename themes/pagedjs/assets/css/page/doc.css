@@ -1,4 +1,6 @@
 .doc-list {
+  font-family: var(--font-sans);
+
   background: white;
   grid-column: start;
   display: flex;

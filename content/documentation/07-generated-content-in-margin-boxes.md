@@ -1,10 +1,10 @@
 ---
 title: "Generated Content in Margin Boxes"
 date: 2019-09-03T18:23:22+02:00
-draft: true
+draft: false
 part: 6
 class: documentation
-weight: 12
+weight: 7
 # colorPrimary: "#aaa"
 # colorHeading: "white"
 intro: "Running headers, footnotes, stuff in margins and so on."
@@ -29,7 +29,7 @@ You can select this margins boxes in  the `@page` rules with rules such as `@top
 
 The code below put your title in the `@top-right` margin box of all right pages:
 
-```css {linenos=table,linenostart=1}
+```css 
 @page:right {
   @top-right {
     content: "My title";
@@ -40,7 +40,7 @@ The code below put your title in the `@top-right` margin box of all right pages:
 
 List of the margin boxes:
 
-```css {linenos=table,linenostart=1}
+```css 
 @top-left-corner {}
 @top-left {}
 @top-center {}
@@ -69,7 +69,7 @@ To define page numbers, Paged.js uses a CSS counter that gets incremented for ea
 
 To insert a page number on a page or retrieve the total number of  pages in a document, the W3C proposes a specific counter named `page`. The counters declaration must be used within a `content` property in the margin-boxes declaration. The following example declares the page number in the bottom-left box:
 
-```css {linenos=table,linenostart=1}
+```css 
 @page {
   @bottom-left {
         content: counter(page);
@@ -81,7 +81,7 @@ To insert a page number on a page or retrieve the total number of  pages in a do
 
 You can also add a bit of text before the page number:
 
-```css {linenos=table,linenostart=1}
+```css 
 @page {
   @bottom-left {
         content: "page " counter(page);
@@ -93,7 +93,7 @@ You can also add a bit of text before the page number:
 
 To tally the total number of pages in your document, you can write this:
 
-```css {linenos=table,linenostart=1}
+```css 
 @page {
   @bottom-left {
         content: "Page " counter(page) " of " counter(pages);
@@ -117,7 +117,7 @@ The fastest way to create running headers/footers is to use what is already in y
 
 First, the text content of the selected element is cloned into a named string using `string-set`  with a custom identifier (in the code below we call it “title”, but you  can name it whatever makes sense as a variable). In the following  example, each time a new `<h2>` appears in the HTML, the content of the named string gets updated with the text of that `<h2>`. (It also can be selected with a class if you prefer).
 
-```css {linenos=table,linenostart=1}
+```css 
 h2 {  string-set: title content(text) }
 ```
 
@@ -125,7 +125,7 @@ h2 {  string-set: title content(text) }
 
 Next, the `string()` function copies the value of a named string to the margin boxes, via the `content` property.
 
-```css {linenos=table,linenostart=1}
+```css 
 @page {
   @bottom-center {
     content: string(title)
@@ -167,7 +167,7 @@ It's possible to define multiple value in the same `string-set`.
 
 Sample: 
 
-```css {linenos=table,linenostart=1}
+```css 
 h2::before {
   content: "Chapter " counter(countChapter, upper-roman);
 }
@@ -194,7 +194,7 @@ The content is copied, so to stylize it you have to apply the styles directly in
 
 For example, if you want to capitalize your title and give it a size of 11px:
 
-```css {linenos=table,linenostart=1}
+```css 
 @page {
   @bottom-center {
     content: string(title);
@@ -266,7 +266,7 @@ First, add dedicated element for running title in your HTML (just after the titl
 
 After, set the element’s `position` to running. Here, “titleRunning” is a custom identifier,  you can name it whatever makes sense to you.
 
-```css {linenos=table,linenostart=1}
+```css 
 .title {
   position: running(titleRunning);
 }
@@ -276,7 +276,7 @@ After, set the element’s `position` to running. Here, “titleRunning” is a 
 
 Then, place the element into a margin box with the `element()` function via the `content` property:
 
-```css {linenos=table,linenostart=1}
+```css 
 @page {
   @top-center {
     content: element(titleRunning)
@@ -300,7 +300,7 @@ Since the element is copied, all styles are copied with it. That is, if you have
 
 With the following code, your running header will appear in capital letters and with a size of 11px:
 
-```css {linenos=table,linenostart=1}
+```css 
 .title{
   position: running(titleRunning);
   text-transform: uppercasse;
@@ -358,7 +358,7 @@ Cab be combined with other possible values for the content property.
 
 Forced page breaks can create blank page,  e.g., pages automatically added to make sure a new chapter begins on the desired left or right page. The `:blank` pseudo class selector selects pages that have no content from the flow. To delete the generated content in blank page, simply use `content: none` in selected margin boxes of the blank pages.
 
-```css {linenos=table,linenostart=1}
+```css 
 @page:blank {
   @top-left { content: none; }
 }
@@ -374,7 +374,7 @@ Forced page breaks can create blank page,  e.g., pages automatically added to ma
 
 You can stylize the margin-boxes by applying styles directly into the at-rules for page-margin boxes.
 
-```css {linenos=table,linenostart=1}
+```css 
 @page{
   @top-left{
     content: "My title";
@@ -427,7 +427,7 @@ You can specify that some CSS rules only apply to your margin box while others a
 
 If you have used `position: running`, the styles applying to the generated content must be declared in the running element and the styles applying to the margin box in the at-rules for page-margin boxes.
 
-```css {linenos=table,linenostart=1}
+```css 
 .running { 
   position: running(chapTitle);
   font-size: 12px;
@@ -453,7 +453,7 @@ If you have used `string-set`, all styles are declared in the margin box and the
 
 For example, if you use background-color and padding into the at-rules for page-margin box, the style are applied on the margin box.
 
-```css {linenos=table,linenostart=1}
+```css 
 @page:left {
   @top-left{
     background-color: #ffd2b5;
@@ -479,7 +479,7 @@ If you want to applied this background-color and padding only on the generated c
 
 
 
-```css {linenos=table,linenostart=1}
+```css 
 .pagedjs_left_page .pagedjs_margin-top-left .pagedjs_margin-content{
     width: auto;
     background-color: #ffd2b5;
@@ -502,7 +502,7 @@ Result:
 
 The height and width of the margin boxes are automatically computed by Paged.js (see "Rendering of margin boxes" below) but you can easily define the size you want using relative (`%`) or absolute values (`mm`, `in`, `px`).
 
-```css {linenos=table,linenostart=1}
+```css 
 @page {
   @left-top {
     width: 28mm;
@@ -519,7 +519,7 @@ The height and width of the margin boxes are automatically computed by Paged.js 
 
 By using the `tranfsorm()` property you can easily rotate the margin-boxes of your document
 
-```css {linenos=table,linenostart=1}
+```css 
 @page {
   @left-top {
     width: 28mm;
@@ -560,7 +560,7 @@ The page consists of four corner margins and four groups of margins placed on a 
 
 **Template of the grid**
 
-```css {linenos=table,linenostart=1}
+```css 
 
 .pagedjs_pagebox {
   grid-template-columns:  [left] var(--pagedjs-margin-left) 

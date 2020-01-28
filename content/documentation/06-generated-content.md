@@ -1,7 +1,7 @@
 ---
 title: "Generated Content"
 date: 2019-09-03T18:23:22+02:00
-draft: true
+draft: false
 intro: "The content property in CSS is one powerfull way to add structure to your content, without fixing it in the HTML. Let’s check how the web manage those automatically created properties before we get to what Paged.js can create automatically"  
 weight: 6
 ---
@@ -17,7 +17,7 @@ In technical terms, generated content exists only in the layout of the web docum
 
 The `content` property is used within `::before` and `::after` pseudo-elements. In the declaration, specify the `content` property what you want to generate automatically as its value. For example, the following rule inserts the string "Note: " before the every element whose class attribute contains "note":
 
-```css {linenos=table,linenostart=1}
+```css 
 .note::before {
 	content: "Note: ";
 }
@@ -26,7 +26,7 @@ The `content` property is used within `::before` and `::after` pseudo-elements. 
 
 You can style the element right where it’s set, like this:
 
-```css {linenos=table,linenostart=1}
+```css 
 .note::before {
 	content: "Note: ";
 	color: red;
@@ -48,7 +48,7 @@ In your HTML:
 
 In your CSS:
 
-```css {linenos=table,linenostart=1}
+```css 
 p.ref::before {
   content: attr(data-ref-id);
 }
@@ -57,7 +57,7 @@ p.ref::before {
 
 It's also possible to combine elements in the content property:
 
-```css {linenos=table,linenostart=1}
+```css 
 p.ref::before {
   content: "Reference " attr(data-ref-id) ": ";
 }
@@ -72,7 +72,7 @@ Once displayed you will have this text:
 
 `css-counter` is a CSS property that lets you count elements within your content. For example, you might want to add a number before each figure caption. To do so, you would reset the counter in the `<body>` selector, increment it any time a caption appears in the content, and display that number in a `::before` pseudo-element.
 
-```css {linenos=table,linenostart=1}
+```css 
 body {
   counter-reset: figureNumber;
 }
@@ -91,7 +91,7 @@ figcaption::before {
 
 If you need to have an image in your generated content, you can do it like this:
 
-```css {linenos=table,linenostart=1}
+```css 
 .glossary::after {
   content: " " url("/images/glossary-icon.png");
 }
@@ -102,7 +102,7 @@ If you need to have an image in your generated content, you can do it like this:
 
 It can be useful to display the actual links of your content as a long URL when you want to print your webpage. The following example inserts the value of the href attribute in parentheses after each `<a>` element:
 
-```css {linenos=table,linenostart=1}
+```css 
 a::after {
   content: " (" attr(href) ")";
 }

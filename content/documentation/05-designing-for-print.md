@@ -1,7 +1,7 @@
 ---
 title: "Web design for print"
 date: 2019-09-03T18:23:22+02:00
-draft: true
+draft: false
 part: 4
 intro: "If you want to start designing your own book, now is the perfect time!"
 weight: 5
@@ -23,7 +23,7 @@ weight: 5
 
 Responsive design is made possible by the use of media queries: a set of CSS properties that you can use to define the styles when your web page is rendered on a tablet terminal, a phone, a TV screen, etc. One of those media queries, the `@media print` was specifically made to print a webpage. For example, you can remove menu, icons, change the way the hyperlinks will appear, etc. As a polyfill, Paged.js will use the CSS rules under that media queries to define the styles of your book:
 
-```css {linenos=table,linenostart=1}
+```css 
 @media print {
   /* All your print styles go here */
 }
@@ -41,7 +41,7 @@ The `size` property specifies the size of your page (excluding bleeds). This fix
 It's also possible to specify the page size by using keywords that can be combined with page orientation (`portrait` or `landscape`). By default, your page will always be printed as portrait.
 
 
-```css {linenos=table,linenostart=1}
+```css 
 
 /* Define a custom page size */
 @page {
@@ -98,7 +98,7 @@ Warning: the browser can only understand one page size for your document. If you
 
 The margins of your pages needs to be declared in the `@page` rule with the same syntax you usually use for the margins. You can use length units like centimeters (`cm`) millimeters (`mm`), inches (`in`) or pixels (`px`).
 
-```css {linenos=table,linenostart=1}
+```css 
 @page {
   margin: 20mm 30mm;
 }
@@ -109,7 +109,7 @@ By default, the margins are set to 1 inch.
 
 Other examples with different syntaxes:
 
-```css {linenos=table,linenostart=1}
+```css 
 /* All margins are 30mm */
 @page {
   margin: 30mm;
@@ -139,7 +139,7 @@ Since Gutemberg, books are designed with facing pages in mind: the left and righ
 
 Let's look at an example with different margins: outside margins are bigger than inside onex.
 
-```css {linenos=table,linenostart=1}
+```css 
 @page:left {
   margin-left: 25mm;
   margin-right: 10mm;
@@ -170,7 +170,7 @@ The `break-before` property indicates that your element should start on a new pa
 
 Let's imagine you have all your book chapters in `<section>` elements with a `chapter` class and you want your chapter to always start on the right page. You would write it like this:
 
-```css {linenos=table,linenostart=1}
+```css 
 .chapter {
   break-before: right;
 }
@@ -179,7 +179,7 @@ Let's imagine you have all your book chapters in `<section>` elements with a `ch
 
 You can also use page breaks on inline-element. For exemple, the following code forces the level 2 titles to always start on a new page:
 
-```css {linenos=table,linenostart=1}
+```css 
 h2 {
   break-before: page;
 }
@@ -211,7 +211,7 @@ A page matched by a pseudo class selector can also be matched by other page pseu
 
 To be sure that there won’t be any white paper visible while printing, we use the `bleed` property. It specifies the size of the bleed area outside the page box. It won’t affect the space on the page for your content
 
-```css {linenos=table,linenostart=1}
+```css 
 @page  {
   bleed: 6mm;
 }
@@ -224,7 +224,7 @@ You can add crop marks outside the page box to facilitate the trimming. For prof
 
 This two type of marks must be added in the same `marks` property, you can use either or both of them.
 
-```css {linenos=table,linenostart=1}
+```css 
 /* To set crop and cross marks */
 @page {
   marks: crop cross;
@@ -239,7 +239,7 @@ This two type of marks must be added in the same `marks` property, you can use e
 
 ## Code Review for a chapter
 
-```css {linenos=table,linenostart=1}
+```css 
 @media print{
     @page {
         size: 140mm 200mm;

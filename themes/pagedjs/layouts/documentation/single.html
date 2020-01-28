@@ -8,6 +8,7 @@
   <article>
     {{ partial "breadcrumb.html" . }}
     <header>
+      
       <h1 id="title">{{ .Title }}</h1>
       {{ if .Params.intro  }}<p class="intro">{{ .Params.intro | markdownify }}</p>{{end}}
       <div class="toc">
