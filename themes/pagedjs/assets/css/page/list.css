@@ -49,27 +49,33 @@
     font-family: var(--font-sans);
   }
 
-  span {
-    font-family: var(--font-serif);
-    font-size: 0.9em;
-  }
 
-  .intro {
-    padding-left: 1em;
-    border-left: 2px solid currentcolor;
-  }
 
   .article {
     margin-left: 0;
-  }
 
-  .article h2 {
+        .intro {
+      font-family: var(--font-sans);
+      font-size: 1em;
+      line-height: 1.5;
+      max-width: 50ch;
+      margin-top: 0.8em;
+      color: var(--color-primary);
+      padding-left: 1em;
+      border-left: 2px solid currentcolor;
+      max-width: 51ch;
+      display: block;
+      font-family: var(--font-serif);
+      font-size: 0.9em;
+      /* align-self: flex-end; */
+    }
+   h2 {
     width: 100%;
     font-size: 1.2em;
     font-weight: bold;
     margin-top: 0;
     position: relative;
-
+    border-color: transparent;
     &::before {
       content: ".................................................................................................................................................";
       text-align: right;
@@ -98,6 +104,7 @@
         background: var(--color-paper);
       }
     }
+}
 
     .toc-emoji {
       float: right;

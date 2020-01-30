@@ -8,7 +8,6 @@
   background: white;
   z-index: 9999999;
   align-items: flex-end;
-
   .baseline {
     line-height: 1;
     position: relative;
@@ -20,16 +19,17 @@
   }
 
   a.back-home {
-    width: 20ch;
-    background: var(--color-primary);
-    padding: 4em 2ch .5em 7ch;
+    width: 14ch;
+    background: 0 0;
+    padding: 0;
     position: relative;
-    top: 1em;
-    margin-left: -5ch;
+    top: 0;
+    margin-left: 0;
+    min-width: 10ch;
   }
 
   #paged-logo {
-
+    background: transparent;
     /* width: 15ch;
     background: var(--color-primary);
     fill: white;
@@ -38,7 +38,7 @@
     position: relative;
     top: 1em; */
     path {
-      fill: white;
+      /* fill: white; */
     }
   }
 }
@@ -82,3 +82,4 @@
     }
   }
 }
+

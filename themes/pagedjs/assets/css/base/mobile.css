@@ -1,4 +1,41 @@
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 1250px) {
   body {
+    grid-template-columns: [sidebar] 10vw [start] 70vw [end] 5vw;
+
+    }
+  }
+
+
+@media screen and (max-width: 1250px) {
+  body {
+    
+    grid-template-columns: [sidebar] 10vw [start] 70vw [end] 5vw;
+  }
+
+  .back-home {
+    position: fixed;
+    top: 0;
   }
 }
+
+
+@media screen and (max-width: 570px) {
+body {
+  grid-template-columns: [sidebar] 0 [start] 70vw [end] 0;
+
+}
+}
+
+
+/* 
+@media screen and (max-width: 767px) {
+  article header  {
+    font-size: 0.7em;
+  }
+  article {
+    grid-template-columns: [left] 5% [main] 90% 5%[end];
+  }
+  body footer {
+    max-width: unset ;
+  }
+} */

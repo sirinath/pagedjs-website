@@ -11,8 +11,8 @@ body {
 
 /* article */
 article {
-  font-size: 20px;
-  line-height: 1.6em;
+  font-size: 18px;
+  line-height: 1.6;
 
   .meta {
     margin: 0;
@@ -27,15 +27,9 @@ article {
     font-weight: 500;
   }
 
-  .intro {
-    font-size: 1.2em;
-  }
 
-  #intro {
-    margin: 0 auto;
-    margin-top: 2em;
-    margin-bottom: 1em;
-  }
+
+
 
   /* common text */
 
@@ -117,7 +111,7 @@ article {
   h1 {
     text-align: left;
     max-width: 100%;
-    font-size: 2.4em;
+    font-size: 1.8em;
     line-height: 1.1;
     text-transform: none;
     margin-bottom: .8em;
@@ -125,12 +119,13 @@ article {
   }
 
   h2 {
-    font-size: 2em;
-    padding-top: 2em;
+    font-size: 1.5em;
+    /* padding-top: 2em; */
+    border-bottom: 2px solid var(--color-lightest-grey);
   }
 
   h3 {
-    font-size: 1.5em;
+    font-size: 1em;
     padding-top: 2em;
   }
 
@@ -172,14 +167,12 @@ article {
     }
   }
 
-  code {
-    /* font-family: var(--font-mono); */
-    font-size: .85em;
-    font-family: var(--font-mono);
-    line-height: 1.2em;
-  }
+
 
   code {
+    font-size: .70em;
+    font-family: var(--font-mono);
+    line-height: 1.2em;
     background: #eed;
     margin: 0 0.3ch;
     line-height: 1;
@@ -245,3 +238,97 @@ article {
   }
 }
 
+
+
+/* headings */
+
+
+article {
+  header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6em;
+    position: relative;
+    z-index: 2;
+    text-shadow: 1px 1px var(--color-paper), -1px 1px var(--color-paper), -1px -1px var(--color-paper), 1px -1px var(--color-paper), 2px 2px var(--color-paper), -2px 2px var(--color-paper), -2px -2px var(--color-paper), 2px -2px var(--color-paper), 3px 3px var(--color-paper), -3px 3px var(--color-paper), -3px -3px var(--color-paper), 3px -3px var(--color-paper), 4px 4px var(--color-paper), -4px 4px var(--color-paper), -4px -4px var(--color-paper), 4px -4px var(--color-paper);
+    grid-column: left/end; 
+    font-size: 0.8em;
+    margin-top: 6em;
+    margin-bottom: 0;   
+    /* font-weight: 700; */
+    &::before {
+      content: " ";
+      transform: rotate(45deg);
+      border: 4px solid #eee;
+      z-index: -1;
+      width: 10em;
+      height: 10em;
+      display: block;
+      position: absolute;
+    }
+
+    #title {
+      margin-top: 0.3em;
+      margin-bottom: 0;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--color-primary);
+      font-size: 3.5em;
+      font-family: var(--font-serif);
+      position: relative;
+      /* text-shadow: 1px 1px white, -1px 1px white, -1px -1px white, 1px -1px white, 2px 2px white, -2px 2px white, -2px -2px white, 2px -2px white; */
+      &::after {
+          content: " ";
+          width: 100%;
+          height: 1em;
+          display: block;
+          position: absolute;
+          border-bottom: 2px dotted var(--color-primary);
+          opacity: 0.3;
+          bottom: 0;
+      }
+    }
+
+    .intro {
+      font-family: var(--font-sans);
+      font-size: 1.1em;
+      line-height: 1.5;
+      max-width: 50ch;
+      margin-top: 2em;
+      color: var(--color-primary);
+    padding-left: 1em;
+    border-left: 2px solid currentcolor;
+      max-width: 51ch;
+display: block;
+margin-top: 2em;
+margin-bottom: 3em;
+      /* align-self: flex-end; */
+    }
+    .meta {
+      /* grid-column: left; */
+      font-size: 0.8em;
+      font-family: var(--font-sans);
+      font-weight: 400;
+      /* border-bottom: 1px solid grey; */
+      a {
+        font-style: normal;
+        margin-left: 2ch;
+        font-weight: 400;
+        background: transparent;
+      }
+    }
+    p,
+    ul,
+    ol,
+    h2,
+    h4,
+    h5,
+    h6 {
+      margin-left: 0;
+    }
+
+    h2 {
+      font-size: 1.5em;
+    }
+  }
+}
