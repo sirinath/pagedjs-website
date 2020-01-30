@@ -1,6 +1,7 @@
 .list .content {
   counter-reset: doc;
-    grid-column: main/end;
+  grid-column: main/end;
+
   a {
     text-decoration: none;
     background: none;
@@ -16,10 +17,9 @@
     /* margin-left: 3ch; */
     border-left: 1px solid black;
   }
- 
+
   nav:not(".menu") > ul {
     margin-left: 5ch;
-   
   }
 
   ul li {
@@ -49,12 +49,11 @@
     font-family: var(--font-sans);
   }
 
-
-
   .article {
     margin-left: 0;
+    margin-top: 1.5em;
 
-        .intro {
+    .intro {
       font-family: var(--font-sans);
       font-size: 1em;
       line-height: 1.5;
@@ -69,42 +68,44 @@
       font-size: 0.9em;
       /* align-self: flex-end; */
     }
-   h2 {
-    width: 100%;
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-top: 0;
-    position: relative;
-    border-color: transparent;
-    &::before {
-      content: ".................................................................................................................................................";
-      text-align: right;
-      color: #ccc;
-      font-size: 0.8em;
-      bottom: 2px;
-      position: absolute;
-      width: 98%;
-      padding-left: 5px;
-      letter-spacing: 2px;
-      overflow: hidden;
-    }
 
-    a {
-      counter-increment: doc;
-      background: white;
+    h2 {
+      width: 100%;
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-top: 0;
       position: relative;
-      z-index: 100;
-      padding-right: 0.5ch;
+      border-color: transparent;
 
-      &::after {
-        line-height: 1.2em;
-        padding-left: 1ch;
-        content: counter(doc);
-        float: right;
-        background: var(--color-paper);
+      &::before {
+        content: ".................................................................................................................................................";
+        text-align: right;
+        color: #ccc;
+        font-size: 0.8em;
+        bottom: 2px;
+        position: absolute;
+        width: 98%;
+        padding-left: 5px;
+        letter-spacing: 2px;
+        overflow: hidden;
+      }
+
+      a {
+        counter-increment: doc;
+        background: white;
+        position: relative;
+        z-index: 100;
+        padding-right: 0.5ch;
+
+        &::after {
+          line-height: 1.2em;
+          padding-left: 1ch;
+          content: counter(doc);
+          float: right;
+          background: var(--color-paper);
+        }
       }
     }
-}
 
     .toc-emoji {
       float: right;

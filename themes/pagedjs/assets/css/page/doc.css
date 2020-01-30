@@ -5,6 +5,11 @@
   --color-primary: hsl(var(--tint), var(--light), var(--saturation));
   --color-accent: var(--color-primary); */
   counter-reset: doc;
+
+
+  .list .content .article  {
+    
+  }
 }
 
 

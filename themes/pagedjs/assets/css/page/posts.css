@@ -5,12 +5,11 @@
   --color-primary: hsl(var(--tint), var(--light), var(--saturation));
   --color-accent: var(--color-primary); */
 
+  
   article {
-    min-height: 860px
   }
 
   .article h2 {
-    border-color: transparent;
   }
 }
 

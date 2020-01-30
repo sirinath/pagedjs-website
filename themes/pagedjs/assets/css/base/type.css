@@ -254,7 +254,7 @@ article {
     grid-column: left/end; 
     font-size: 0.8em;
     margin-top: 6em;
-    margin-bottom: 0;   
+    margin-bottom: 2em;   
     /* font-weight: 700; */
     &::before {
       content: " ";
