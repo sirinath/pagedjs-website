@@ -1,39 +1,23 @@
-publish_mode: editorial_workflow
-media_folder: "static/uploads" # Media files will be stored in the repo under images/uploads
-public_folder: "uploads/images/" # The src attribute for uploaded media will begin with /images/uploads
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
+# publish_mode: editorial_workflow
+media_folder: "static/uploads" # Media files will be stored in the repo under images/uploads
+public_folder: "uploads/images/" # The src attribute for uploaded media will begin with /images/uploads
+
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label: "Journal" # Used in the UI
     folder: "posts/" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
+    create: true 
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
+    fields:
       - {label: "draft", name: "draft", widget: "boolean"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "class", name: "class", widget: "string", default: "journal"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Featured Image", name: "cover", widget: "image"}
       - {label: "weight", name: "weight", widget: "string"}
       - {label: "intro", name: "intro", widget: "markdown"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "documentation" # Used in routes, e.g., /admin/collections/blog
-    label: "documentation" # Used in the UI
-    folder: "documentation/" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: "draft", name: "draft", widget: "boolean"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "class", name: "class", widget: "string", default: "journal"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "image", widget: "image"}
-      - {label: "weight", name: "weight", widget: "string"}
-      - {label: "tags", name: "tags", widget: "list"}
-      - {label: "intro", name: "intro", widget: "markdown"}
-      - {label: "Body", name: "body", widget: "markdown"}
-
-
-
+ 

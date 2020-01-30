@@ -1,23 +1,40 @@
 {{ define "main" }}
-<div class="article-list">
-    <div class="header">
-        <h1>{{ .Title }}</h1>
-        {{ .Content }}
+<main class="list">
+    {{ partial "cropmarks.html" . }}
+    <article class="{{ .Page.Section }}">
+        {{ partial "running-head" . }}
+        
+        {{/*  {{ partial "breadcrumb.html" . }} */}}
+        <header>
+            <h1 id="title">{{ .Title }}</h1>
+            {{ if .Params.intro  }}<p class="intro">{{ .Params.intro | markdownify }}</p>{{end}}
+            <div class="tags">
+                {{ partial "tag-coma.html" . }}
+            </div>
+        </header>
+        <div class="content">
+        <ul>
+            {{ range .Pages }}
+            <li class="article">
+                <!-- <p class="date">{{ dateFormat "2/1/2006" .Date  }}</p> -->
+                <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                {{ if eq .Page.Section "documentation"}}
+                {{/*  {{ if .Params.intro }}<span class="intro"> {{ .Params.intro }} </span> {{ end }}  */}}
+                {{ .TableOfContents }}
+                {{else}}
+                {{ if .Params.intro }}<span class="intro"> {{ .Params.intro }} </span> {{ end }}
+                {{end}}
+                </a>
+            </li>
+            {{ end }}
+        </ul>
     </div>
-    {{ range .Pages }}
-    <div class="article">
-        {{ partial "cropmarks.html" . }}
-        <a href="{{ .Permalink }}"  class="content">
-            <p class="date">{{ dateFormat "2/1/2006" .Date  }}</p>
-            <h2>{{ .Title }}</h2>
-            <p class="intro">{{ .Params.intro | markdownify }}</p>
-            
-        </a>
-        {{ partial "tag-list.html" . }}
+    {{ partial "footer.html" . }}
 
-    </div>
-    
-    {{ end }}
-  
-</div>
+</article>
+
+</main>{{ end }}
+{{ define "script" }}
+{{ $js := resources.Get "/js/docList.js" }}
+<script src="{{$js.Permalink}}"></script>
 {{ end }}

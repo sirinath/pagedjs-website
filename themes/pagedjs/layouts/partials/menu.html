@@ -1,13 +1,8 @@
-<aside class="menu">
-    <a class="menu-logos">
-    {{ partial "paged-logo.html" }}
-    {{ partial "baseline" . }}
-    </a>
-    <nav role="main">
+    <nav class="menu" role="main">
         <ul>
             {{ $currentPage := . }}
             {{ range .Site.Menus.main }}
-            <li {{ if $currentPage.HasMenuCurrent "main" . }}class="active"{{ end }}>
+            <li {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}class="active"{{ end }}>
                 <a href="{{ .URL }}">
                     <span>{{ .Name }}</span>
                 </a>
@@ -15,4 +10,3 @@
             {{ end }}
         </ul>
     </nav>
-</aside>

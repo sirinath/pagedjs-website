@@ -12,12 +12,18 @@
 
 
 @import "themes/pagedjs/assets/css/base/layout.css";
+
+@import "themes/pagedjs/assets/css/page/single.css";
+@import "themes/pagedjs/assets/css/page/list.css";
+
+
 @import "themes/pagedjs/assets/css/page/index.css";
+
+
+@import "themes/pagedjs/assets/css/page/about.css";
+@import "themes/pagedjs/assets/css/page/posts.css";
 @import "themes/pagedjs/assets/css/page/doc.css";
 @import "themes/pagedjs/assets/css/page/cookbook.css";
-@import "themes/pagedjs/assets/css/page/about.css";
-@import "themes/pagedjs/assets/css/page/journal.css";
-@import "themes/pagedjs/assets/css/page/single.css";
 
 /* page specific 
 @import "themes/pagedjs/assets/css/page/doc.css"; */

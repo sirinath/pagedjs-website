@@ -1,3 +1,14 @@
-.about main article aside {
-    display: none;
+.about {
+    --tint: calc(360 - 120); 
+    --light: 20%;
+    --saturation: 50%;
+    --color-primary: hsl(var(--tint), var(--light), var(--saturation));
+    --color-accent: var(--color-primary);
+    
+    .meta {
+        display: none;
+    }
+
+    
+
 }

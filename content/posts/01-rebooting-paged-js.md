@@ -7,6 +7,7 @@ tags:
 - pagedjs
 - update
 - friends
+author: Julien Taquet
 ---
 
 

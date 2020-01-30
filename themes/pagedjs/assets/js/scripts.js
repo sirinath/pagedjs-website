@@ -3,7 +3,8 @@ document.querySelector('footer').addEventListener("click", function() {
 })
 
 console.log(document.querySelector('#toggleMenu'));
-document.querySelector('#toggleMenu').addEventListener("click",  function() { document.querySelector("aside.menu").classList.toggle("leftHide")});
+
+// document.querySelector('#toggleMenu').addEventListener("click",  function() { document.querySelector("aside.menu").classList.toggle("leftHide")});
 
 if (document.querySelector('.toc .title')) {
 document.querySelector('.toc .title').addEventListener("click", function() {

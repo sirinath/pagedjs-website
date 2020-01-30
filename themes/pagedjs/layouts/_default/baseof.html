@@ -14,18 +14,13 @@
     {{ end }}
   </head>
 
-  <body {{ if .Params.class }} class="{{ .Params.class }}" {{ end }}>
-    {{ block "sidebar" .}}
-    <button id="toggleMenu" class="menuToggle">
-      {{ partial "paged-monogram.html" . }}
-    </button>
-  
-      {{ partial "menu.html" . }}
-    {{ end }}
+  <body  class="{{ if .Params.class }}{{ .Params.class }}{{ end }} {{ .Page.Section }}" >
+ 
     {{ block "main" . }}
     <main style="{{ if .Params.colorPaper }} --color-paper:{{ .Params.colorPaper }} {{ end }}">
       {{ partial "cropmarks.html" }}
       <article>
+
         {{ partial "breadcrumb.html" .}}
         {{ if .Params.intro }}
         <header>
@@ -42,12 +37,11 @@
           <a class="next" href="{{.Permalink}}">{{.Title}}</a>
           {{ end }}
         </aside>
+        
       </article>
     </main>
     {{ end }}
-    {{ block "footer" . }}
-    {{ partial "footer.html" . }}
-    {{ end }}
+ 
     {{ block "script" . }}
     {{ $js := resources.Get "/js/scripts.js" }} 
       <script src="{{$js.Permalink}}"></script>

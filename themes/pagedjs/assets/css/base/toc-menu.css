@@ -9,7 +9,7 @@
   right: -28vw;
   background: white;
   padding: 1em;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-paper);
   position: fixed;
   bottom: 3vh;
   z-index: 9;
@@ -22,7 +22,7 @@
     left: -30px;
     width: 3ch;
     background: white;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-paper);
     padding: 0.2em 0.2em;
     position: absolute;
     min-height: 15ch;

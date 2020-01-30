@@ -1,0 +1,39 @@
+
+.menu {
+  position: fixed;
+  /* grid-column: end; */
+  left: 10vw;
+  font-family: var(--font-sans);
+  /* margin-top: 20em; */
+  z-index: -2;
+top: 11vh;
+
+}
+.menu nav ul {
+
+  /* display: flex;
+  flex-direction: column; */
+  list-style-type: none;
+
+  li a {
+    box-shadow: var(--shadow-paper);
+    writing-mode: vertical-rl;
+    background: white;
+    padding: 2em 1em;
+    padding-right: 5em;
+    display: block;
+    margin-bottom: 2em;
+    &:nth-of-type(1) {
+      transform: rotate(4deg);
+    }
+    &:nth-of-type(2) {
+      transform: rotate(2deg);
+    }&:nth-of-type(3) {
+      transform: rotate(-3deg);
+    }&:nth-of-type(4) {
+      transform: rotate(-5deg);
+    }&:nth-of-type(5) {
+      transform: rotate(1deg);
+    }
+    }
+}

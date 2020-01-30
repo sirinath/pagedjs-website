@@ -15,30 +15,11 @@ body {
   }
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: [sidebar] 22vw [start] 65vw [end];
-  grid-gap: 3vw;
-  padding: 2em;
+  grid-template-columns: [sidebar] 15vw [start] 70vw [end] 5vw;
+  grid-gap: 0vw;
+  padding: 0em;
   background: var(--color-background);
   margin: 0;
-}
-
-
-
-.menu {
-  position: fixed;
-  grid-column-start: sidebar;
-  height: calc(100vh - 4em);
-  width: 15vw;
-  max-width: 190px;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 3em;
-  justify-content: flex-end;
-  /* top: 0; */
-  button {
-    justify-self: flex-start;
-  }
-  z-index: 4;
 }
 
 main {
@@ -50,7 +31,7 @@ main {
     right: -2em;
     bottom: -2em;
     background: var(--color-paper, white);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-paper);
     content: " ";
     z-index: -2;
   }
@@ -59,8 +40,8 @@ main {
   grid-column-end: end;
   width: 90%;
   justify-self: center;
-  margin-top: auto;
-  margin-top: 5em;
+  margin: 10em auto;
+
   position: relative;
 
   header {
@@ -82,6 +63,24 @@ article {
   position: relative;
   padding: 2.5em;
   padding-bottom: 4em;
+
+  header {
+    grid-column: left/end; 
+    #title {
+        position: relative;
+        &::after {
+            content: " ";
+            width: 100%;
+            height: 1em;
+            display: block;
+            position: absolute;
+            border-bottom: 5px dotted var(--color-primary);
+            opacity: 0.3;
+            bottom: 0;
+        }
+    }
+  }
+  
 }
 
 .crop-marks {
@@ -91,6 +90,8 @@ article {
   right: 0;
   bottom: 0;
   z-index: -1;
+
+ 
 }
 
 
@@ -119,24 +120,11 @@ article {
   border-width: 1px 0;
 }
 
-main article .menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 3em;
-
-  a {
-    font-family: var(--font-sans);
-    /* color: red; */
-  }
-
-
-}
 
 
 /* mobile */
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 1000px) {
   body {
     display: block;
 
@@ -149,6 +137,7 @@ main article .menu {
       margin-bottom: 2em;
       padding: 0;
       margin-top: 3em;
+
       article {
         padding: 0;
       }
@@ -181,10 +170,8 @@ main article .menu {
       svg path {
         /* fill: white; */
       }
-      position:fixed;
+      position: fixed;
       /* box-shadow: -5px 5px 5px 0 rgba(100,100,100,0.5); */
-      
-    
     }
 
     .menu {
@@ -215,11 +202,14 @@ main article .menu {
   &.both {
     justify-content: space-between;
   }
+
   a {
     font-style: normal;
     background: white;
   }
-  .previous, .next {
+
+  .previous,
+  .next {
     &::before {
       content: "Previously ";
       display: block;
@@ -229,13 +219,11 @@ main article .menu {
       letter-spacing: 0.2ch;
       margin-bottom: 1em;
     }
-
   }
 
   .next::before {
     content: "Next";
     text-align: right;
-  
   }
 }
 

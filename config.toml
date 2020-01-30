@@ -34,7 +34,7 @@ talkyardScriptUrl = "https://c1.ty-cdn.net/-/talkyard-comments.min.js"
   [[menu.main]]
     identifier = "about"
     name = "About"
-    url = "/about"
+    url = "/about/"
     weight= 1
 
   [[menu.main]]

@@ -1,5 +1,5 @@
 ---
-title: "Welcome to our blog roll!"
+title: "The Printer’s Times"
 subtitle: 
 class: "blog-index"
 ---
