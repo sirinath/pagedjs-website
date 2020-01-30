@@ -14,7 +14,7 @@
 .homepage article .contents {
   grid-template-columns: [left] 50% [start];
   grid-column: left/end;
-    display: grid;
+    /* display: grid; */
     margin-top: 4em;
     grid-gap: 8ch;
 }
