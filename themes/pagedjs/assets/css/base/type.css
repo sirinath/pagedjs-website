@@ -250,7 +250,6 @@ article {
     margin-bottom: 6em;
     position: relative;
     z-index: 2;
-    text-shadow: 1px 1px var(--color-paper), -1px 1px var(--color-paper), -1px -1px var(--color-paper), 1px -1px var(--color-paper), 2px 2px var(--color-paper), -2px 2px var(--color-paper), -2px -2px var(--color-paper), 2px -2px var(--color-paper), 3px 3px var(--color-paper), -3px 3px var(--color-paper), -3px -3px var(--color-paper), 3px -3px var(--color-paper), 4px 4px var(--color-paper), -4px 4px var(--color-paper), -4px -4px var(--color-paper), 4px -4px var(--color-paper);
     grid-column: left/end; 
     font-size: 0.8em;
     margin-top: 6em;
@@ -276,7 +275,8 @@ article {
       font-size: 3.5em;
       font-family: var(--font-serif);
       position: relative;
-      /* text-shadow: 1px 1px white, -1px 1px white, -1px -1px white, 1px -1px white, 2px 2px white, -2px 2px white, -2px -2px white, 2px -2px white; */
+      text-shadow: 1px 1px var(--color-paper), -1px 1px var(--color-paper), -1px -1px var(--color-paper), 1px -1px var(--color-paper), 2px 2px var(--color-paper), -2px 2px var(--color-paper), -2px -2px var(--color-paper), 2px -2px var(--color-paper), 3px 3px var(--color-paper), -3px 3px var(--color-paper), -3px -3px var(--color-paper), 3px -3px var(--color-paper), 4px 4px var(--color-paper), -4px 4px var(--color-paper), -4px -4px var(--color-paper), 4px -4px var(--color-paper);
+
       &::after {
           content: " ";
           width: 100%;
@@ -302,7 +302,8 @@ article {
 display: block;
 margin-top: 2em;
 margin-bottom: 3em;
-      /* align-self: flex-end; */
+text-shadow: 1px 1px var(--color-paper), -1px 1px var(--color-paper), -1px -1px var(--color-paper), 1px -1px var(--color-paper), 2px 2px var(--color-paper), -2px 2px var(--color-paper), -2px -2px var(--color-paper), 2px -2px var(--color-paper), 3px 3px var(--color-paper), -3px 3px var(--color-paper), -3px -3px var(--color-paper), 3px -3px var(--color-paper), 4px 4px var(--color-paper), -4px 4px var(--color-paper), -4px -4px var(--color-paper), 4px -4px var(--color-paper);
+
     }
     .meta {
       /* grid-column: left; */

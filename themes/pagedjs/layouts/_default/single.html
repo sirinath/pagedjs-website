@@ -18,6 +18,7 @@
       </div>
     </header>
     {{ .Content }}
+
     <aside class="paginator {{ if and .NextInSection .PrevInSection }} both{{ end }}">
       {{ with .NextInSection }}
       <a class="previous" href="{{.Permalink}}">{{.Title}}</a>
@@ -33,6 +34,7 @@
       {{ end }}
     </aside>
     {{ partial "footer.html" . }}
+
   </article>
 
 </main>

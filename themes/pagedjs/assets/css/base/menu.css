@@ -8,6 +8,7 @@
   background: white;
   z-index: 9999999;
   align-items: flex-end;
+  box-shadow: -16px 0px 0 white, 16px 0px 0 white, -16px -16px 0 white;
   .baseline {
     line-height: 1;
     position: relative;

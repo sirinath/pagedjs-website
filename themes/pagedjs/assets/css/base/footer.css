@@ -7,23 +7,21 @@ footer {
   /* --color-light: hsl(var(--tint), 80%, 80%); */
 
   --color-accent: var(--color-primary);
-  margin: 0;
-  margin: 7em -3em -5em;
-  padding: 2em 3em 4em;
+  /* padding: 2em 3em 4em; */
+
+
+
+  --color-accent: var(--color-primary);
+  margin: 7em 0 0;
   background: var(--color-light);
   color: var(--color-primary);
-  /* margin-top: 2em; */
-  /* margin-right: 4em; */
-  font-size: 0.8em;
+  font-size: .8em;
   grid-column: left/end;
   font-family: var(--font-sans);
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  &.show {
-    left: 10%;
-  }
+  border-top: 1px solid var(--color-lightest-grey);
 
   p {
     line-height: 1.4;
@@ -40,6 +38,7 @@ footer {
     /* max-width: 300px; */
     max-height: 100px;
     display: block;
+
     path {
       fill: var(--color-primary);
     }
