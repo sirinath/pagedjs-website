@@ -33,10 +33,10 @@ We also now have a better and usable documentation. For the last year, we’ve b
 ##### title 5
 We also want to show all the good that people using paged.js are doing: [Atla](https://www.atla.com) are now using Editoria as their only tool to manage workflow, content, editing, and publishing, and Paged.js is their main tool to generate the PDF they send to the printer. The people behind Atla has a high idea of what “open” means, thus they want to share their book templates as open source.
 
-###### title 6
+<!-- ###### title 6 -->
 Our friends a [Booksprints](https://www.booksprints.net/) comissioned two designers to produce four CSS templates to be used with Paged.js. Agathe Baez and Manuel Vazquez worked closely with us to be able to produce good looking templates, and they’re open. You can download those and publish your own books. The collection keeps growing, which is pretty amazing. 
 
-{{< figure src="img/1139e889a554ab3a295840.jpg">}}
+{{< figure src="../../img/1139e889a554ab3a295840.jpg">}}
 
 Our french friends at [C&F editions](https://cfeditions.com/) use paged.js to publish all the book of their “Intervention” collection. This is a great exemple of how you can make book without any proprietary software! Using only open tools, they manage to build a whole book production workflow that end up in libraries and bookshops, as physical books and a digital artifacts. 
 

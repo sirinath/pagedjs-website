@@ -61,7 +61,6 @@ article {
 
   header {
     grid-column: left/end;
-
   }
 
   figure {
@@ -100,15 +99,17 @@ article {
     color: var(--color-primary);
 
     .name {
-      border-bottom: 2px dotted var(--color-primary);
+      border-bottom: 2px dotted var(--color-lightest-grey);
       margin-left: -3em;
       padding-left: 3em;
       width: max-content;
+      padding-right: .3ch;
+
     }
   }
 
   .signature img {
-    border: 2px solid var(--color-primary);
+    border: 2px solid var(--color-lightest-grey);
     float: left;
     display: block;
     width: 73px;
@@ -116,10 +117,11 @@ article {
     height: auto;
     margin-right: 1em;
     border-radius: 50%;
-    /* box-shadow: 0 0 0 5px var(--color-primary); */
+    padding: 5px;
+    background: var(--color-paper);
+    margin-top: -6px;
+        /* box-shadow: 0 0 0 5px var(--color-primary); */
   }
-
- 
 }
 
 .tags {
