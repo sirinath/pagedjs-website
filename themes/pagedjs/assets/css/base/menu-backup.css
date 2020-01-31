@@ -6,7 +6,7 @@
     left: -15ch;
     bottom: -5em;
     right: -5ch;
-    background: white;
+    background: var(--color-paper);
     z-index: -2;
     transform: rotate(3deg);
     box-shadow: var(--shadow-paper);
@@ -68,7 +68,7 @@
       a {
         text-decoration: none;
         font-size: 1.3em;
-        /* color: white; */
+        /* color: var(--color-paper); */
       }
     }
   }
@@ -93,7 +93,7 @@
       left: -15ch;
       bottom: -5em;
       right: -5ch;
-      background: white;
+      background: var(--color-paper);
       z-index: -2;
       transform: rotate(3deg);
       box-shadow: var(--shadow-paper);

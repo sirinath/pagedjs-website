@@ -10,7 +10,7 @@
 
   a {
     text-decoration: none;
-    background: white;
+    background: var(--color-paper);
     font-family: var(--font-sans);
     font-weight: 400;
     font-style: normal;
@@ -27,7 +27,7 @@
     margin-left: 2ch;
 
     a {
-      background: white;
+      background: var(--color-paper);
       z-index: 30;
       position: relative;
       &::after {

@@ -228,7 +228,7 @@ article {
   .dd {
     position: absolute;
     background: var(--color-primary);
-    color: white;
+    color: var(--color-paper);
     font-family: var(--font-sans-serif);
     top: 2em;
     left: 0px;

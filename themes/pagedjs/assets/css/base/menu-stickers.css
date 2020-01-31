@@ -18,7 +18,7 @@ top: 11vh;
   li a {
     box-shadow: var(--shadow-paper);
     writing-mode: vertical-rl;
-    background: white;
+    background: var(--color-paper);
     padding: 2em 1em;
     padding-right: 5em;
     display: block;

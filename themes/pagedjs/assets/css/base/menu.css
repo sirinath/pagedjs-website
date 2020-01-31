@@ -5,10 +5,10 @@
   justify-content: space-between;
   position: sticky;
   top: -4em;
-  background: white;
+  background: var(--color-paper);
   z-index: 9999999;
   align-items: flex-end;
-  box-shadow: -16px 0px 0 white, 16px 0px 0 white, -16px -16px 0 white;
+  box-shadow: -16px 0px 0 var(--color-paper), 16px 0px 0 var(--color-paper), -16px -16px 0 var(--color-paper);
   .baseline {
     line-height: 1;
     position: relative;
@@ -33,13 +33,13 @@
     background: transparent;
     /* width: 15ch;
     background: var(--color-primary);
-    fill: white;
+    fill: var(--color-paper);
     padding: 4em 2ch 0.5em;
     margin-top: -5.5em;
     position: relative;
     top: 1em; */
     path {
-      /* fill: white; */
+      /* fill: var(--color-paper); */
     }
   }
 }
@@ -73,7 +73,7 @@
       a {
         font-style: normal;
         text-decoration: none;
-        background: white;
+        background: var(--color-paper);
       }
     }
 

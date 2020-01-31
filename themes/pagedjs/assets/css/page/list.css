@@ -92,7 +92,7 @@
 
       a {
         counter-increment: doc;
-        background: white;
+        background: var(--color-paper);
         position: relative;
         z-index: 100;
         padding-right: 0.5ch;

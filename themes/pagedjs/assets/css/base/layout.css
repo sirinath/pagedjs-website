@@ -120,7 +120,7 @@ article {
 
   a {
     font-style: normal;
-    background: white;
+    background: var(--color-paper);
   }
 
   .previous,

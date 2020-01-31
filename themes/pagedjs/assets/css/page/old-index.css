@@ -4,7 +4,7 @@
     padding-bottom: 2em;
 
     &::before {
-      background: white;
+      background: var(--color-paper);
     }
   }
 

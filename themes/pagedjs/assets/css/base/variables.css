@@ -11,7 +11,7 @@
   --shadow-paper: none;
 
   --shadow-main: none;
-  --color-body: hsl(var(--tint), 20%, 20%);
+  --color-body: hsl(var(--tint), 30%, 20%);
   --color-link: var(--color-accent);
   --color-paper: white;
   --color-accent: var(--color-primary);

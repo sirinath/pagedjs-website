@@ -7,7 +7,7 @@
   margin-top: 0;
   margin-left: 3em;
   right: -28vw;
-  background: white;
+  background: var(--color-paper);
   padding: 1em;
   box-shadow: var(--shadow-paper);
   position: fixed;
@@ -21,14 +21,14 @@
     text-orientation: mixed;
     left: -30px;
     width: 3ch;
-    background: white;
+    background: var(--color-paper);
     box-shadow: var(--shadow-paper);
     padding: 0.2em 0.2em;
     position: absolute;
     min-height: 15ch;
     text-align: center;
     background: var(--color-primary);
-    color: white;
+    color: var(--color-paper);
     cursor: pointer;
   }
 

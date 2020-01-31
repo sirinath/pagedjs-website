@@ -15,7 +15,7 @@
 
   a {
     color: inherit;
-    background: white;
+    background: var(--color-paper);
 
     &::after {
       content: none;
