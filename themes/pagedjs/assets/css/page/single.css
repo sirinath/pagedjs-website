@@ -102,7 +102,7 @@ article {
       border-bottom: 2px dotted var(--color-lightest-grey);
       margin-left: -3em;
       padding-left: 3em;
-      width: max-content;
+      max-width: max-content;
       padding-right: .3ch;
 
     }

@@ -14,8 +14,8 @@ body {
     box-sizing: border-box;
   }
   box-sizing: border-box;
-  display: grid;
-  grid-template-columns: [sidebar] 15vw [start] 70vw [end] 5vw;
+  /* display: grid;
+  grid-template-columns: [sidebar] 15vw [start] 70vw [end] 5vw; */
   grid-gap: 0vw;
   padding: 0em;
   background: var(--color-background);
@@ -42,7 +42,7 @@ main {
   width: 100%;
   justify-self: center;
   margin: 3em auto;
-
+  max-width: 1000px;
   position: relative;
 
 
