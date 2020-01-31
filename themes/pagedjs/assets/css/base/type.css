@@ -65,9 +65,35 @@ article {
   }
 
   blockquote {
-    padding-left: 1em;
-    margin-left: 0;
-    border-left: 0.5ch solid lightgrey;
+    /* padding-left: 1em; */
+    /* margin-left: 0; */
+    font-size: 0.95em;
+    width: auto;
+    padding: 0.5em 1em 1em;
+    /* margin-left: 4ch; */
+    margin: 1em 4ch 1em 4ch;
+    font-family: var(--font-sans);
+    /* border-left: 0.5ch solid lightgrey; */
+
+    position: relative;
+    &::before {
+      content: "「";
+      position: absolute;
+      font-size: 1em;
+      color:
+      grey;
+      top: 0;
+      left: -1ch;
+    }
+    &::after {
+      content: "」";
+      position: absolute;
+      font-size: 1em;
+      color:
+      grey;
+      bottom: 0;
+      right: -1ch;
+    }
   }
   /* list */
 
@@ -102,7 +128,7 @@ article {
     line-height: 1.2;
     margin-top: 1.8em;
     margin-bottom: 0.5em;
-
+    /* font-variant: all0s */
     &:first-child {
       margin-top: 1em;
     }
@@ -111,34 +137,41 @@ article {
   h1 {
     text-align: left;
     max-width: 100%;
-    font-size: 1.8em;
+    font-size: 2.20em;
     line-height: 1.1;
     text-transform: none;
     margin-bottom: .8em;
-    margin-top: 0;
+    /* margin-top: 0; */
+    border-bottom: 2px solid grey;
   }
 
   h2 {
-    font-size: 1.5em;
+    font-size: 1.66em;
     /* padding-top: 2em; */
     border-bottom: 2px solid var(--color-lightest-grey);
   }
 
   h3 {
-    font-size: 1em;
-    padding-top: 2em;
+    font-size: 1.375em;
+
   }
 
   h4 {
-    font-size: 1.2em;
+    font-size: 1.25em;
+    font-family: var(--font-serif);
+    font-style: normal;
+    font-variant: all-small-caps;
   }
 
   h5 {
-    font-size: 1em;
+    font-size: 1.125em;
+    font-family: var(--font-serif);
+    font-style: italic;
   }
 
   h6 {
     font-size: 1em;
+    text-align: center;
   }
 
   /* code */
@@ -272,11 +305,11 @@ article {
       font-weight: 400;
       font-style: italic;
       color: var(--color-primary);
-      font-size: 3.5em;
+      font-size: 4.25em;
       font-family: var(--font-serif);
       position: relative;
       text-shadow: 1px 1px var(--color-paper), -1px 1px var(--color-paper), -1px -1px var(--color-paper), 1px -1px var(--color-paper), 2px 2px var(--color-paper), -2px 2px var(--color-paper), -2px -2px var(--color-paper), 2px -2px var(--color-paper), 3px 3px var(--color-paper), -3px 3px var(--color-paper), -3px -3px var(--color-paper), 3px -3px var(--color-paper), 4px 4px var(--color-paper), -4px 4px var(--color-paper), -4px -4px var(--color-paper), 4px -4px var(--color-paper);
-
+      border: 0px solid transparent;
       &::after {
           content: " ";
           width: 100%;

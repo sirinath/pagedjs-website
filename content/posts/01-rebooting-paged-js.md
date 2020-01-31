@@ -16,17 +16,27 @@ It’s been quite some time since we haven’t spoke, but truth is, we got a lit
 
 First, we are now under the flag of the Cabbage Tree Labs,next to amazing projects: Wax, the word processing engine for the web, and Xsweet, the Microsoft .docx format to HTML converter. All of these tools are open source, under MIT licence, and you should definitely check what you can do if you use those together (you can check Editoria, which now takes everything from those three tools to make books in the same app!)
 
+# title 1
 And that’s just the beginning: as we’re writing these words, we’re polishing the paperworks to be members of the W3C, to finally take part of the conversation regarding web design for print with HTML and CSS. We’ll be more involved in the future of the specifications for print, and we’ll be happy to take the discussion further to handle things that print people need.
 
+## title 2
 The team hasn’t changed at all, but what we’re doing a bit: Fred, our lead dev on Paged.js, is still doing all the development work to make sure Paged.js handles the content it gets, Julie keeps digging the specifications and is pushing us to write some specifications of our own (pretty sure that you’re gonna hear about margin notes pretty soon), Adam keeps looking at us, taking care of our needs, making sure that we’re all alright and I started to work full time on Paged.js: building the website, helping the new comers and the old friends -- we’ll have a lot to tell over the coming months.
 
+### title 3
 There is a lot of lost content in the pagedmedia.org website. A lot of it are related to Paged.js so we’re gonna revisit a lot of those so it won’t get lost later on. And we also have quite some articles coming, so if you’re into baseline, pdf and printing, stick around for a bit. 
 
+> Althought it could be fun, but you know, somehow, we don’t need you :D
+
+#### title 4
 We also now have a better and usable documentation. For the last year, we’ve been writing scripts and plugins for Paged.js in order to do specific things: table of contents, footnotes, fullpage images, spreads, etc. A lot of those comes from the community, and are part of the gitlab demo repo. But we believe that there should be a place to keep those up to date, and this website will be it. We still need to edit some a bit. If you’d like to make some edits in the documentation, or share your own demo, please do so, it’s all available on gitlab and we’ll be happy to merge new things. Everything related to paged.js will be in one specific place!
 
+##### title 5
 We also want to show all the good that people using paged.js are doing: [Atla](https://www.atla.com) are now using Editoria as their only tool to manage workflow, content, editing, and publishing, and Paged.js is their main tool to generate the PDF they send to the printer. The people behind Atla has a high idea of what “open” means, thus they want to share their book templates as open source.
 
+###### title 6
 Our friends a [Booksprints](https://www.booksprints.net/) comissioned two designers to produce four CSS templates to be used with Paged.js. Agathe Baez and Manuel Vazquez worked closely with us to be able to produce good looking templates, and they’re open. You can download those and publish your own books. The collection keeps growing, which is pretty amazing. 
+
+{{< figure src="img/1139e889a554ab3a295840.jpg">}}
 
 Our french friends at [C&F editions](https://cfeditions.com/) use paged.js to publish all the book of their “Intervention” collection. This is a great exemple of how you can make book without any proprietary software! Using only open tools, they manage to build a whole book production workflow that end up in libraries and bookshops, as physical books and a digital artifacts. 
 
