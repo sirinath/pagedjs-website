@@ -1,35 +1,51 @@
 .homepage {
-  height: 100vh;
+  /* height: 100vh;
+  display: grid; */
 }
 
 .homepage main {
-  margin: auto;
+  /* margin: auto; */
 
-  
 }
 
+.homepage article {
+  min-height: 80vh; 
+  display: grid;
+  grid-template-rows: 36.5px auto;
 
+}
 
 .homepage article .contents {
+  display: flex;
+  align-content: center;
+  justify-content: center;
   grid-template-columns: [left] 50% [start];
   grid-column: left/end;
-    /* display: grid; */
-    margin-top: 4em;
-    grid-gap: 8ch;
+  /* display: grid; */
+  margin-top: 4em;
+  grid-gap: 8ch;
+  font-size: 1.2em;
+
+
+  p {
+    margin: 0 auto;
+    margin-bottom: 0px;
+    max-width: 40ch;
+    margin-bottom: 1em;
+    text-align: justify;
+    hyphens: auto;
+  }
 }
-
-
-
 
 .print-machine {
-grid-column: left;
-width: 100%;
-max-width: 500px;
-margin: 0 auto;
-/* margin-top: 3em; */
-img {
-  object-fit: contain;
-}
+  grid-column: left;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  /* margin-top: 3em; */
+  img {
+    object-fit: contain;
+  }
 }
 
 .right {
