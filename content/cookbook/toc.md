@@ -3,7 +3,7 @@ title: " A Table of Content"
 subtitle: "Find your way in your book!"
 class: "cookbook"
 date: 2019-12-12T15:56:54+01:00
-colorPaper: "gold"
+# colorPaper: "gold"
 baseline: "the library that prints the web"
 header: "tryout"
 intro: "You got some HTML content you want to make a book with, but it would takes too much time to set the ids and hyperlinks? We got you covered!" 

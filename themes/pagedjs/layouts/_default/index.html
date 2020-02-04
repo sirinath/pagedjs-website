@@ -1,8 +1,9 @@
+{{ define "header"  }}
+<p></p>
+{{ end }}
+
 {{ define "main" }}
-<main>
-    {{ partial "cropmarks.html" . }}
     <article>
-        {{ partial "running-head" . }}
 
         <div class="contents">
             {{ if .Params.cover }} <img class="print-machine" src="{{.Params.cover}}" /> {{end}}
@@ -11,16 +12,9 @@
             </div>
         </div>
     </article>
-</main>
-{{/*  <main>
-    {{ partial "cropmarks.html" }}
-<article>
-    <div class="text">
-        {{ .Content }}
-    </div>
-</article>
-{{ partial "footer.html" . }}
-</main> */}}
+
 {{ end }}
+
 {{ define "footer"  }}
+<p></p>
 {{ end }}

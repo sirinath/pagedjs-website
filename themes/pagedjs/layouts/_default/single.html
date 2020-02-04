@@ -1,43 +1,21 @@
-{{ define "main" }}
-<main>
-  {{ partial "cropmarks.html" }}
-  <article>
-  
-    {{ partial "running-head" . }}
-
-    {{/*  {{ partial "breadcrumb.html" . }}  */}}
-   
+   {{ define "header" }}     
     <header>
+      {{ if eq .Page.Section "documentation" }}
+      {{ else }}
       <p class="meta">
         written by <span class="author">{{ .Params.author }}</span> on 
         <span class="date">{{ dateFormat "January 2, 2006" .Date  }}</span>
       </p>
+      {{ end }}
       <h1 id="title">{{ .Title }}</h1>
       {{ if .Params.intro  }}<p class="intro">{{ .Params.intro | markdownify }} <br/><span class="tags">      {{ partial "tag-coma.html" . }}</span>      </p>{{end}}
       <div class="tags">
       </div>
     </header>
-    {{ .Content }}
+    {{ end }}
 
-    <aside class="paginator {{ if and .NextInSection .PrevInSection }} both{{ end }}">
-      {{ with .NextInSection }}
-      <a class="previous" href="{{.Permalink}}">{{.Title}}</a>
-      {{ end }}
-      {{ if .NextInSection }}
-      {{ with .PrevInSection }}
-      <a class="next" href="{{.Permalink}}">{{.Title}}</a>
-      {{ end }}
-      {{ else }}
-      {{ with .PrevInSection }}
-      <a class="next alone" href="{{.Permalink}}">{{.Title}}</a>
-      {{ end }}
-      {{ end }}
-    </aside>
-    {{ partial "footer.html" . }}
 
-  </article>
+   
 
-</main>
-{{/*  {{ partial "menu.html" . }}  */}}
 
-{{ end }}
+

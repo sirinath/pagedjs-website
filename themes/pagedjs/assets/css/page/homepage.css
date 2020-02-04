@@ -8,23 +8,23 @@
 
 }
 
-.homepage article {
+.homepage  {
   min-height: 80vh; 
   display: grid;
   grid-template-rows: 36.5px auto;
 
 }
 
-.homepage article .contents {
+.homepage article  {
   display: flex;
   align-content: center;
   justify-content: center;
-  grid-template-columns: [left] 50% [start];
+  grid-template-columns: [left] 50% [main];
   grid-column: left/end;
   /* display: grid; */
   margin-top: 4em;
   grid-gap: 8ch;
-  font-size: 1.2em;
+  font-size: 1em;
 
 
   p {
@@ -35,20 +35,4 @@
     text-align: center;
     font-size: 1.5em;
   }
-}
-
-.print-machine {
-  grid-column: left;
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  /* margin-top: 3em; */
-  img {
-    object-fit: contain;
-  }
-}
-
-.right {
-  grid-column: start;
-  align-self: center;
 }

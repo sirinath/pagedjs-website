@@ -14,7 +14,7 @@
 :root {
   /* --color-print-background: whitesmoke; */
   --color-pageBox: #666;
-  --color-paper: white;
+  /* --color-paper: --color-paper; */
   --color-marginBox: transparent;
 }
 

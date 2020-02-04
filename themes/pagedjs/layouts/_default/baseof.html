@@ -4,81 +4,58 @@
   <head>
     <meta charset="utf-8">
     <meta name="description" content="The home of paged.js, the library to turn HTML into PDF">
-    <meta name="viewport" content="width=device-width, initial-scale=1">  
-    <title>Pagedjs — {{ block "title" . }}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ block "title" . }}
       {{ .Site.Title }}
       {{ end }}</title>
     {{ $css := resources.Get "./css/main.css" | resources.PostCSS (dict "config" "./assets/css/postcss.config.js" "noMap" true) | minify  | resources.Fingerprint "md5" }}
     <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}">
-      {{/*  {{ if or (eq .Params.print true) (eq .Page.Section "posts") }}  */}}
-
-      {{/*  {{ $pagedjs := resources.Get "js/paged.esm.js" }} 
-      <script src="{{ $pagedjs.Permalink }}" type="module" type="application/javascript"></script>  */}}
-
-
-      {{/*  {{ $interact := resources.Get "js/scripts.js" }}
-      {{ $print := resources.Get "js/print.js" }} 
-      {{ $js := slice  $print $interact | resources.Concat "js/bundle.js" | minify | resources.Fingerprint "md5"  }}
-      <script src="{{ $js.Permalink }}" type="module" type="application/javascript"></script>  */}}
-      {{/*  {{ end }}  */}}
-
-      {{/*  set up paged.js polyfull to preview the print version  */}}
-      {{ $pagegjs := resources.Get "js/paged.polyfill.js" | resources.Fingerprint "md5" }} 
-      <script src="{{ $pagegjs.Permalink }}" type="module" type="application/javascript"></script>
-  
-      <script>
-        window.PagedConfig = {
-          auto: false
-        };    
-      </script>
-
-    {{ block "headScripts" . }}
-    {{ end }}
+    {{/*  {{ block "headScripts" . }}
+    {{ end }} */}}
   </head>
 
-  <body  class="{{ if .Params.class }}{{ .Params.class }}{{ end }} {{ .Page.Section }}" >
-
-    {{ block "print" .}}
-      {{/*  print button  */}}
-      {{  if or (.Params.print) (eq .Page.Section "documentation") (eq .Page.Section "posts")}}
-        <button id="print">{{ partial "print-icon.html" . }}</button>
-      {{ end }}
+  <body style="{{ if .Params.colorPaper }} --color-paper:{{ .Params.colorPaper }} {{ end }}" class="{{ if .Params.class }} {{ .Params.class }} {{ end }} {{ .Page.Section }}">
+    {{ partial "cropmarks.html" }}
+    {{ partial "running-head" . }}
+    {{ block "header" . }}
+    <header>
+      <h1 id="title">{{ .Title }}</h1>
+      {{ if .Params.intro  }}
+      <p class="intro">{{ .Params.intro | markdownify }}</p>
+      {{end}}
+    </header>
     {{ end }}
-
     {{ block "main" . }}
-    <main style="{{ if .Params.colorPaper }} --color-paper:{{ .Params.colorPaper }} {{ end }}">
-      {{ partial "cropmarks.html" }}
-      <article>
-
-        {{ partial "breadcrumb.html" .}}
-        {{ if .Params.intro }}
-        <header>
-          <h1 id="title">{{ .Title }}</h1>
-          {{ if .Params.intro  }}<p class="intro">{{ .Params.intro | markdownify }}</p>{{end}}
-        </header>
-        {{ end }}
-        {{ .Content }}
-        <aside>
-          {{ with .PrevInSection }}
-          <a class="previous" href="{{.Permalink}}">{{.Title}}</a>
-          {{ end }}
-          {{ with .NextInSection }}
-          <a class="next" href="{{.Permalink}}">{{.Title}}</a>
-          {{ end }}
-        </aside>
-        
-      </article>
-    </main>
+    {{ block "breadcrumb.html" . }}
+    {{/*  {{ partial "breadcrumb.html" .}}  */}}
     {{ end }}
- 
-    {{ block "script" . }}
-    {{ $js := resources.Get "/js/scripts.js" }} 
-      <script src="{{$js.Permalink}}"></script>
-            <!-- {{ $smooth := resources.Get "/js/smoothscroll.js" }} 
-            <script src="{{$smooth.Permalink}}"></script>
-            <script>smoothscroll.polyfill();</script> -->
-
+    <article>
+      {{ .Content }}
+      {{block "aside" .}}
+      <aside class="paginator {{ if and .NextInSection .PrevInSection }} both {{ end }}">
+        {{ with .NextInSection }}
+        <a class="previous" href="{{.Permalink}}">{{.Title}}</a>
+        {{ end }}
+        {{ if .NextInSection }}
+        {{ with .PrevInSection }}
+        <a class="next" href="{{.Permalink}}">{{.Title}}</a>
+        {{ end }}
+        {{ else }}
+        {{ with .PrevInSection }}
+        <a class="next alone" href="{{.Permalink}}">{{.Title}}</a>
+        {{ end }}
+        {{ end }}
+      </aside>
       {{ end }}
+    </article>
+    {{ end }}
+    {{ block "footer" . }}
+    {{ partial "footer.html" . }}
+    {{ end }}
+    {{ block "script" . }}
+    {{ $js := resources.Get "/js/scripts.js" }}
+    <script src="{{$js.Permalink}}"></script>
+    {{ end }}
   </body>
 
 </html>

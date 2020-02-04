@@ -1,25 +1,10 @@
 {{ define "main" }}
-<main class="list">
-    {{ partial "cropmarks.html" . }}
-    <article>
-        {{ partial "running-head" . }}
-        
-        {{/*  {{ partial "breadcrumb.html" . }} */}}
-        <header>
-            <h1 id="title">{{ .Title }}</h1>
-            {{ if .Params.intro  }}<p class="intro">{{ .Params.intro | markdownify }}</p>{{end}}
-            <div class="tags">
-                {{ partial "tag-coma.html" . }}
-            </div>
-        </header>
-        <div class="content">
+        <div class="list content">
         <ul>
             {{ range .Pages }}
             <li class="article">
-                <!-- <p class="date">{{ dateFormat "2/1/2006" .Date  }}</p> -->
                 <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
                 {{ if eq .Page.Section "documentation"}}
-                {{/*  {{ if .Params.intro }}<span class="intro"> {{ .Params.intro }} </span> {{ end }}  */}}
                 {{ .TableOfContents }}
                 {{else}}
                 {{ if .Params.intro }}<span class="intro"> {{ .Params.intro }} </span> {{ end }}
@@ -30,11 +15,12 @@
         </ul>
 
     </div>
-    {{ partial "footer.html" . }}
 
-</article>
 
-</main>{{ end }}
+
+{{ end }}
+
+
 {{ define "script" }}
 {{ $js := resources.Get "/js/docList.js" }}
 <script src="{{$js.Permalink}}"></script>
