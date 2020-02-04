@@ -1,0 +1,200 @@
+/* paged.js interface  */
+#print {
+  width: 60px;
+  position: fixed;
+  z-index: 20000;
+  background: var(--color-body);
+  fill: white;
+  padding: 1em;
+  right: 0;
+  top: 0;
+}
+
+/* Change the look */
+:root {
+  --color-background: whitesmoke;
+  --color-pageBox: #666;
+  --color-paper: white;
+  --color-marginBox: transparent;
+}
+
+
+/* To define how the book look on the screen: */
+@media screen {
+  .pagedjs_pages {
+    display: flex;
+    /* width: var(--pagedjs-width); */
+    flex-direction: column;
+    flex: 0;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .pagedjs_page {
+    background-color: var(--color-paper);
+    box-shadow: 0 0 0 1px var(--color-pageBox);
+    margin: 0;
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin-top: 10mm;
+  }
+
+  .pagedjs_first_page {
+    /* margin-left: var(--pagedjs-width); */
+  }
+
+  .pagedjs_page:last-of-type {
+    margin-bottom: 10mm;
+  }
+
+
+  /* show the margin-box */
+
+  .pagedjs_margin-top-left-corner-holder,
+  .pagedjs_margin-top,
+  .pagedjs_margin-top-left,
+  .pagedjs_margin-top-center,
+  .pagedjs_margin-top-right,
+  .pagedjs_margin-top-right-corner-holder,
+  .pagedjs_margin-bottom-left-corner-holder,
+  .pagedjs_margin-bottom,
+  .pagedjs_margin-bottom-left,
+  .pagedjs_margin-bottom-center,
+  .pagedjs_margin-bottom-right,
+  .pagedjs_margin-bottom-right-corner-holder,
+  .pagedjs_margin-right,
+  .pagedjs_margin-right-top,
+  .pagedjs_margin-right-middle,
+  .pagedjs_margin-right-bottom,
+  .pagedjs_margin-left,
+  .pagedjs_margin-left-top,
+  .pagedjs_margin-left-middle,
+  .pagedjs_margin-left-bottom {
+    box-shadow: 0 0 0 1px inset var(--color-marginBox);
+  }
+}
+
+
+
+
+
+/* paged.js style */
+
+
+@media print {
+  footer {
+    position: running(footer);
+  }
+
+  #title {
+    sring-set: title content(text);
+  }
+
+  body {
+    --color-body: black;
+    widows: 3;
+    orphans: 3;
+  }
+
+  @page  {
+    size: A4;
+
+    @top-left  {
+      content: string(title);
+    }
+
+    @bottom-center  {
+      content: element(footer);
+    }
+
+    @top-right  {
+      content: counter(page);
+    }
+  }
+
+  #print {
+    display: none;
+  }
+
+  #tableOfContents {
+    font-size: 10pt;
+  }
+
+  .list .content {
+    grid-column: left/end;
+    font-size: 0.8em;
+
+    li {
+      break-inside: avoid;
+    }
+  }
+
+  main {
+    /* display: block; */
+    width: unset;
+    height: unset;
+    margin: 0;
+    padding: 0;
+  }
+
+  article {
+    padding: 0;
+    margin: 0;
+    display: block;
+    font-size: 14px;
+
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .running-head {
+    border: 0px solid transparent;
+  }
+
+  .crop-marks {
+    display: none;
+  }
+
+  article {
+    min-height: unset;
+
+    header {
+      page: header;
+      margin-top: 0;
+      margin-bottom: 0;
+
+      .intro {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @page header {
+    background: var(--color-body);
+
+    @bottom-left  {
+      content: element(logo);
+    }
+  }
+
+  .running-head {
+    position: running(logo);
+    background: unset;
+    box-shadow: none;
+    display: block;
+
+    menu {
+      display: none;
+    }
+
+    .back-home svg {
+      width: 14ch;
+
+      path {
+        fill: white;
+      }
+    }
+  }
+}

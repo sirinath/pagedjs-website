@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://www.pagedjs.org/"
 languageCode = "en-us"
 title = "pagedjs, house of HTML printing" 
 theme = "pagedjs"

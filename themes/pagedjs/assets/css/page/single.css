@@ -11,7 +11,7 @@
     font-weight: 400;
   }
   padding-bottom: .7em;
-  color: grey;
+  color: var(--color-grey);
 
   a {
     color: inherit;
@@ -22,7 +22,7 @@
     }
 
     &:last-child {
-      color: black;
+      color: var(--color-body);
     }
 
     &:hover {

@@ -9,6 +9,7 @@
 @import "themes/pagedjs/assets/css/base/toc.css";
 @import "themes/pagedjs/assets/css/base/syntax.css";
 @import "themes/pagedjs/assets/css/base/mobile.css";
+@import "themes/pagedjs/assets/css/base/print.css";
 
 
 @import "themes/pagedjs/assets/css/base/layout.css";

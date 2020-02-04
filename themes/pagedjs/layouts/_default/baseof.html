@@ -3,19 +3,48 @@
 
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="The home of paged.js, the library to turn HTML into PDF">
+    <meta name="description" content="The home of paged.js, the library to turn HTML into PDF">
     <meta name="viewport" content="width=device-width, initial-scale=1">  
-    <title>{{ block "title" . }}
+    <title>Pagedjs — {{ block "title" . }}
       {{ .Site.Title }}
       {{ end }}</title>
     {{ $css := resources.Get "./css/main.css" | resources.PostCSS (dict "config" "./assets/css/postcss.config.js" "noMap" true) | minify  | resources.Fingerprint "md5" }}
     <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}">
+      {{/*  {{ if or (eq .Params.print true) (eq .Page.Section "posts") }}  */}}
+
+      {{/*  {{ $pagedjs := resources.Get "js/paged.esm.js" }} 
+      <script src="{{ $pagedjs.Permalink }}" type="module" type="application/javascript"></script>  */}}
+
+
+      {{/*  {{ $interact := resources.Get "js/scripts.js" }}
+      {{ $print := resources.Get "js/print.js" }} 
+      {{ $js := slice  $print $interact | resources.Concat "js/bundle.js" | minify | resources.Fingerprint "md5"  }}
+      <script src="{{ $js.Permalink }}" type="module" type="application/javascript"></script>  */}}
+      {{/*  {{ end }}  */}}
+
+      {{/*  set up paged.js polyfull to preview the print version  */}}
+      {{ $pagegjs := resources.Get "js/paged.polyfill.js" | resources.Fingerprint "md5" }} 
+      <script src="{{ $pagegjs.Permalink }}" type="module" type="application/javascript"></script>
+  
+      <script>
+        window.PagedConfig = {
+          auto: false
+        };    
+      </script>
+
     {{ block "headScripts" . }}
     {{ end }}
   </head>
 
   <body  class="{{ if .Params.class }}{{ .Params.class }}{{ end }} {{ .Page.Section }}" >
- 
+
+    {{ block "print" .}}
+      {{/*  print button  */}}
+      {{  if or (.Params.print) (eq .Page.Section "documentation") (eq .Page.Section "posts")}}
+        <button id="print">{{ partial "print-icon.html" . }}</button>
+      {{ end }}
+    {{ end }}
+
     {{ block "main" . }}
     <main style="{{ if .Params.colorPaper }} --color-paper:{{ .Params.colorPaper }} {{ end }}">
       {{ partial "cropmarks.html" }}

@@ -1,8 +1,9 @@
-document.querySelector('footer').addEventListener("click", function() {
-    this.classList.toggle("show");
-})
 
-console.log(document.querySelector('#toggleMenu'));
+// document.querySelector('footer').addEventListener("click", function() {
+//     this.classList.toggle("show");
+// })
+
+// console.log(document.querySelector('#toggleMenu'));
 
 // document.querySelector('#toggleMenu').addEventListener("click",  function() { document.querySelector("aside.menu").classList.toggle("leftHide")});
 
@@ -13,3 +14,10 @@ document.querySelector('.toc .title').addEventListener("click", function() {
 }
 
 
+
+
+document.querySelector('#print').addEventListener("click", print);
+
+function print() {
+  window.PagedPolyfill.preview();
+}

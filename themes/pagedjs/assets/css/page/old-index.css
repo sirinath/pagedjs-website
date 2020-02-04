@@ -36,7 +36,7 @@
   }
 
   .menu svg path {
-    fill: var(--color-primary, black);
+    fill: var(--color-primary, var(--color-body));
   }
 
   .baseline {

@@ -10,7 +10,7 @@ https://prismjs.com/download.html#themes=prism-coy&languages=markup+css&plugins=
 
  code[class*="language-"],
  pre[class*="language-"] {
-     color: black;
+     color: var(--color-body);
      background: none;
      font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
      font-size: 1em;
