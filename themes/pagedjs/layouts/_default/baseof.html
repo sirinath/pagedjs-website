@@ -10,11 +10,34 @@
       {{ end }}</title>
     {{ $css := resources.Get "./css/main.css" | resources.PostCSS (dict "config" "./assets/css/postcss.config.js" "noMap" true) | minify  | resources.Fingerprint "md5" }}
     <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}">
-    {{/*  {{ block "headScripts" . }}
-    {{ end }} */}}
+    {{/*  set up paged.js polyfull to preview the print version  */}}
+    {{ $pagegjs := resources.Get "js/paged.polyfill.js" | resources.Fingerprint "md5" }} 
+    <script src="{{ $pagegjs.Permalink }}" type="module" type="application/javascript"></script>
+
+    <script>
+      window.PagedConfig = {
+        auto: false
+      };    
+    </script>
+
+  
+
   </head>
 
+
+
   <body style="{{ if .Params.colorPaper }} --color-paper:{{ .Params.colorPaper }} {{ end }}" class="{{ if .Params.class }} {{ .Params.class }} {{ end }} {{ .Page.Section }}">
+
+
+    {{ block "print" .}}
+      {{/*  print button  */}}
+      {{  if or (.Params.print) (eq .Page.Section "documentation") (eq .Page.Section "posts")}}
+        <button id="print">{{ partial "print-icon.html" . }}</button>
+      {{ end }}
+    {{ end }}
+
+
+
     {{ partial "cropmarks.html" }}
     {{ partial "running-head" . }}
     {{ block "header" . }}
