@@ -14,7 +14,7 @@
 :root {
   /* --color-print-background: whitesmoke; */
   --color-pageBox: #666;
-  --color-paper: white;
+  /* --color-paper: --color-paper; */
   --color-marginBox: transparent;
 }
 
@@ -95,6 +95,14 @@
     widows: 3;
     orphans: 3;
   }
+  header {
+    #title, .intro {
+    /* color: white; */
+      text-shadow: none;
+      
+  }
+  break-after: page;
+  }
 
   @page  {
     size: A4;
@@ -157,8 +165,6 @@
     display: none;
   }
 
-  article {
-    min-height: unset;
 
     header {
       page: header;
@@ -168,11 +174,10 @@
       .intro {
         margin-bottom: 0;
       }
-    }
   }
 
   @page header {
-    background: var(--color-body);
+    background: var(--color-lightest-grey);
 
     @bottom-left  {
       content: element(logo);

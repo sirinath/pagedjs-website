@@ -1,4 +1,4 @@
-.list .content {
+.list {
   counter-reset: doc;
   grid-column: main/end;
 
@@ -13,9 +13,9 @@
   }
 
   ul ul {
-    padding-left: 3ch;
-    /* margin-left: 3ch; */
-    border-left: 1px solid var(--color-body);
+    padding-left: 2ch;
+    border-left: 1px solid var(--color-lightest-grey);
+    margin-left: 2ch;
   }
 
   nav:not(".menu") > ul {
@@ -25,11 +25,13 @@
   ul li {
     list-style-type: none;
     font-size: 1em;
+    
 
     > ul {
-      padding-left: 3ch;
-      margin-left: 3ch;
-      border-left: 1px solid var(--color-body);
+      margin-bottom: 0.5em;
+      padding-left: 2ch;
+      margin-left: 1ch;
+      border-left: 1px solid var(--color-lightest-grey);
     }
 
     &::before {
@@ -71,11 +73,12 @@
 
     h2 {
       width: 100%;
-      font-size: 1.2em;
-      /* font-weight: bold; */
+      font-size: 1.5em;
+      font-weight: 400;
       margin-top: 0;
       position: relative;
       border-color: transparent;
+      margin-bottom: 0;
 
       &::before {
         content: ".................................................................................................................................................";
@@ -96,6 +99,7 @@
         position: relative;
         z-index: 100;
         padding-right: 0.5ch;
+        font-style: italic;
 
         &::after {
           line-height: 1.2em;
