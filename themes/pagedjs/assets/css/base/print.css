@@ -12,7 +12,7 @@
 
 /* Change the look */
 :root {
-  --color-background: whitesmoke;
+  /* --color-print-background: whitesmoke; */
   --color-pageBox: #666;
   --color-paper: white;
   --color-marginBox: transparent;
