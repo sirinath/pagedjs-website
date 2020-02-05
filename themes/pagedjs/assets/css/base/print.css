@@ -81,13 +81,95 @@
 /* paged.js style */
 
 
+@page  {
+  size: A5;
+
+
+
+  @bottom-center  {
+    content: element(footer);
+  }
+
+
+}
+
+
+
+
+@page :right {
+  margin-top: 15mm;
+  margin-left: 20mm;
+  margin-right: 15mm;
+  margin-bottom: 25mm;
+  @top-right  {
+    content: counter(page);
+    font-family: var(--font-sans);
+    font-size: 0.7em;
+    width: 5ch;
+    background: var(--color-lightest-grey);
+  }
+  @top-left {
+    content: string(title);
+    font-family: var(--font-sans);
+    font-size: 0.7em;
+
+  }
+}
+@page :left {
+  margin-top: 15mm;
+  margin-left: 15mm;
+  margin-right: 20mm;
+  margin-bottom: 25mm;
+  @top-left  {
+    content: counter(page);
+    font-family: var(--font-sans);
+    font-size: 0.7em;
+    width: 5ch;
+    background: var(--color-lightest-grey);
+  }
+  @top-right {
+    content: string(title);
+    font-family: var(--font-sans);
+    font-size: 0.7em;
+
+  }
+}
+@page :first {
+  background: var(--color-lightest-grey);
+
+  @bottom-left  {
+    content: element(logo);
+  }
+  @top-left {
+    content: none;
+  }
+
+  @top-right  {
+    content: none;
+  }
+}
+
+
 @media print {
+
+  body {
+    display: block;
+  }
+
   footer {
     position: running(footer);
+    font-size: 0.8em;
+    margin: 0;
+    }
+    .paginator {
+      display: none;
+    }
+  #print {
+    display: none;
   }
 
   #title {
-    sring-set: title content(text);
+    string-set: title content(text);
   }
 
   body {
@@ -95,30 +177,15 @@
     widows: 3;
     orphans: 3;
   }
+
   header {
-    #title, .intro {
-    /* color: white; */
+    #title,
+    .intro {
       text-shadow: none;
-      
-  }
-  break-after: page;
-  }
-
-  @page  {
-    size: A4;
-
-    @top-left  {
-      content: string(title);
     }
-
-    @bottom-center  {
-      content: element(footer);
-    }
-
-    @top-right  {
-      content: counter(page);
-    }
+    break-after: page;
   }
+
 
   #print {
     display: none;
@@ -150,7 +217,6 @@
     margin: 0;
     display: block;
     font-size: 14px;
-
   }
 
   .menu {
@@ -165,24 +231,13 @@
     display: none;
   }
 
+  header {
 
-    header {
-      page: header;
-      margin-top: 0;
+    .intro {
       margin-bottom: 0;
-
-      .intro {
-        margin-bottom: 0;
-      }
-  }
-
-  @page header {
-    background: var(--color-lightest-grey);
-
-    @bottom-left  {
-      content: element(logo);
     }
   }
+
 
   .running-head {
     position: running(logo);
