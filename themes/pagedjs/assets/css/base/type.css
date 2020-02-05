@@ -43,7 +43,11 @@ article {
   p {
     max-width: 60ch;
   }
-
+  strong {
+    font-family: var(--font-sans);
+    font-family: 0.95em;
+    font-weight: 500;
+  }
   li {
     max-width: calc(60ch - 10ch);
     margin-left: 5ch;

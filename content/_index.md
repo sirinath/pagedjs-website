@@ -23,4 +23,6 @@ header: "this is fun"
 
 <!-- Or maybe, you want to read the [latest news](posts/) around Paged.js and CSS print. -->
 
-Paged.js is an open source and free library <br/>to paginate content in the browser,<br/>to turn webpages in beautiful PDF. 
+<!-- Paged.js is an open source and free library <br/>to paginate content in the browser,<br/>to turn webpages in beautiful PDF.  -->
+
+Paged.js is an open source software that converts webpages into beautiful PDF

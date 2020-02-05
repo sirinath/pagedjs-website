@@ -8,7 +8,7 @@
       </p>
       {{ end }}
       <h1 id="title">{{ .Title }}</h1>
-      {{ if .Params.intro  }}<p class="intro">{{ .Params.intro | markdownify }} <br/><span class="tags">      {{ partial "tag-coma.html" . }}</span>      </p>{{end}}
+      {{ if .Params.intro  }}<p class="intro">{{ .Params.intro | markdownify }} <br/><span class="tags">      {{ partial "tag-coma.html" . }}</span></p>{{end}}
       <div class="tags">
       </div>
     </header>
