@@ -49,7 +49,7 @@ article .note {
 
 article {
   display: grid;
-  grid-template-columns: [left] 20% [main] 60% 20%[end];
+  grid-template-columns: [left] 20% [main] 70% 10%[end];
 
   .top {
     grid-column: left/end;
