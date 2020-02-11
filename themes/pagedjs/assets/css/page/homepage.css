@@ -6,20 +6,22 @@
 
 .homepage {
   min-height: 80vh;
-  max-width: 800px;
-  display: grid;
+  /* max-width: 800px; */
+  /* display: grid; */
   /* grid-template-rows: 36.5px auto; */
   .running-head {
     height: 20px;
-    border-bottom: 0 solid transparent;
     display: flex;
+    justify-content: flex-end;
+        /* border-bottom: 0 solid transparent;
     align-items: center;
     justify-content: space-around;
     li {
       margin: 0 2ch;
       padding: 0;
     }
-  }
+    */
+  } 
 }
 
 .homepage article {

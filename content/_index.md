@@ -19,7 +19,7 @@ header: "this is fun"
 
 <!-- ---  -->
 
-<!-- {{< halftone src="img/intro.jpg" title="The house of printing sun" id="test">}} -->
+<!-- {{< halftone src="img/intro.jpg">}} -->
 
 <!-- {{<img class="print-machine" src="img/1139e889a554ab3a295840.jpg">}} -->
 
