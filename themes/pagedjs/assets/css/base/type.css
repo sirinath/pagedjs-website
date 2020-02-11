@@ -294,7 +294,7 @@ header {
   flex-direction: column;
   margin-bottom: 6em;
   position: relative;
-  z-index: 2;
+  /* z-index: 2; */
   grid-column: left/end;
   font-size: 0.8em;
   margin-top: 6em;
