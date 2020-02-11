@@ -7,7 +7,8 @@ weight: 2
 intro: "The basics to run Paged.js" 
 cover: "images/chuncker-1.png"
 class: documentation
-
+symbolContent: "𝄢"
+symbolText: "The Musical Symbols block covers characters used by basic Western musical notation and its antecedents (mensural notation and plainsong - or Gregorian - notation)."
 ---
 
 ## Starting Paged.js

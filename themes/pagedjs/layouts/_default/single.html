@@ -9,8 +9,7 @@
       {{ end }}
       <h1 id="title">{{ .Title }}</h1>
       {{ if .Params.intro  }}<p class="intro">{{ .Params.intro | markdownify }} <br/><span class="tags">      {{ partial "tag-coma.html" . }}</span></p>{{end}}
-      <div class="tags">
-      </div>
+        {{ if .Params.symbolText }} <div class="symbol-text">{{ .Params.symbolText | markdownify }}</div>{{end}}
     </header>
     {{ end }}
 

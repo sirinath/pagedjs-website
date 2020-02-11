@@ -11,7 +11,7 @@
   background: var(--color-paper);
   z-index: 9999999;
   align-items: flex-end;
-  height: 20px;
+  height: 50px;
 
   /* border-image: linear-gradient(red, yellow) ; */
   /* border-width: 0 0 20px 0; */

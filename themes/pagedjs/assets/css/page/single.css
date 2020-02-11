@@ -141,3 +141,31 @@ a.tag {
 .talkyard-comments {
   margin-top: 100px !important;
 }
+
+
+.symbol-text {
+  font-family: var(--font-sans);
+  font-size: 1em;
+  position: absolute;
+  color: grey;
+  width: 25ch;
+  a {
+    text-decoration: underline;
+    /* word-break: none;  */
+    white-space: nowrap
+  }
+
+  left: -40ch;
+  margin-top: 3em;
+  text-align:right; 
+  &::before {
+    content: " ";
+    transform: rotate(-10deg);
+    height: 1px;
+    background:    grey;
+    display: block;
+    right: -112px;
+    width: 12ch;
+    position: absolute;
+  }
+}
