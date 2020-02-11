@@ -1,5 +1,12 @@
 {{ define "header"  }}
-<p></p>
+    <!-- --> 
+{{ end }}
+
+
+{{ define "running" }}
+      <div class="running-head">
+        {{ partial "menu" . }}
+    </div>
 {{ end }}
 
 {{ define "main" }}
@@ -7,14 +14,12 @@
 
         <div class="contents">
             {{ if .Params.cover }} <img class="print-machine" src="{{.Params.cover}}" /> {{end}}
-            <div class="right">
-                {{ .Content }}
-            </div>
+                {{ .Content }} 
+
         </div>
     </article>
-
 {{ end }}
 
 {{ define "footer"  }}
-<p></p>
+<!-- -->
 {{ end }}

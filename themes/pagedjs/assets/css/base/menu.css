@@ -90,3 +90,10 @@
   }
 }
 
+
+
+.homepage {
+  #paged-logo {
+    display: none;
+  }
+}

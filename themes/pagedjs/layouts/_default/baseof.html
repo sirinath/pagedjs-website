@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="{{ if .Params.colorBackground }} --color-background:{{ .Params.colorBackground }}; {{ end }} {{ if .Params.colorBody }} --color-body:{{ .Params.colorBody }}; {{ end }} {{ if .Params.colorCrop }} --color-cropmarks:{{ .Params.colorCrop }}; {{ end }}">
 
   <head>
     <meta charset="utf-8">
@@ -26,7 +26,7 @@
 
 
 
-  <body style="{{ if .Params.colorPaper }} --color-paper:{{ .Params.colorPaper }} {{ end }}" class="{{ if .Params.class }} {{ .Params.class }} {{ end }} {{ .Page.Section }}">
+  <body style="{{ if .Params.colorPaper }} --color-paper:{{ .Params.colorPaper }}; {{ end }} " class="{{ if .Params.class }} {{ .Params.class }} {{ end }} {{ .Page.Section }}">
 
 
     {{ block "print" .}}
@@ -39,7 +39,14 @@
 
 
     {{ partial "cropmarks.html" }}
-    {{ partial "running-head" . }}
+    {{ block "running" . }}
+      <div class="running-head">
+        <a class="back-home" href="{{ .Site.BaseURL }}">
+        {{ partial "paged-logo.html" . }}
+        </a>
+        {{ partial "menu" . }}
+  </div>
+  {{ end }}
     {{ block "header" . }}
     <header>
       <h1 id="title">{{ .Title }}</h1>

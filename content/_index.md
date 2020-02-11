@@ -2,7 +2,11 @@
 title: "Paged.js"
 subtitle: "this is the subtitle"
 class: "homepage"
-# colorPaper: "whitesmoke"
+# colorPaper: "black"
+# colorCrop: "red"
+# colorPaper: "orange"
+# colorBackground: "orange"
+# colorBody: "darkred"
 baseline: "the library that prints the web"
 header: "this is fun"
 # cover: "img/1139e889a554ab3a295840.jpg" #link to the printing machine we can update it through js and randomize it.
@@ -25,4 +29,15 @@ header: "this is fun"
 
 <!-- Paged.js is an open source and free library <br/>to paginate content in the browser,<br/>to turn webpages in beautiful PDF.  -->
 
-Paged.js is an open source software that converts webpages into beautiful PDF
+
+{{< pagedjs-logo class="intro-logo" >}}
+
+*by* Cabbage Tree Labs
+
+
+- open source
+- standards compliant
+- community driven
+
+
+<!-- {{< ctl-logo class="ctl-logo" >}} -->
