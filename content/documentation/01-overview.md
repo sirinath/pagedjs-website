@@ -4,7 +4,7 @@ date: 2019-09-03T18:23:22+02:00
 draft: false
 part: 1 
 weight: 1
-tocEmoji: " 🖼"
+symbolContent: "❦"
 intro: "Heard about Paged.js but don’t know where to start? " 
 cover: "images/chuncker-1.png"
 class: documentation

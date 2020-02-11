@@ -7,6 +7,7 @@
   --color-lightest-grey: rgb(245, 245, 245);
   --color-lightest-grey: hsl(var(--tint), 0%, 88%);
   /* --color-primary: hsl(var(--tint),  var(--saturation), var(--light)); */
+  --symbol-content: "❧";
 
  
   --shadow-paper: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
