@@ -1,4 +1,45 @@
 figure {
     padding: 0;
     margin: 0;
+    /* transform: ; */
+}
+
+
+.halftone {
+    margin-left: -4em;
+    margin-right: -4em;
+    background: white;
+    position: relative;
+    filter: contrast(40);
+    overflow: hidden;
+/*     transform: translateZ(0); /* force a HW accelerated layer */ 
+img {
+    width: 150%;
+}
+}
+
+.halftone > * {
+    filter: brightness(0.5) blur(4px);
+    animation: 10s animation-filter infinite alternate;
+}
+
+.halftone::after {
+    content: '';
+    position: absolute;
+    top: -200%;
+    left: -200%;
+    right: -200%;
+    bottom: -200%;
+    background-blend-mode: multiply;
+    background:
+        radial-gradient(6px 6px, cyan, white), 
+        radial-gradient(6px 6px, magenta, white),
+        radial-gradient(6px 6px, yellow, white);
+    background-size: 6px 6px;
+    background-position: 0 -3px, -2px 0, 2px 0;
+    mix-blend-mode: screen;
+    pointer-events: none;
+    transform: rotate(11.25deg);
+    /* transition: 1s ease-in-out transform; */
+    z-index: 1;
 }
