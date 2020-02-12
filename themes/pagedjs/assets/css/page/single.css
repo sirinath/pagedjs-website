@@ -162,13 +162,24 @@ a.tag {
   text-align:right; 
   &::before {
     content: " ";
-    transform: rotate(-10deg);
+
+    transform: rotate(-11deg);
+    
     height: 1px;
-    background:    grey;
+    
+    background:
+    grey;
+    
     display: block;
-    right: -112px;
-    width: 12ch;
+    
+    right: -52px;
+    
+    width: 11ch;
+    
     position: absolute;
+    
     z-index: -1;
-  }
+    
+    top: 11px;
+    }
 }

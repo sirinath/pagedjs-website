@@ -154,6 +154,8 @@ article {
     font-size: 1.66em;
     /* padding-top: 2em; */
     border-bottom: 2px solid var(--color-lightest-grey);
+    /* /* padding-top: /px; margin-top: -/px; */
+    padding-top: 3em;
   }
 
   h3 {
@@ -324,7 +326,7 @@ header {
     line-height: 1.1;
     font-family: var(--font-serif);
     position: relative;
-    /* text-shadow: 1px 1px var(--color-paper), -1px 1px var(--color-paper), -1px -1px var(--color-paper), 1px -1px var(--color-paper), 2px 2px var(--color-paper), -2px 2px var(--color-paper), -2px -2px var(--color-paper), 2px -2px var(--color-paper), 3px 3px var(--color-paper), -3px 3px var(--color-paper), -3px -3px var(--color-paper), 3px -3px var(--color-paper), 4px 4px var(--color-paper), -4px 4px var(--color-paper), -4px -4px var(--color-paper), 4px -4px var(--color-paper); */
+      /* text-shadow: 1px 1px var(--color-paper), -1px 1px var(--color-paper), -1px -1px var(--color-paper), 1px -1px var(--color-paper), 2px 2px var(--color-paper), -2px 2px var(--color-paper), -2px -2px var(--color-paper), 2px -2px var(--color-paper), 3px 3px var(--color-paper), -3px 3px var(--color-paper), -3px -3px var(--color-paper), 3px -3px var(--color-paper), 4px 4px var(--color-paper), -4px 4px var(--color-paper), -4px -4px var(--color-paper), 4px -4px var(--color-paper); */
     /* filter: drop-shadow(-2px 0px 0px var(--color-paper)) drop-shadow(0px 2px 0px var(--color-paper)) drop-shadow(-2px -2px 0px var(--color-paper)) drop-shadow(2px 2px 0px var(--color-paper)) ; */
     border: 0px solid transparent;
 

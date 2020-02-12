@@ -67,3 +67,5 @@ function halftone(image) {
       console.log(list);
 
   };
+
+
