@@ -1,4 +1,5 @@
 .homepage {
+  overflow-y: scroll;
 }
 
 .homepage main {
@@ -10,7 +11,7 @@
   /* display: grid; */
   /* grid-template-rows: 36.5px auto; */
   .running-head {
-    height: 20px;
+    height: 50px;
     display: flex;
     justify-content: flex-end;
         /* border-bottom: 0 solid transparent;
