@@ -99,7 +99,7 @@ article {
     color: var(--color-primary);
 
     .name {
-      border-bottom: 2px dotted var(--color-lightest-grey);
+      /* border-bottom: 2px dotted var(--color-lightest-grey); */
       margin-left: -3em;
       padding-left: 3em;
       max-width: max-content;
@@ -149,6 +149,8 @@ a.tag {
   position: absolute;
   color: grey;
   width: 25ch;
+  background: var(--color-paper);
+  padding-right: 1em;
   a {
     text-decoration: underline;
     /* word-break: none;  */
@@ -167,5 +169,6 @@ a.tag {
     right: -112px;
     width: 12ch;
     position: absolute;
+    z-index: -1;
   }
 }

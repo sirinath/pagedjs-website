@@ -4,11 +4,11 @@
             {{ range .Pages }}
             <li class="article">
                 <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-                {{ if eq .Page.Section "documentation"}}
+                <!-- {{ if eq .Page.Section "documentation"}}
                 {{ .TableOfContents }}
-                {{else}}
+                {{else}} -->
                 {{ if .Params.intro }}<span class="intro"> {{ .Params.intro }} </span> {{ end }}
-                {{end}}
+                <!-- {{end}} -->
                 </a>
             </li>
             {{ end }}

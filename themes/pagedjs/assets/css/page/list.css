@@ -1,7 +1,6 @@
 .list {
   counter-reset: doc;
   grid-column: main/end;
-
   a {
     text-decoration: none;
     background: none;

@@ -11,7 +11,6 @@ body {
 
 /* article */
 article {
-  font-size: 20px;
   line-height: 1.6;
 
   .meta {
@@ -325,7 +324,7 @@ header {
     line-height: 1.1;
     font-family: var(--font-serif);
     position: relative;
-    text-shadow: 1px 1px var(--color-paper), -1px 1px var(--color-paper), -1px -1px var(--color-paper), 1px -1px var(--color-paper), 2px 2px var(--color-paper), -2px 2px var(--color-paper), -2px -2px var(--color-paper), 2px -2px var(--color-paper), 3px 3px var(--color-paper), -3px 3px var(--color-paper), -3px -3px var(--color-paper), 3px -3px var(--color-paper), 4px 4px var(--color-paper), -4px 4px var(--color-paper), -4px -4px var(--color-paper), 4px -4px var(--color-paper);
+    /* text-shadow: 1px 1px var(--color-paper), -1px 1px var(--color-paper), -1px -1px var(--color-paper), 1px -1px var(--color-paper), 2px 2px var(--color-paper), -2px 2px var(--color-paper), -2px -2px var(--color-paper), 2px -2px var(--color-paper), 3px 3px var(--color-paper), -3px 3px var(--color-paper), -3px -3px var(--color-paper), 3px -3px var(--color-paper), 4px 4px var(--color-paper), -4px 4px var(--color-paper), -4px -4px var(--color-paper), 4px -4px var(--color-paper); */
     /* filter: drop-shadow(-2px 0px 0px var(--color-paper)) drop-shadow(0px 2px 0px var(--color-paper)) drop-shadow(-2px -2px 0px var(--color-paper)) drop-shadow(2px 2px 0px var(--color-paper)) ; */
     border: 0px solid transparent;
 
@@ -335,7 +334,7 @@ header {
       height: 1em;
       display: block;
       position: absolute;
-      border-bottom: 2px dotted var(--color-primary);
+      /* border-bottom: 2px dotted var(--color-primary); */
       opacity: 0.3;
       bottom: 0;
     }
@@ -346,15 +345,14 @@ header {
     font-size: 1.1em;
     line-height: 1.5;
     max-width: 50ch;
-    margin-top: 2em;
+    margin-top: 0;
     color: var(--color-body);
     padding-left: 1em;
     border-left: 2px solid currentcolor;
     max-width: 51ch;
     display: block;
-    margin-top: 2em;
     margin-bottom: 3em;
-    text-shadow: 1px 1px var(--color-paper), -1px 1px var(--color-paper), -1px -1px var(--color-paper), 1px -1px var(--color-paper), 2px 2px var(--color-paper), -2px 2px var(--color-paper), -2px -2px var(--color-paper), 2px -2px var(--color-paper), 3px 3px var(--color-paper), -3px 3px var(--color-paper), -3px -3px var(--color-paper), 3px -3px var(--color-paper), 4px 4px var(--color-paper), -4px 4px var(--color-paper), -4px -4px var(--color-paper), 4px -4px var(--color-paper);
+    /* text-shadow: 1px 1px var(--color-paper), -1px 1px var(--color-paper), -1px -1px var(--color-paper), 1px -1px var(--color-paper), 2px 2px var(--color-paper), -2px 2px var(--color-paper), -2px -2px var(--color-paper), 2px -2px var(--color-paper), 3px 3px var(--color-paper), -3px 3px var(--color-paper), -3px -3px var(--color-paper), 3px -3px var(--color-paper), 4px 4px var(--color-paper), -4px 4px var(--color-paper), -4px -4px var(--color-paper), 4px -4px var(--color-paper); */
     /* filter: drop-shadow(-2px 0px 0px var(--color-paper)) drop-shadow(0px 2px 0px var(--color-paper)) drop-shadow(-2px -2px 0px var(--color-paper)) drop-shadow(2px 2px 0px var(--color-paper)) ; */
 
   }
@@ -388,3 +386,4 @@ header {
     font-size: 1.5em;
   }
 }
+
