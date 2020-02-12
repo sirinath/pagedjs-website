@@ -10,7 +10,7 @@ html {
 }
 
 body {
-
+  overflow-y: scroll;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: [left] 20% [main] 60% [right] 20% [end];
