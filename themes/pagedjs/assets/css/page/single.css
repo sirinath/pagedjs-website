@@ -40,7 +40,9 @@ article .note {
   margin-left: 2em;
   border-left: 2px solid var(--color-primary);
   font-family: var(--font-sans);
-  grid-column: note;
+  float: right;
+  width: 30ch;
+
 
   :first-child {
     padding-top: 0;
