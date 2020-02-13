@@ -8,7 +8,6 @@
 @import "themes/pagedjs/assets/css/base/postit.css";
 @import "themes/pagedjs/assets/css/base/toc.css";
 @import "themes/pagedjs/assets/css/base/syntax.css";
-@import "themes/pagedjs/assets/css/base/mobile.css";
 @import "themes/pagedjs/assets/css/base/print.css";
 
 
@@ -28,3 +27,6 @@
 
 /* page specific 
 @import "themes/pagedjs/assets/css/page/doc.css"; */
+
+
+@import "themes/pagedjs/assets/css/base/mobile.css";

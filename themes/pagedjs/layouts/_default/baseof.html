@@ -11,42 +11,33 @@
     {{ $css := resources.Get "./css/main.css" | resources.PostCSS (dict "config" "./assets/css/postcss.config.js" "noMap" true) | minify  | resources.Fingerprint "md5" }}
     <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}">
     {{/*  set up paged.js polyfull to preview the print version  */}}
-    {{ $pagegjs := resources.Get "js/paged.polyfill.js" | resources.Fingerprint "md5" }} 
+    {{ $pagegjs := resources.Get "js/paged.polyfill.js" | resources.Fingerprint "md5" }}
     <script src="{{ $pagegjs.Permalink }}" type="module" type="application/javascript"></script>
-
     <script>
       window.PagedConfig = {
         auto: false
       };    
     </script>
-
-  
-
   </head>
 
-
-
   <body style="{{ if .Params.colorPaper }} --color-paper:{{ .Params.colorPaper }}; {{ end }} " class="{{ if .Params.class }} {{ .Params.class }} {{ end }} {{ .Page.Section }}">
-
-
     {{ block "print" .}}
-      {{/*  print button  */}}
-      {{  if or (.Params.print) (eq .Page.Section "documentation") (eq .Page.Section "posts")}}
-        <button id="print">{{ partial "print-icon.html" . }}</button>
-      {{ end }}
+    {{/*  print button  */}}
+    {{  if or (.Params.print) (eq .Page.Section "documentation") (eq .Page.Section "posts")}}
+    <button id="print">{{ partial "print-icon.html" . }}</button>
     {{ end }}
-
-
-
+    {{ end }}
     {{ partial "cropmarks.html" }}
     {{ block "running" . }}
-      <div class="running-head">
-        <a class="back-home" href="{{ .Site.BaseURL }}">
+    <div class="running-head">
+      <!-- <a class="back-home" href="{{ .Site.BaseURL }}"> -->
+      <button class="back-home">
         {{ partial "paged-logo.html" . }}
-        </a>
-        {{ partial "menu" . }}
-  </div>
-  {{ end }}
+      </button>
+      <!-- </a> -->
+      {{ partial "menu" . }}
+    </div>
+    {{ end }}
     {{ block "header" . }}
     <header>
       <h1 id="title">{{ .Title }}</h1>
@@ -57,7 +48,7 @@
     {{ end }}
     {{ block "main" . }}
     {{ block "breadcrumb.html" . }}
-    {{/*  {{ partial "breadcrumb.html" .}}  */}}
+    {{/*  {{ partial "breadcrumb.html" .}} */}}
     {{ end }}
     <article>
       {{ .Content }}
@@ -85,6 +76,10 @@
     {{ block "script" . }}
     {{ $js := resources.Get "/js/scripts.js" }}
     <script src="{{$js.Permalink}}"></script>
+    {{ if eq .Params.section "documentation" }}
+    {{ $docjs := resources.Get "/js/docList.js" }}
+    <script src="{{$docjs.Permalink}}"></script>
+    {{ end }}
     {{ end }}
   </body>
 

@@ -43,7 +43,6 @@ article .note {
   float: right;
   width: 30ch;
 
-
   :first-child {
     padding-top: 0;
   }
@@ -106,7 +105,6 @@ article {
       padding-left: 3em;
       max-width: max-content;
       padding-right: .3ch;
-
     }
   }
 
@@ -122,7 +120,7 @@ article {
     padding: 5px;
     background: var(--color-paper);
     margin-top: -6px;
-        /* box-shadow: 0 0 0 5px var(--color-primary); */
+    /* box-shadow: 0 0 0 5px var(--color-primary); */
   }
 }
 
@@ -144,44 +142,34 @@ a.tag {
   margin-top: 100px !important;
 }
 
-
 .symbol-text {
   font-family: var(--font-sans);
   font-size: 1em;
   position: absolute;
   color: grey;
-  width: 25ch;
+  width: 20ch;
   background: var(--color-paper);
   padding-right: 1em;
+  left: -33ch;
+  margin-top: 3em;
+  text-align: right;
+
   a {
     text-decoration: underline;
     /* word-break: none;  */
-    white-space: nowrap
+    white-space: nowrap;
   }
 
-  left: -40ch;
-  margin-top: 3em;
-  text-align:right; 
   &::before {
     content: " ";
-
     transform: rotate(-11deg);
-    
     height: 1px;
-    
-    background:
-    grey;
-    
+    background: grey;
     display: block;
-    
     right: -52px;
-    
     width: 11ch;
-    
     position: absolute;
-    
     z-index: -1;
-    
     top: 11px;
-    }
+  }
 }

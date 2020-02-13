@@ -13,10 +13,12 @@ document.querySelector('.toc .title').addEventListener("click", function() {
 })
 }
 
+document.querySelector(".back-home").addEventListener("click", function() {document.querySelector(".menu").classList.toggle("hide")});
 
 
-
+if (document.querySelector('#print')) {
 document.querySelector('#print').addEventListener("click", print);
+}
 
 function print() {
   window.PagedPolyfill.preview();

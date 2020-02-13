@@ -3,7 +3,7 @@
         <ul>
             {{ range .Pages }}
             <li class="article">
-                <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                <h2><a href="{{ .Permalink }}"><span>{{ .Title }}</span></a></h2>
                 {{ if eq .Page.Section "documentation"}}
                 {{ .TableOfContents }}
                 {{else}}
@@ -21,7 +21,3 @@
 {{ end }}
 
 
-{{ define "script" }}
-{{ $js := resources.Get "/js/docList.js" }}
-<script src="{{$js.Permalink}}"></script>
-{{ end }}

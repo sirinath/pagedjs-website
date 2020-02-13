@@ -28,7 +28,7 @@
     margin-left: 1ch;
   }
 
-  a.back-home {
+  .back-home {
     width: 14ch;
     background: 0 0;
     padding: 0;
@@ -36,6 +36,8 @@
     top: 0;
     margin-left: 0;
     min-width: 10ch;
+    box-shadow: none;
+    border: none;
   }
 
   #paged-logo {
@@ -60,7 +62,9 @@
   text-transform: uppercase;
   font-variant: all-small-caps;
   font-size: 1.1em;
-
+  &.hide {
+    display: flex;
+  }
   ul {
     width: 100%;
     list-style-type: none;
@@ -100,3 +104,4 @@
     display: none;
   }
 }
+

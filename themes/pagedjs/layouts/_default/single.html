@@ -1,13 +1,17 @@
    {{ define "header" }}     
     <header>
       {{ if eq .Page.Section "documentation" }}
-      {{ else }}
+       <h1 id="title">{{ .Title }}</h1>
+
+
+       {{ else }}
+   
+      <h1 id="title">{{ .Title }}</h1>
       <p class="meta">
         written by <span class="author">{{ .Params.author }}</span> on 
         <span class="date">{{ dateFormat "January 2, 2006" .Date  }}</span>
       </p>
       {{ end }}
-      <h1 id="title">{{ .Title }}</h1>
       {{ if .Params.intro  }}<p class="intro">{{ .Params.intro | markdownify }} <br/><span class="tags">      {{ partial "tag-coma.html" . }}</span></p>{{end}}
 
         {{ if .Params.symbolText }} 

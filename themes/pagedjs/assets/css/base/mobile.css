@@ -32,7 +32,7 @@
 }
 
 
-/* 
+/* 0
 @media screen and (max-width: 767px) {
   article header  {
     font-size: 0.7em;
@@ -44,3 +44,138 @@
     max-width: unset ;
   }
 } */
+
+@media screen and (max-width: 767px) {
+  :root {
+    --font-size: 16px;
+  }
+
+  article {
+    grid-template-columns: [left] 10% [main] 80% 10%[end];
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    grid-template-columns: [left] 10% [main] 80% [right] 10% [end];
+  }
+
+  .running-head {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding-top: 0;
+    width: 100%;
+    border-bottom: none;
+    background: white;
+
+    .back-home {
+      position: unset;
+      background: transparent;
+      padding-top: 1em;
+      width: 100%;
+      background: white;
+      padding: 2em 35%;
+    }
+
+    .menu {
+      margin-top: 0;
+      transition: all .6s;
+      opacity: 1;
+      padding-top: 0;
+      margin-bottom: 2em;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu.hide {
+      opacity: 0;
+      margin-top: -50vh;
+      /* background: red; */
+      /* height: 0; */
+    }
+
+    .menu ul {
+      padding: 0;
+      text-align: center;
+      /* display: none; */
+      flex-direction: column;
+
+      li {
+        margin: 0;
+        border-bottom: 1px solid grey;
+        padding: 1em;
+      }
+    }
+  }
+
+  header {
+    grid-column: main/main;
+    margin-top: 10em;
+  }
+
+  .symbol-text {
+    display: none;
+  }
+
+  .paginator {
+    grid-column: main;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.7em;
+
+    .next {
+      width: 100%;
+      text-align: center;
+      border: none;
+      padding: 0;
+      margin-top: 2em;
+
+      &::before {
+        font-size: 0.3em;
+        text-align: center;
+      }
+    }
+
+    .previous {
+      text-align: center;
+      width: 100%;
+      border: none;
+      padding: 0;
+
+      &::before {
+        font-size: 0.3em;
+        text-align: center;
+      }
+    }
+
+    .alone {
+    }
+  }
+
+  footer {
+    padding: 0 5em 3em;
+    text-align: center;
+
+    a {
+      white-space: pre;
+    }
+  }
+
+  /* list */
+  body .article {
+    grid-template-columns: [left] 2% [main] 96% 2%[end];
+  }
+  .list {
+    grid-column: main/main;
+    ul {
+      padding-left: 0;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
