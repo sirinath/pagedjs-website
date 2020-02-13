@@ -27,8 +27,9 @@ That said, we’re happy that you found us, and welcome around :)
 Paged.js was founded by [Adam Hyde](https://www.adamhyde.net) and is currently developed by [Julie Blanc](http://julie-blanc.fr), [Fred Chasen](http://fchasen.com/) and Julien Taquet at the [Cabbage Tree Labs](https://www.cabbagetreelabs.org). 
 
 Paged.js logo was designed by the lovely [Anton Moglia](http://moglia.fr/) and our own awesome [Julie Blanc](http://julie-blanc.fr) in a train back from this 60 years old type design event called [Les Rencontres de Lure](http://delure.org). 
-Paged.js website was designed and built by Julien Taquet thanks to the great static website generator [Hugo](https://gohugo.io/). 
+Paged.js website was designed and built by Adam Hyde and Julien Taquet thanks to the great static website generator [Hugo](https://gohugo.io/). 
 
 <!-- Minipax, the extraordinary font used on the website was designed by Raphaël Ronot and is exclusively offered through the open and independant [Velvetyne](https://www.velvetyne.fr/) type foundry.  -->
+The Unicode character on each page and the story around it comes from the excellent [decodeunicode](https://www.decodeunicode.org/) project.
 
 The website is mainly using the [Jost*](https://indestructibletype.com/Jost.html) font from Indestructible type and [Fanwood Text](https://www.theleagueofmoveabletype.com/fanwood) from the league of moveable type, both free and open source fonts. Oh, we’re also using [Victor Mono](https://rubjo.github.io/victor-mono/) when it comes to code, designed by Rune B which is also free and open source.  
