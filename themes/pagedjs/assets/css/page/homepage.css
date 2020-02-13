@@ -21,7 +21,18 @@
       padding: 0;
     }
     */
+    .menu {
+    height: auto;
+    }
   } 
+
+
+.back-home {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
 }
 
 .homepage article {

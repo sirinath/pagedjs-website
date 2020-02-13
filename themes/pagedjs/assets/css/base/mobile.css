@@ -78,6 +78,10 @@ width: auto;
     --font-size: 16px;
   }
 
+  .homepage #paged-logo {
+    display: block;
+  }
+
   article {
     grid-template-columns: [left] 10% [main] 80% 10%[end];
   }

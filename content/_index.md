@@ -29,8 +29,9 @@ header: "this is fun"
 
 <!-- Paged.js is an open source and free library <br/>to paginate content in the browser,<br/>to turn webpages in beautiful PDF.  -->
 
-
+<a href="about">
 {{< pagedjs-logo class="intro-logo" >}}
+</a>
 
 *by* Cabbage Tree Labs
 
