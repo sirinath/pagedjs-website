@@ -18,7 +18,7 @@ article {
     width: 100%;
     max-width: 100%;
     margin-top: 2em;
-    margin-bottom: 0;
+    margin-bottom: 2em;
     font-family: var(--font-sans-serif);
   }
 
@@ -290,6 +290,24 @@ article {
 
 /* headings */
 
+.intro {
+  font-family: var(--font-sans);
+  font-size: .9em;
+  line-height: 1.5;
+  max-width: 50ch;
+  margin-top: 0;
+  color: var(--color-body);
+  padding-left: 1em;
+  border-left: 2px solid currentcolor;
+  max-width: 51ch;
+  display: block;
+  margin-bottom: 3em;
+  /* margin-top: 2em; */
+  grid-column: main/end;
+  /* text-shadow: 1px 1px var(--color-paper), -1px 1px var(--color-paper), -1px -1px var(--color-paper), 1px -1px var(--color-paper), 2px 2px var(--color-paper), -2px 2px var(--color-paper), -2px -2px var(--color-paper), 2px -2px var(--color-paper), 3px 3px var(--color-paper), -3px 3px var(--color-paper), -3px -3px var(--color-paper), 3px -3px var(--color-paper), 4px 4px var(--color-paper), -4px 4px var(--color-paper), -4px -4px var(--color-paper), 4px -4px var(--color-paper); */
+  /* filter: drop-shadow(-2px 0px 0px var(--color-paper)) drop-shadow(0px 2px 0px var(--color-paper)) drop-shadow(-2px -2px 0px var(--color-paper)) drop-shadow(2px 2px 0px var(--color-paper)) ; */
+
+}
 
 header {
   --color-primary: var(color-body);
@@ -301,7 +319,7 @@ header {
   grid-column: left/end;
   font-size: 0.8em;
   margin-top: 6em;
-  margin-bottom: 2em;
+  margin-bottom: 6em;
   /* font-weight: 700; */
   &::before {
     content: var(--symbol-content);
@@ -345,28 +363,11 @@ header {
     }
   }
 
-  .intro {
-    font-family: var(--font-sans);
-    font-size: 1.1em;
-    line-height: 1.5;
-    max-width: 50ch;
-    margin-top: 0;
-    color: var(--color-body);
-    padding-left: 1em;
-    border-left: 2px solid currentcolor;
-    max-width: 51ch;
-    display: block;
-    margin-bottom: 3em;
-    /* margin-top: 2em; */
-    
-    /* text-shadow: 1px 1px var(--color-paper), -1px 1px var(--color-paper), -1px -1px var(--color-paper), 1px -1px var(--color-paper), 2px 2px var(--color-paper), -2px 2px var(--color-paper), -2px -2px var(--color-paper), 2px -2px var(--color-paper), 3px 3px var(--color-paper), -3px 3px var(--color-paper), -3px -3px var(--color-paper), 3px -3px var(--color-paper), 4px 4px var(--color-paper), -4px 4px var(--color-paper), -4px -4px var(--color-paper), 4px -4px var(--color-paper); */
-    /* filter: drop-shadow(-2px 0px 0px var(--color-paper)) drop-shadow(0px 2px 0px var(--color-paper)) drop-shadow(-2px -2px 0px var(--color-paper)) drop-shadow(2px 2px 0px var(--color-paper)) ; */
-
-  }
+ 
 
   .meta {
     /* grid-column: left; */
-    font-size: .8em;
+    font-size: 1em;
     font-family: var(--font-sans);
     font-weight: 400;
     margin-bottom: 0px;
@@ -393,5 +394,7 @@ header {
   h2 {
     font-size: 1.5em;
   }
+
+  
 }
 

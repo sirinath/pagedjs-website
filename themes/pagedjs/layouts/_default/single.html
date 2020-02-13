@@ -2,17 +2,15 @@
     <header>
       {{ if eq .Page.Section "documentation" }}
        <h1 id="title">{{ .Title }}</h1>
-
-
        {{ else }}
-       <p class="meta">
+      
+      <h1 id="title">{{ .Title }}</h1>
+      <p class="meta">
         written by <span class="author">{{ .Params.author }}</span> on 
         <span class="date">{{ dateFormat "January 2, 2006" .Date  }}</span>
       </p>
-      <h1 id="title">{{ .Title }}</h1>
-    
       {{ end }}
-      {{ if .Params.intro  }}<p class="intro">{{ .Params.intro | markdownify }} <br/><span class="tags">      {{ partial "tag-coma.html" . }}</span></p>{{end}}
+     
 
         {{ if .Params.symbolText }} 
         <div class="symbol-text">{{ .Params.symbolText | markdownify }}</div>
@@ -26,6 +24,8 @@
 
         {{end}}
     </header>
+
+    {{ if .Params.intro  }}<p class="intro">{{ .Params.intro | markdownify }} <br/><span class="tags">      {{ partial "tag-coma.html" . }}</span></p>{{end}} 
     {{ end }}
 
 
