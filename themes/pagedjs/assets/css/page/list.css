@@ -53,22 +53,27 @@
   .article {
     margin-left: 0;
     margin-top: 3em;
-
+    .meta {
+      font-family: var(--font-sans);
+      font-size: 0.7em;
+      margin-bottom: 0;
+    }
+    
     .intro {
       font-family: var(--font-sans);
-      font-size: 1em;
+      font-size: 1.4em;
       line-height: 1.5;
       max-width: 50ch;
-      margin-top: 0.8em;
+      margin-top: 0.3em;
       color: var(--color-primary);
       padding-left: 1em;
       border-left: 2px solid currentcolor;
       max-width: 51ch;
       display: block;
       font-family: var(--font-serif);
+      margin-left: 4ch;
       /* align-self: flex-end; */
     }
-
     h2 {
       width: 100%;
       font-size: 1.5em;
