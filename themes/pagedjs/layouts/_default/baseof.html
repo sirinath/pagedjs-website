@@ -53,6 +53,8 @@
     {{/*  {{ partial "breadcrumb.html" .}} */}}
     {{ end }}
     <article>
+    {{ if .Params.intro  }}<p class="intro">{{ .Params.intro | markdownify }} <br/><span class="tags">      {{ partial "tag-coma.html" . }}</span></p>{{end}} 
+
       {{ .Content }}
       {{block "aside" .}}
       <aside class="paginator {{ if and .NextInSection .PrevInSection }} both {{ end }}">
