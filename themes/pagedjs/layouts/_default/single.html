@@ -5,12 +5,12 @@
 
 
        {{ else }}
-   
-      <h1 id="title">{{ .Title }}</h1>
-      <p class="meta">
+       <p class="meta">
         written by <span class="author">{{ .Params.author }}</span> on 
         <span class="date">{{ dateFormat "January 2, 2006" .Date  }}</span>
       </p>
+      <h1 id="title">{{ .Title }}</h1>
+    
       {{ end }}
       {{ if .Params.intro  }}<p class="intro">{{ .Params.intro | markdownify }} <br/><span class="tags">      {{ partial "tag-coma.html" . }}</span></p>{{end}}
 

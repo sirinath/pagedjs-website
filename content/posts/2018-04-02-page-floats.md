@@ -1,5 +1,5 @@
 ---
-title: 'Paged Media approaches : page floats'
+title: 'Paged Media approaches : page floats'
 author: Julie Blanc
 type: post
 date: 2018-04-02T21:24:56+00:00

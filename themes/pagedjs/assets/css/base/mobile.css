@@ -1,19 +1,4 @@
-@media screen and (max-width: 1250px) {
-  body {
-    /* grid-template-columns: [sidebar] 10vw [main] 70vw [end] 5vw; */
-  }
-}
 
-@media screen and (max-width: 1250px) {
-  body {
-    /* grid-template-columns: [sidebar] 10vw [main] 70vw [end] 5vw; */
-  }
-
-  .back-home {
-    position: fixed;
-    top: 0;
-  }
-}
 
 @media screen and (max-width: 570px) {
   body {
@@ -26,7 +11,7 @@
     }
 
     .crop-marks {
-      display: none;
+      /* display: none; */
     }
   }
 }
@@ -44,7 +29,50 @@
     max-width: unset ;
   }
 } */
+@media screen and (max-width: 1540px) {
+  .symbol-text {
+    display: none;
+  }
+  body {
+    padding: 1.5em;
+    width: 90%;
+  }
+}
 
+@media screen and (max-width: 1000px) {
+  body {
+    padding: 1.5em;
+    margin: 1em;
+width: auto;
+  }
+  /* .symbol-text {
+    display: none;
+  } */
+  .running-head {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding-top: 0;
+    width: 100%;
+    /* border-bottom: none; */
+    background: white;
+  }
+  article {
+  grid-template-columns: [left] 10% [main] 80% 10% [end];
+}
+  .menu {
+    width: 100%;
+  }
+  .menu ul {
+    justify-content: space-around;
+    padding: 0;
+    li {
+      margin: 0 1ch;
+    }
+  }
+
+}
 @media screen and (max-width: 767px) {
   :root {
     --font-size: 16px;
@@ -55,10 +83,11 @@
   }
 
   body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    grid-template-columns: [left] 10% [main] 80% [right] 10% [end];
+    padding: 0em;
+    margin: 1em;
+width: auto;
+    grid-template-columns: 5% [left] 5% [main] 80% [right] 5% [end] 5%;
+
   }
 
   .running-head {
@@ -68,7 +97,7 @@
     height: auto;
     padding-top: 0;
     width: 100%;
-    border-bottom: none;
+    /* border-bottom: none; */
     background: white;
 
     .back-home {
@@ -108,13 +137,20 @@
         margin: 0;
         border-bottom: 1px solid grey;
         padding: 1em;
+      &:last-of-type {
+        border-bottom: none;
       }
+      }
+      
     }
   }
 
   header {
     grid-column: main/main;
-    margin-top: 10em;
+    margin-top: 4em;
+  #title {
+    font-size: 3.25em;
+  }
   }
 
   .symbol-text {
@@ -174,6 +210,10 @@
     ul {
       padding-left: 0;
     }
+  }
+
+  #print {
+    display: none;
   }
 }
 
