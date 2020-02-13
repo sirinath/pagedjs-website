@@ -84,7 +84,7 @@
   justify-content: center;
   justify-self: flex-end;
   margin-top: auto;
-
+  
   li::before {
     content: none;
   }
@@ -98,5 +98,9 @@
     display: inline-block;
     font-family: var(--font-sans);
     padding: 1em;
+    text-align: center;
+
   }
+
+
 }

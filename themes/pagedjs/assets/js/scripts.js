@@ -13,7 +13,7 @@ document.querySelector('.toc .title').addEventListener("click", function() {
 })
 }
 
-document.querySelector(".back-home").addEventListener("click", function() {document.querySelector(".menu").classList.toggle("hide")});
+document.querySelector(".menu-call").addEventListener("click", function() {document.querySelector(".menu").classList.toggle("hide")});
 
 
 if (document.querySelector('#print')) {

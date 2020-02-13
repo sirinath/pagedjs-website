@@ -1,5 +1,3 @@
-
-
 @media screen and (max-width: 570px) {
   body {
     /* grid-template-columns: [sidebar] 0 [main] 100% [right] 0 [end]; */
@@ -33,6 +31,7 @@
   .symbol-text {
     display: none;
   }
+
   body {
     padding: 1.5em;
     width: 90%;
@@ -43,7 +42,7 @@
   body {
     padding: 1.5em;
     margin: 1em;
-width: auto;
+    width: auto;
   }
   /* .symbol-text {
     display: none;
@@ -58,21 +57,25 @@ width: auto;
     /* border-bottom: none; */
     background: white;
   }
+
   article {
-  grid-template-columns: [left] 10% [main] 80% 10% [end];
-}
+    grid-template-columns: [left] 10% [main] 80% 10% [end];
+  }
+
   .menu {
     width: 100%;
   }
+
   .menu ul {
     justify-content: space-around;
     padding: 0;
+
     li {
       margin: 0 1ch;
     }
   }
-
 }
+
 @media screen and (max-width: 767px) {
   :root {
     --font-size: 16px;
@@ -80,6 +83,23 @@ width: auto;
 
   .homepage #paged-logo {
     display: block;
+    
+  }
+  .homepage {
+    min-height: 80vh;
+    height: 90vh;
+    margin: 5%;
+    padding-bottom: 5vh;
+    .running-head {
+      height: auto;
+      border-bottom: 0 solid transparent;
+      margin-bottom: 3em;
+      justify-content: flex-start;
+      padding-top: 4em;
+    }
+    .menu {
+      align-items: flex-start;
+    }
   }
 
   article {
@@ -89,9 +109,8 @@ width: auto;
   body {
     padding: 0em;
     margin: 1em;
-width: auto;
+    width: auto;
     grid-template-columns: 5% [left] 5% [main] 80% [right] 5% [end] 5%;
-
   }
 
   .running-head {
@@ -106,13 +125,17 @@ width: auto;
 
     .back-home {
       position: unset;
-      background: transparent;
+      background: 0 0;
       padding-top: 1em;
       width: 100%;
-      background: white;
-    padding: 1.5em 35% 0.5em ;
-
+      background: #fff;
+      padding: 1.5em 73% .5em 0;
     }
+
+      .menu-call {
+        display: block;
+        z-index: 3000;
+      }
 
     .menu {
       margin-top: 0;
@@ -122,13 +145,15 @@ width: auto;
       /* margin-bottom: 2em; */
       display: flex;
       flex-direction: column;
+      /* height: auto; */
     }
 
     .menu.hide {
-      opacity: 0;
+      display: none;
+      /* opacity: 0; */
       /* margin-top: -50vh; */
       /* background: red; */
-      height: 0;
+      /* height: 0; */
     }
 
     .menu ul {
@@ -141,20 +166,21 @@ width: auto;
         margin: 0;
         border-bottom: 1px solid grey;
         padding: 1em;
-      &:last-of-type {
-        border-bottom: none;
+
+        &:last-of-type {
+          border-bottom: none;
+        }
       }
-      }
-      
     }
   }
 
   header {
     grid-column: main/main;
     margin-top: 4em;
-  #title {
-    font-size: 3.25em;
-  }
+
+    #title {
+      font-size: 3.25em;
+    }
   }
 
   .symbol-text {
@@ -209,8 +235,10 @@ width: auto;
   body .article {
     grid-template-columns: [left] 2% [main] 96% 2%[end];
   }
+
   .list {
     grid-column: main/main;
+
     ul {
       padding-left: 0;
     }

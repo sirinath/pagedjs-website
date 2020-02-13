@@ -11,13 +11,14 @@
   background: var(--color-paper);
   z-index: 9999999;
   align-items: flex-end;
-  height: 50px;
+  /* height: 50px; */
   font-size: 0.9em;
 
   /* border-image: linear-gradient(red, yellow) ; */
   /* border-width: 0 0 20px 0; */
 
   box-shadow: -4px 4px 0 var(--color-paper), 0px 4px 0 var(--color-paper), 4px 4px 0 var(--color-paper);
+
   .baseline {
     line-height: 1;
     position: relative;
@@ -62,9 +63,11 @@
   text-transform: uppercase;
   font-variant: all-small-caps;
   font-size: 1.1em;
+
   &.hide {
     display: flex;
   }
+
   ul {
     width: 100%;
     list-style-type: none;
@@ -97,13 +100,18 @@
   }
 }
 
-
-
 .homepage {
   #paged-logo {
     display: none;
   }
-
-
 }
 
+.menu-call {
+  font-family: var(--font-sans);
+  padding: 1em;
+  background: transparent;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 14px;
+}

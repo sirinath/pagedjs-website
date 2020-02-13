@@ -30,11 +30,14 @@
     {{ partial "cropmarks.html" }}
     {{ block "running" . }}
     <div class="running-head">
-      <button class="back-home">
+      <a class="back-home" href="{{ .Site.BaseURL }}">
         {{ partial "paged-logo.html" . }}
-      </button>
-      <!-- </a> -->
+      </a>
+      <button class="menu-call">MENU</button>
       {{ partial "menu" . }}
+
+      <!-- </a> -->
+
     </div>
     {{ end }}
     {{ block "header" . }}
