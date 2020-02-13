@@ -13,7 +13,7 @@ symbolText: "The Musical Symbols block covers characters used by basic Western m
 
 ## Starting Paged.js
 
-Paged.js comes in two flavours: a polyfill that will automatically run when you starts the browser and a npm module that you can run. Both can be adapted to your need pretty easily, but feel free to use what’s the more convenient for you, but in this chapter, we’ll focus on the polyfill. You can find more about the esm version [here !! PLEASE ADD A LINK]()
+Paged.js comes in two flavours: a polyfill that will automatically run when you starts the browser and a npm module that you can run. Both can be adapted to your need pretty easily, but feel free to use what’s the more convenient for you, but in this chapter, we’ll focus on the polyfill. 
 
 
 ### Using Paged.js as a polyfill
