@@ -1,5 +1,5 @@
 ---
-title: " A Table of Content"
+title: " A Table of Contents"
 subtitle: "Find your way in your book!"
 class: "cookbook"
 date: 2019-12-12T15:56:54+01:00
@@ -10,12 +10,12 @@ intro: "You got some HTML content you want to make a book with, but it would tak
 ---
 
 
-In this part of the doc, we'll show you how to build a table of content using a custom script and the css  function `target-counter()` for the `content` property.
+In this part of the doc, we'll show you how to build a table of contents using a custom script and the css  function `target-counter()` for the `content` property.
 
 
-## Build the table of content from your html
+## Build the table of contentss from your html
 
-In HTML, a table of content is a `<nav>` elements that contain a list of the reveleant titles of your document with a link to the unique identifier of each. This part can be done with your own tool/generator but here is an exemple of a script to generate a table of content in vanilla javascript: 
+In HTML, a table of contentss is a `<nav>` elements that contain a list of the reveleant titles of your document with a link to the unique identifier of each. This part can be done with your own tool/generator but here is an exemple of a script to generate a table of contentss in vanilla javascript: 
 
 ```js
 function createToc(config){
@@ -75,7 +75,7 @@ Copy this script to a `.js` and link this file to your document.
 
 
 
-The table of content need to be generated before paged.js fragment the content into pages. Therefore, you need to register the handler `beforeParsed()` and call the table of content script inside.   
+The table of contentss need to be generated before paged.js fragment the content into pages. Therefore, you need to register the handler `beforeParsed()` and call the table of contentss script inside.   
 
 Add this code in the `head` of you html document after the call for paged.js script:
 
@@ -108,7 +108,7 @@ Add this code in the `head` of you html document after the call for paged.js scr
 
 `tocElement`: define the id element where the toc list will be created
 
-`titleElements`: array of the title element you want in the your table of content. You can add as many as you want and the elements can be selected like any css, for example: `.title-1` or `.my-content h1`
+`titleElements`: array of the title element you want in the your table of contents. You can add as many as you want and the elements can be selected like any css, for example: `.title-1` or `.my-content h1`
 
 
 
@@ -116,7 +116,7 @@ Add this code in the `head` of you html document after the call for paged.js scr
 
 ## Generate page numbers
 
-Thanks to the previous script, your content is now structured using `id` for the heading, and the table of contents we created use hyperlinks to those `#id`:
+Thanks to the previous script, your content is now structured using `id` for the heading, and the table of contentss we created use hyperlinks to those `#id`:
 
 ```html
 <!-- the headings in the text-->
@@ -127,7 +127,7 @@ Thanks to the previous script, your content is now structured using `id` for the
 ```
 
 ```html
-<!-- the table of contents-->
+<!-- the table of contentss-->
 <ul id="toc">
   <li><a href="#pre-digital_era">Pre-digital era</a></li>
   <li><a href="#digital_era">Digital era</a></li>
@@ -145,9 +145,9 @@ In the CSS, the `target-counter` property is used within `::before` and `::after
 
 
 
-## Add styles to the table of contents
+## Add styles to the table of contentss
 
-If you need to add counters or leaders to your table of content generated above, here is an exemple of CSS you can use:
+If you need to add counters or leaders to your table of contents generated above, here is an exemple of CSS you can use:
 
 
 
@@ -234,4 +234,4 @@ If you need to add counters or leaders to your table of content generated above,
 ```
 
 And *voilà*!
-All the files (scripts, CSS, HTML exemples) to create a table of content are available on gitlab: [https://gitlab.pagedmedia.org/tools/experiments/tree/master/table-of-content](https://gitlab.pagedmedia.org/tools/experiments/tree/master/table-of-content).
+All the files (scripts, CSS, HTML exemples) to create a table of contents are available on gitlab: [https://gitlab.pagedmedia.org/tools/experiments/tree/master/table-of-content](https://gitlab.pagedmedia.org/tools/experiments/tree/master/table-of-content).
