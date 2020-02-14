@@ -49,9 +49,9 @@ talkyardScriptUrl = "https://c1.ty-cdn.net/-/talkyard-comments.min.js"
     url = "/documentation/"
     weight= 2
 
-  [[menu.main]]
-    identifier = "cookbook"
-    name = "Cook book"
-    url = "/cookbook/"
-    weight= 3
+  # [[menu.main]]
+  #   identifier = "cookbook"
+  #   name = "Cook book"
+  #   url = "/cookbook/"
+  #   weight= 3
 

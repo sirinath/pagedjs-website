@@ -10,7 +10,7 @@
 </p>
 */}}
 {{- if .Params.tags -}}
-<p class="tags">
+<p class="tags-wrap">
     {{- range .Params.tags -}}
     {{- $url := print "/tags/" ( . | urlize) "/" -}}
     <a class="tag" href="{{- $url | relLangURL -}}">{{- . -}}</a>

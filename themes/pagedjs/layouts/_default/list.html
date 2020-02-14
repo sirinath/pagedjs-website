@@ -10,9 +10,9 @@
                 
                 {{ if .Params.intro }}
                 <div class="meta">
-                    {{ if .Params.author }}Written by <span class="author"> {{ .Params.author }} </span> {{ end }}
-                    {{ if and .Params.author .Date }} / {{ end }}
-                    {{ if .Params.date }} the <span class="date"> {{ dateFormat "January 2, 2006" .Date }} </span> {{ end }}
+                    {{ if .Params.author }}Written by <span class="author"> {{ .Params.author }}</span>, {{ end }}
+                    {{ if and .Params.author .Date }}  {{ end }}
+                    {{ if .Params.date }} the <span class="date"> {{ dateFormat "2 of january 2006" .Date }} </span> {{ end }}
                 <span class="intro"> {{ .Params.intro }} </span> {{ end   }}
                 {{end}}
                 </a>

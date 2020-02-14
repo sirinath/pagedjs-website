@@ -4,7 +4,7 @@ date: 2020-02-14T11:19:56+01:00
 draft: false
 class: 
 intro: "With the upcoming W3C workshop on CSS print in Prague, we put together this position paper. If you never heard of Paged.js, it’s a pretty good start."
-author: "Julie & Julien"
+author: "the Paged.js folks"
 ---
 
 # Paged.js 
