@@ -247,6 +247,10 @@
   #print {
     display: none;
   }
+
+  .cropmarks {
+    display: none;
+  }
 }
 
 .hide {
