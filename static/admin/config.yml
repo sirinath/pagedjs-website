@@ -27,4 +27,21 @@ collections:
       - {label: "Featured Image", name: "cover", widget: "image", , required: false}
       - {label: "weight", name: "weight", widget: "string", , required: false}
       - {label: "Body", name: "body", widget: "markdown"}
- 
+  - name: "documentation" # Used in routes, e.g., /admin/collections/blog
+    label: "documentation" # Used in the UI
+    folder: "content/documentation/" # The path to the folder where the documents are stored
+    create: true 
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
+    fields:
+      - {label: "draft", name: "draft", widget: "boolean"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "intro", name: "intro", widget: "markdown"}
+      - {label: "symbol", name: "symbolContent", widget: "string", required: false}
+      - {label: "symbol annotation", name: "symbolText", widget: "string", required: false}
+
+      - {label: "class", name: "class", widget: "string", default: "journal", required: false}
+      - {label: "author", name: "author", widget: "string", required: false}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "cover", widget: "image", , required: false}
+      - {label: "weight", name: "weight", widget: "string", , required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
