@@ -1,7 +1,13 @@
 backend:
   name: gitlab
+  repo: tools/pagedjs-website
   branch: master # Branch to update (optional; defaults to master)
-# publish_mode: editorial_workflow
+  auth_type: implicit
+  app_id: fca248c60f5baeb52964adf1e1e83c61d5b552d1672e9944cbeee6c8c948d4f5
+  api_root: https://gitlab.pagedmedia.org/api/v4
+  base_url: https://gitlab.pagedmedia.org
+  auth_endpoint: oauth/authorize
+publish_mode: editorial_workflow
 media_folder: "static/uploads" # Media files will be stored in the repo under images/uploads
 public_folder: "uploads/images/" # The src attribute for uploaded media will begin with /images/uploads
 

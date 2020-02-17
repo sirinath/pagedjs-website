@@ -4,9 +4,9 @@ title = "pagedjs, house of HTML printing"
 theme = "pagedjs"
 # relativeURLs = true
 
-[params]
-talkyardServerUrl = "https://comments-for-pagedjs-org.talkyard.net"
-talkyardScriptUrl = "https://c1.ty-cdn.net/-/talkyard-comments.min.js"
+# [params]
+# talkyardServerUrl = "https://comments-for-pagedjs-org.talkyard.net"
+# talkyardScriptUrl = "https://c1.ty-cdn.net/-/talkyard-comments.min.js"
 
 
 [markup]
