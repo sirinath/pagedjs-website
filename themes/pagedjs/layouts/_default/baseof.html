@@ -18,6 +18,8 @@
         auto: false
       };    
     </script>
+    {{ block 'html-head' .}}
+    {{ end }}
   </head>
 
   <body style="{{ if .Params.colorPaper }} --color-paper:{{ .Params.colorPaper }}; {{ end }} " class="{{ if .Params.class }} {{ .Params.class }} {{ end }} {{ .Page.Section }}">
