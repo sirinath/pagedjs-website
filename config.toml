@@ -1,6 +1,6 @@
 baseURL = "https://www.pagedjs.org/"
 languageCode = "en-us"
-title = "pagedjs, house of HTML printing" 
+title = "pagedjs, home of HTML printing" 
 theme = "pagedjs"
 # relativeURLs = true
 
