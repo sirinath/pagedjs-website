@@ -20,10 +20,11 @@ collections:
     fields:
       - {label: "draft", name: "draft", widget: "boolean"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "intro", name: "intro", widget: "markdown"}
       - {label: "class", name: "class", widget: "string", default: "journal", required: false}
+      - {label: "author", name: "author", widget: "string", required: false}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "cover", widget: "image", , required: false}
       - {label: "weight", name: "weight", widget: "string", , required: false}
-      - {label: "intro", name: "intro", widget: "markdown"}
       - {label: "Body", name: "body", widget: "markdown"}
  
