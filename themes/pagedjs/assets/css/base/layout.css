@@ -137,3 +137,16 @@ article {
 .menu-call {
   display: none;
 }
+
+
+/* matomo */
+
+.MatomoOptout {
+  grid-column: main/end;
+  text-align: center;
+  button {
+    border: 2px solid var(--color-grey);
+    padding: 1em 1em;
+    margin: 2em;
+  }
+}
