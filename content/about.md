@@ -8,7 +8,7 @@ intro:
 
 Paged.js is a free and open source JavaScript library that paginates content in the browser to create PDF output from any HTML content. This means you can design works for print (eg. books) using HTML and CSS!
 
-Following the Paged Media standards published by the W3C (ie the Paged Media Module, and the Generated Content for Paged Media Module), Paged.js acts as a polyfill for the CSS modules to print content in ways that are not normally supported by browsers.
+Paged.js follows the Paged Media standards published by the W3C (ie the Paged Media Module, and the Generated Content for Paged Media Module). In effect Paged.js acts as a [polyfill](https://en.wikipedia.org/wiki/Polyfill_(programming)) for the CSS modules to print content in ways that are not normally supported by browsers.
 
 
 ## Paged.js
