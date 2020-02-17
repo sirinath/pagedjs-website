@@ -1,13 +1,16 @@
 baseURL = "https://www.pagedjs.org/"
 languageCode = "en-us"
 title = "pagedjs, home of HTML printing" 
-theme = "pagedjs"
+theme = ["pagedjs", "matomo"]
 # relativeURLs = true
 
 # [params]
 # talkyardServerUrl = "https://comments-for-pagedjs-org.talkyard.net"
 # talkyardScriptUrl = "https://c1.ty-cdn.net/-/talkyard-comments.min.js"
 
+[params.matomo]
+url = "https://stats.coko.foundation"
+id = 17
 
 [markup]
   [markup.goldmark]

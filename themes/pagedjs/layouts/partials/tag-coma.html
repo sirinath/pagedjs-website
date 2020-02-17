@@ -1,14 +1,3 @@
-{{/*
-<p class="tagslist">
-{{ with .Params.tags }}
-    <span>Tags</span>
-    {{ $sort := sort . }}
-    {{ $links := apply $sort "partial" "post-tag-link.html" "." }}
-    {{ $clean := apply $links "chomp" "." }}
-    {{ delimit $clean " / " }}
-    {{ end }}
-</p>
-*/}}
 {{- if .Params.tags -}}
     {{- range .Params.tags -}}
     {{- $url := print "/tags/" ( . | urlize) "/" -}}
