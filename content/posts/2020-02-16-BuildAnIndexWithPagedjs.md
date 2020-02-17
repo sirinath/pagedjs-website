@@ -1,14 +1,13 @@
 ---
-title: "Build An Index With Pagedjs"
-date: 2020-02-14T15:40:08+01:00
+title: "Build An Index With Pagedjs"
+date: 2020-02-02T15:40:08+01:00
 draft: false
 author: "Julie Blanc"
 class: cookbook
 intro: "Indexing is not an easy task. But what if we could automatize a bit the whole experience, on the export? Here is how you can do it with Paged.js" 
 tags:
-- index
+- Indexing
 - guide
-- paged.js
 ---
 
 

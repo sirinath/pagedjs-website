@@ -1,0 +1,26 @@
+{{ define "main" }}
+<div class="list content">
+    <ul>
+        {{ range .Pages.ByDate }}
+        <li class="article">
+            <h2><a href="{{ .Permalink }}"><span>{{ .Title }}</span></a></h2>
+            {{ .TableOfContents }}
+        </li>
+        {{ end }}
+        <li class="article">
+            <h2><a href="/tags/guide"><span>Guides and How-tos from the journal</span></a></h2>
+            <nav id="TableOfContents">
+                <ul>
+                    {{ range .Site.RegularPages.ByDate.Reverse }}
+                    {{ if in .Params.tags "guide" }}
+                    <li><a href={{ .Page.Permalink }}>
+                            {{ .Page.Title }}
+                        </a></li>
+                    {{ end }}
+                    {{ end }}
+                </ul>
+            </nav>
+        </li>
+    </ul>
+</div>
+{{ end }}

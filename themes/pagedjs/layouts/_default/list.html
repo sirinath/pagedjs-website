@@ -1,19 +1,16 @@
 {{ define "main" }}
         <div class="list content">
         <ul>
-            {{ range .Pages }}
+        {{ range .Pages.ByDate.Reverse }}
             <li class="article">
                 <h2><a href="{{ .Permalink }}"><span>{{ .Title }}</span></a></h2>
-                {{ if eq .Page.Section "documentation"}}
-                {{ .TableOfContents }}
-                {{else}}
                 
                 {{ if .Params.intro }}
                 <div class="meta">
                     {{ if .Params.author }}Written by <span class="author"> {{ .Params.author }}</span>, {{ end }}
                     {{ if and .Params.author .Date }}  {{ end }}
-                    {{ if .Params.date }} the <span class="date"> {{ dateFormat "2 of january 2006" .Date }} </span> {{ end }}
-                <span class="intro"> {{ .Params.intro }} </span> {{ end   }}
+                    {{ if .Params.date }} the <span class="date"> {{ dateFormat "2 january 2006" .Date }} </span> {{ end }}
+                <span class="intro"> {{ .Params.intro }} </span>
                 {{end}}
                 </a>
             </li>

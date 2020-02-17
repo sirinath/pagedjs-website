@@ -1,7 +1,7 @@
 ---
 title: "And we’re back!"
 date: 2020-01-27T15:56:54+01:00
-draft: false
+draft: true
 intro: "After a year of undercover work in the realm of printing HTML, we’re proudly introducing the new Paged.js website."
 tags: 
 - pagedjs

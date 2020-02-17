@@ -2,20 +2,14 @@
 title: 'Paged Media approaches : page floats'
 author: Julie Blanc
 type: post
-date: 2018-04-02T21:24:56+00:00
+date: 2020-02-01T21:24:56+00:00
 intro: 'In CSS specifications, the float property is very interesting. The property indicates that an element is to be removed from the normal flow and instead be placed into a different place - currently, on the right or left side of its container. Text and other inline elements will then surround the floated element.'
 url: /page-floats/
-categories:
-  - Blog post
-  - Guidelines
-  - Paged Media Open Source initiative
 tags:
-  - automated layout with CSS
+  - Automated Typesetting
   - CSS layout design
-  - floats
-  - paged media
-  - Paged Media Open Source initiative
-  - pagemasters and flows
+  - Page-floats
+
 
 ---
 Layout is the operation of positioning and styling elements of content in a given space. It aims to position the content (text, images, notes&#8230;) in a hierarchical and harmonious way (balancing the zones, colors and spaces, contrasts), in order to facilitate display and the flow of reading.

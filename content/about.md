@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "About Paged.js"
 date: 2019-11-02T00:08:22+01:00
 draft: false
 class: "about"

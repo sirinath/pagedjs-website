@@ -1,5 +1,5 @@
 ---
-title: "Our position paper for the W3C print CSS event"
+title: "Our position paper for the W3C CSS print workshop"
 date: 2020-02-14T11:19:56+01:00
 draft: false
 class: 
