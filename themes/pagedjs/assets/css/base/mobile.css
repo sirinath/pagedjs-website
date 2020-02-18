@@ -78,7 +78,7 @@
 
 @media screen and (max-width: 767px) {
   :root {
-    --font-size: 16px;
+    --font-size: 17px;
   }
 
   .homepage #paged-logo {
@@ -104,6 +104,8 @@
 
   article {
     grid-template-columns: [left] 5% [main] 90% 5%[end];
+    margin-top: 0.5em;
+
   }
 
   body {
@@ -195,7 +197,8 @@
     grid-column: main;
     flex-direction: column;
     align-items: center;
-    font-size: 1.7em;
+    font-size: 1.5em;
+    line-height: 1.2;
 
     .next {
       width: 100%;
@@ -242,9 +245,15 @@
 
   .list {
     grid-column: main/main;
-
+    .article .intro {
+      margin-top: 0.5em;
+      font-size: 1.1em;
+    } 
     ul {
       padding-left: 0;
+    }
+    .article .meta {
+      font-size: 0.8em;
     }
   }
 
