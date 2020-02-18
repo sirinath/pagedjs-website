@@ -22,7 +22,10 @@
     {{ end }}
   </head>
 
-  <body style="{{ if .Params.colorPaper }} --color-paper:{{ .Params.colorPaper }}; {{ end }} " class="{{ if .Params.class }} {{ .Params.class }} {{ end }} {{ .Page.Section }}">
+  <body style="{{ if .Params.colorPaper }} --color-paper:{{ .Params.colorPaper }}; {{ end }} " class="{{block "bodyClass" .}} {{ end }} {{ if .Params.class }} {{ .Params.class }} {{ end }} {{ .Page.Section }}"  >
+
+    {{ block "background" . }}
+    {{ end }}
     {{ block "print" .}}
     {{/*  print button  */}}
     {{  if or (.Params.print) (eq .Page.Section "documentation") (eq .Page.Section "posts")}}

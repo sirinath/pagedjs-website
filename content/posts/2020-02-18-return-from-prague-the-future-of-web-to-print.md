@@ -1,13 +1,7 @@
 ---
 draft: false
 title: 'Return from Prague: the future of web to print'
-intro: >-
-  On Thursday, February 13th, a group of people gathered at the University of
-  Economics in Prague (Czech Republic) to participate in the[W3C Workshop on CSS
-  Print](https://wiki.csswg.org/planning/print-workshop-2020)as a part of the
-  XML Prague conference. The workshop was organized by Rachel Andrew, Jirka
-  Kosek and Dave Cramer, members of the CSS working group. Between 30 and 40
-  people were present, showing a real interest in CSS print.
+intro: "A report on the recent W3C print workshop"
 class: journal
 author: Julie Blanc
 date: 2020-02-18T11:02:48.208Z
@@ -16,7 +10,7 @@ date: 2020-02-18T11:02:48.208Z
 
 ## Report about the W3C Workshop on CSS Print
 
-The workshop started with a[presentation by Rachel Andrews](https://noti.st/rachelandrew/Hy20NS/introduction-to-the-css-working-group#sWtnkmF), talking about the work of the W3C about the creation of freely open standards for the Web and how the working groups operate, particularly the CSS working group. She recalled that standards take time to set up, because of the specification process, but also because of the lack of funding for work on print specifications. She enumerated a list of possibilities for making things better. Anyone can and is allowed to contribute to specifications (no need to be part of W3C or need permission). Reading and commenting on[specifications issues](https://github.com/w3c/csswg-drafts/issues)is a good start, such as showing use cases or developing web platform tests. It's also possible to contribute by providing examples and diagrams to specifications. If we want the specifications to improve, there's no secret; the W3C needs to find people to work on print-related specifications, testing and implementations.
+  On Thursday, February 13th, a group of people gathered at the University of Economics in Prague (Czech Republic) to participate in the[W3C Workshop on CSS Print](https://wiki.csswg.org/planning/print-workshop-2020) as a part of the XML Prague conference. The event was organized by Rachel Andrew, Jirka Kosek and Dave Cramer, members of the CSS working group. Between 30 and 40 people were present, showing a real interest in CSS print. The workshop started with a[presentation by Rachel Andrews](https://noti.st/rachelandrew/Hy20NS/introduction-to-the-css-working-group#sWtnkmF), talking about the work of the W3C about the creation of freely open standards for the Web and how the working groups operate, particularly the CSS working group. She recalled that standards take time to set up, because of the specification process, but also because of the lack of funding for work on print specifications. She enumerated a list of possibilities for making things better. Anyone can and is allowed to contribute to specifications (no need to be part of W3C or need permission). Reading and commenting on[specifications issues](https://github.com/w3c/csswg-drafts/issues)is a good start, such as showing use cases or developing web platform tests. It's also possible to contribute by providing examples and diagrams to specifications. If we want the specifications to improve, there's no secret; the W3C needs to find people to work on print-related specifications, testing and implementations.
 
 After Rachel, several people who had submitted their paper positions, gave shorter presentations about their work and the tools used with CSS print and paged media.
 
