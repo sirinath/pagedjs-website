@@ -124,6 +124,7 @@
     width: 100%;
     /* border-bottom: none; */
     background: white;
+    position: fixed;
 
     .back-home {
       position: unset;
