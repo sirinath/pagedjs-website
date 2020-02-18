@@ -155,6 +155,7 @@ article {
     /* padding-top: 2em; */
     border-bottom: 2px solid var(--color-lightest-grey);
     /* /* padding-top: /px; margin-top: -/px; */
+    margin-top: 0;
     padding-top: 3em;
   }
 
@@ -301,7 +302,7 @@ article {
   border-left: 2px solid currentcolor;
   max-width: 51ch;
   display: block;
-  margin-bottom: 3em;
+  /* margin-bottom: 3em; */
   /* margin-top: 2em; */
   grid-column: main/end;
   /* text-shadow: 1px 1px var(--color-paper), -1px 1px var(--color-paper), -1px -1px var(--color-paper), 1px -1px var(--color-paper), 2px 2px var(--color-paper), -2px 2px var(--color-paper), -2px -2px var(--color-paper), 2px -2px var(--color-paper), 3px 3px var(--color-paper), -3px 3px var(--color-paper), -3px -3px var(--color-paper), 3px -3px var(--color-paper), 4px 4px var(--color-paper), -4px 4px var(--color-paper), -4px -4px var(--color-paper), 4px -4px var(--color-paper); */
@@ -313,13 +314,12 @@ header {
   --color-primary: var(color-body);
   display: flex;
   flex-direction: column;
-  margin-bottom: 6em;
   position: relative;
   /* z-index: 2; */
   grid-column: left/end;
   font-size: 0.8em;
+  margin-bottom: 2em;
   margin-top: 6em;
-  margin-bottom: 6em;
   /* font-weight: 700; */
   &::before {
     content: var(--symbol-content);

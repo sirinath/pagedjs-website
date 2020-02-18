@@ -103,7 +103,7 @@
   }
 
   article {
-    grid-template-columns: [left] 10% [main] 80% 10%[end];
+    grid-template-columns: [left] 5% [main] 90% 5%[end];
   }
 
   body {
@@ -183,6 +183,10 @@
     }
   }
 
+  .intro {
+    grid-column: main/main;
+  }
+
   .symbol-text {
     display: none;
   }
@@ -248,7 +252,7 @@
     display: none;
   }
 
-  .cropmarks {
+  .crop-marks {
     display: none;
   }
 }
