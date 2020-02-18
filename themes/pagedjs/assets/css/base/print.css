@@ -152,11 +152,13 @@
 
 @media print {
 
+
   body {
     display: block;
     margin: 0;
     padding: 0;
   }
+
 
   footer {
     position: running(footer);
@@ -172,6 +174,7 @@
 
   #title {
     string-set: title content(text);
+    font-size: 3em !important;
   }
 
   body {
@@ -180,14 +183,11 @@
     orphans: 3;
   }
 
-  header {
-    #title,
-    .intro {
-      text-shadow: none;
-    }
+  .intro {
+    page-break-after: always;
     break-after: page;
-  }
 
+  }
 
   #print {
     display: none;
@@ -219,9 +219,14 @@
     margin: 0;
     display: block;
     font-size: 14px;
+    h2, h3 {
+      padding-top: 0;
+      margin-top: 2em;
+    }
+  
   }
 
-  .menu {
+  .menu.hide, .menu {
     display: none;
   }
 
@@ -255,7 +260,7 @@
       width: 14ch;
 
       path {
-        fill: white;
+        fill: black;
       }
     }
   }

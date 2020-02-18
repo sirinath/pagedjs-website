@@ -43,9 +43,11 @@ article {
     max-width: 60ch;
   }
   strong {
-    font-family: var(--font-sans);
-    font-family: 0.95em;
+    /* font-family: var(--font-sans); */
+    /* font-size: 0.85em; */
+    text-decoration: underline;
     font-weight: 500;
+    line-height: 0;
   }
   li {
     max-width: calc(60ch - 10ch);
@@ -162,7 +164,7 @@ article {
   h3 {
     font-size: 1.375em;
     padding-top: 3em;
-
+    margin-top: 0;
   }
 
   h4 {
