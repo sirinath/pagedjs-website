@@ -162,7 +162,7 @@
 
   footer {
     position: running(footer);
-    font-size: 0.8em;
+    font-size: .65em;
     margin: 0;
     }
     .paginator {
