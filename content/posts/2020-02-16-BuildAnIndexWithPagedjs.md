@@ -27,7 +27,7 @@ When you think your content is revelant and need to be in the index, simply add 
 
 Your span must contain at least two elements:
 - **a class**: this class is common to all index span elements of your document, you can name it as you wish
-- **a data attribut**: this data attribut must be named `data-book-index`, it indicates the word(s) that will appear in the index
+- **a data attribute**: this data attribut must be named `data-book-index`, it indicates the word(s) that will appear in the index
 - you can also add an id if you want but it's not required
 
 About the data attribute: 
