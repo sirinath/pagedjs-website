@@ -279,4 +279,4 @@ The [CSS Page Floats](https://www.w3.org/TR/css-page-floats-3/) specifications a
     }
 ```
 
-{{< figure src="article-figure-16.png" caption="inserts in margins">}}
+{{< figure src="article-figures16.png" >}}
