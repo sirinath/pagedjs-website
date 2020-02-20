@@ -93,7 +93,7 @@ If you need to have an image in your generated content, you can do it like this:
 
 ```css 
 .glossary::after {
-  content: " " url("/images/glossary-icon.png");
+  content: " " url("../images/glossary-icon.png");
 }
 ```
 

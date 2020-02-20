@@ -36,7 +36,7 @@ First of all, in your HTML, you define a relevant element with an unique id in y
 
 In an other place of your HTML, you create a link anchor that refers to the unique identifier of your revelant element:
 
-```
+```html
 <p>see the <a class="link" href="#figure-3">figure 3</a></p>
 ```
 

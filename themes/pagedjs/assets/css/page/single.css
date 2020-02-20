@@ -32,16 +32,27 @@
 }
 
 article .note {
-  /* width: 30%; */
-  /* float: right; */
-
-  padding-left: 1em;
   font-size: 0.8em;
-  margin-left: 2em;
-  border-left: 2px solid var(--color-primary);
   font-family: var(--font-sans);
-  float: right;
-  width: 30ch;
+  grid-column: main/main;
+  width: 70%;
+  position: relative;
+  margin-top: 2em;
+  background: white;
+  padding: 2px 3px;
+  &::before {
+    z-index: -1;
+    content: " ";
+    width: 2em;
+    height: 2em;
+    background: var(--color-lightest-grey);
+    display: block;
+    position: absolute;
+    left: -2ch;
+    top: -.7em;
+    border-radius: 50%;
+    background: linear-gradient(34deg, #f6f6f6, var(--color-lightest-grey));
+  }
 
   :first-child {
     padding-top: 0;

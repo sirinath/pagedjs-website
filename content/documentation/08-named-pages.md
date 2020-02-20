@@ -10,7 +10,7 @@ weight: 8
 There could be pages in your book that may need their own, more specific layout: different background, different margins, and even different styles from the main rule.
 You can use what is called “named pages” to define this. Based on your HTML, you can bind a specific layout to any content.
 
-![How named pages works](https://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/named-pages.png)
+![How named pages works](../images/named-pages.png)
 
 Imagine you want a specific layout for the pages of your frontmatter. 
 
@@ -66,7 +66,7 @@ You can also select the `:left` and the `:right` pages of named pages and page g
 
 The `:nth()` and `:blank` selector doesn't work with named pages for now. But you can use this trick to select the blank pages of named pages:
 
-```
+```css
 .pagedjs_chapter_page + .pagedjs_blank_page {
 	/* specific rules for blank pages of named page called "chapter" */
 }

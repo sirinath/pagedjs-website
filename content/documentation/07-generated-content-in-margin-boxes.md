@@ -23,7 +23,7 @@ Each have its own margin, border, padding, and content areas.  By default, their
  The figure bellow represent the sixteen margin boxes of a page defined by the W3C:
 
 
-{{< figure src="https://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/margin-boxes.png" >}}
+{{< figure src="../images/margin-boxes.png" >}}
 
 You can select this margins boxes in  the `@page` rules with rules such as `@top-left`, `@bottom-right-corner`,  `@left-middle`, etc. You add content in a page-margin box with the `content` property.
 
@@ -141,7 +141,7 @@ The string property act like a variable. It read your DOM and each time a new ti
 
 
 
-{{< figure src="https://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/string-set.png" >}}
+{{< figure src="../images/string-set.png" >}}
 
 
 
@@ -393,8 +393,7 @@ You can stylize the margin-boxes by applying styles directly into the at-rules f
 Each margin box have default alignements for the content (show in the following table). You can easy change it by using `text-align` and `vertical-align` properties into at-rules for page-margin boxes.
 
 
-
-**Table of default alignement**
+{{% table caption="Table of default alignement" %}}
 
 | Margin box           | `text-align` | `vertical-align` |
 | -------------------- | ------------ | ---------------- |
@@ -415,6 +414,7 @@ Each margin box have default alignements for the content (show in the following 
 | @bottom-right        | right        | middle           |
 | @bottom-right-corner | left         | middle           |
 
+{{% /table %}}
 
 
 ### Applying style on generated content
@@ -469,7 +469,7 @@ For example, if you use background-color and padding into the at-rules for page-
 
 Result:
 
-{{< figure src="https://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/marginbox-style-01.png" >}}
+{{< figure src="../images/marginbox-style-01.png" >}}
 
 
 
@@ -494,7 +494,7 @@ If you want to applied this background-color and padding only on the generated c
 
 Result:
 
-{{< figure src="https://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/marginbox-style-02.png" >}}
+{{< figure src="../images/marginbox-style-02.png" >}}
 
 
 
@@ -538,7 +538,7 @@ By using the `tranfsorm()` property you can easily rotate the margin-boxes of yo
 
 Result:
 
-{{< figure src="https://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/marginbox-style-03.png" >}}
+{{< figure src="../images/marginbox-style-03.png" >}}
 
 
 
@@ -554,7 +554,7 @@ Paged.js use CSS grid and flexbox to create the margin boxes of the page. The fi
 
 ### Margin boxes on the page
 
-{{< figure src="https://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/margin-boxes_grid_01.png" >}}
+{{< figure src="../images/margin-boxes_grid_01.png" >}}
 
 The page consists of four corner margins and four groups of margins placed on a grid with three columns and three rows. The grid use margin variables created by Paged.js based on your margin and page size declarations to set the size of items.
 
@@ -613,7 +613,7 @@ Each margin group contains three margin boxes contained in a single direction gr
 
 
 
-{{< figure src="https://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/margin-boxes_grid_02.png" >}}
+{{< figure src="../images/margin-boxes_grid_02.png" >}}
 
 
 
@@ -676,36 +676,36 @@ Here, to explain this computation rules patterns, we use letters corresponding t
 
 If only one of the margin boxes is generate, the margin box will take the full width/height of the margin group.
 
-{{< figure src="https://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/margin-boxes_size_sample-01.png" >}}
+{{< figure src="../images/margin-boxes_size_sample-01.png" >}}
 
 **If two margin box are generated**
 
 * If A and C are generated,
 
-  * With no size set: the size of B is `0`, A and C are extended over the size of the margin group. Their size is relative to the length of the generated content.  {{< figure src="https://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/margin-boxes_size_sample-02.png" >}}
+  * With no size set: the size of B is `0`, A and C are extended over the size of the margin group. Their size is relative to the length of the generated content.  {{< figure src="../images/margin-boxes_size_sample-02.png" >}}
 
   * With one size set (A or C): he size of B is` 0`. A and C are spread over the size of the margin group. The margin box whose size is not set fills the remaining space in the margin group.
 
-    {{< figure src="https://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/margin-boxes_size_sample-03.png" >}}
+    {{< figure src="../images/margin-boxes_size_sample-03.png" >}}
 
   * With the two size set (A and C): A is aligned on the left of the margin group, C is aligned with the right of the margin group. B takes the remaining space but has no content.
 
-    {{< figure src="https://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/margin-boxes_size_sample-04.png" >}}
+    {{< figure src="../images/margin-boxes_size_sample-04.png" >}}
 
 * If A and B or B and C are generated, 
 
-  * With no size set: the size of the margin-boxes will be relative to the length of the generated content. The one in the center will always be in the middle (“center rule”), i.e. the size of A will always be equal to the size of C.{{< figure src="https://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/margin-boxes_size_sample-05.png" >}}
-  * With one size set (A, B or C):  the other two margins bowes (with no size set) will extent the remaining space. The “center rule” remains valid, so the automatic sizes of the two margin-boxes will be distributed according to this rule. {{< figure src="https://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/margin-boxes_size_sample-06.png" >}}
-  * With two size set: the two margin boxes with size set will have the declared size. The third margin box (which has no content) will take the size of the remaining space in the group. {{< figure src="https://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/margin-boxes_size_sample-07.png" >}}
+  * With no size set: the size of the margin-boxes will be relative to the length of the generated content. The one in the center will always be in the middle (“center rule”), i.e. the size of A will always be equal to the size of C.{{< figure src="../images/margin-boxes_size_sample-05.png" >}}
+  * With one size set (A, B or C):  the other two margins bowes (with no size set) will extent the remaining space. The “center rule” remains valid, so the automatic sizes of the two margin-boxes will be distributed according to this rule. {{< figure src="../images/margin-boxes_size_sample-06.png" >}}
+  * With two size set: the two margin boxes with size set will have the declared size. The third margin box (which has no content) will take the size of the remaining space in the group. {{< figure src="../images/margin-boxes_size_sample-07.png" >}}
 
 
 
 **If all margin box are generated**
 
-* If no size set: the size of the margin-boxes will be relative to the length of the generated content. The one in the center will always be in the middle (“center rule”), i.e. the size of A will always be equal to the size of C. {{< figure src="https://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/margin-boxes_size_sample-08.png" >}}
-* If one size set (A, B or C): the other two margins bowes (with no size set) will extent the remaining space. The “center rule” remains valid, so the automatic sizes of the two margin-boxes will be distributed according to this rule.{{< figure src="https://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/margin-boxes_size_sample-09.png" >}}
-* If two size set: the two margin boxes with size set will have the declared size. The third margin box (which has no content) will take the size of the remaining space in the group. {{< figure src="https://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/margin-boxes_size_sample-10.png" >}}
-* if all sizes set: all margins box have the declared size. They will be aligned on the left for top/bottom page margins and on top for left/right margins. {{< figure src="https://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/margin-boxes_size_sample-11.png" >}}
+* If no size set: the size of the margin-boxes will be relative to the length of the generated content. The one in the center will always be in the middle (“center rule”), i.e. the size of A will always be equal to the size of C. {{< figure src="../images/margin-boxes_size_sample-08.png" >}}
+* If one size set (A, B or C): the other two margins bowes (with no size set) will extent the remaining space. The “center rule” remains valid, so the automatic sizes of the two margin-boxes will be distributed according to this rule.{{< figure src="../images/margin-boxes_size_sample-09.png" >}}
+* If two size set: the two margin boxes with size set will have the declared size. The third margin box (which has no content) will take the size of the remaining space in the group. {{< figure src="../images/margin-boxes_size_sample-10.png" >}}
+* if all sizes set: all margins box have the declared size. They will be aligned on the left for top/bottom page margins and on top for left/right margins. {{< figure src="../images/margin-boxes_size_sample-11.png" >}}
 
 
 

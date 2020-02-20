@@ -10,7 +10,7 @@ intro: "If you have ever tried to lay out a website for printing or to publish a
 
 
 
-{{< figure src="https://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/flux-page.png" >}}
+{{< figure src="../images/flux-page.png" >}}
 
 Paged.js is made of three modules, each one has a very precise task:
 
@@ -27,13 +27,13 @@ To start using Paged.js, all you have to do is to write the standardized CSS dec
 
 The chunker takes all your rendered content, with all the design rules applied to it, puts as much possible of it in a first box and looks for the overflowing content.
 
-<!-- ![The chunker puts all your rendered content in a box and checks the overflow](https://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/chuncker-1.png) -->
+<!-- ![The chunker puts all your rendered content in a box and checks the overflow](images/chuncker-1.png) -->
 
 After that, the script creates a new box, puts as much as possible of the overflowing content in it looks for the next overflow, and again and again, until there is no content left to put in the boxes. Paged.js does this repeatedly until the book is done. 
 
 <!-- ![The chunker creates a new box and puts the overflow content in it]() -->
 
-{{< figure src="http://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/chuncker-2.png" >}}
+{{< figure src="../images/chuncker-2.png" >}}
 
 To do so, we use the mighty CSS columns properties: each page is a column. This offers us an easy access to some of the properties already implemented in browsers, such as column-breaks, element(), or widows and orphans.
 
@@ -52,7 +52,7 @@ We will see that it is possible to control page breaks and change the size of th
 
 The Polisher is the part of Paged.js that translate the CSS rules for each of your page. It builds new boxes to create page layouts and places your content in these pages. We use the CSS tree library to parse the CSS from text and replace `@page` rules with classes. The polisher also replaces calls such as running headers, page counters, or CSS generated content functions with variables from the DOM.
 
-{{< figure src="https://gitlab.pagedmedia.org/tools/pagedjs-documentation/raw/master/images/div-pages.png" >}}
+{{< figure src="../images/div-pages.png" >}}
 
 Let's take the following CSS as an example:
 

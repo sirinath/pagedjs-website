@@ -1,0 +1,6 @@
+<figure {{ with .Get "width" }} width="{{ . }}" {{ end }}  class="table" {{ with .Get "id" }} id="{{ . }}" {{ end }}>
+{{ with .Get "caption" }}
+<figcaption><span>table</span> {{ . }}</figcaption>
+{{ end }}
+{{ .Inner }}
+</figure>

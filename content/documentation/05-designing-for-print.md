@@ -7,17 +7,6 @@ intro: "If you want to start designing your own book, now is the perfect time!"
 weight: 5
 ---
 
-<!-- 
-- Print media query
-- @page rule
-
-* Page size property
-* Margin size property
-* Page spread or recto/verso
-* Page breaks
-* Crop marks and bleed
-* Code resume of the chapter -->
-
 
 ## The `@media print` query
 
@@ -59,11 +48,10 @@ It's also possible to specify the page size by using keywords that can be combin
 }
 ```
 
+{{% table width="80%" caption="Page size keywords and their size" %}}
 
-**Page size keywords and their size**
-
-| **Page size keyword** | **size**      |
-| --------------------- | ------------- |
+| Page size keyword     | Size          |
+| :--                   |           --: |
 | A0                    | 841 × 1189 mm |
 | A1                    | 594 × 841 mm  |
 | A2                    | 420 × 594 mm  |
@@ -78,6 +66,8 @@ It's also possible to specify the page size by using keywords that can be combin
 | letter                | 8.5 × 11 in   |
 | legal                 | 8.5 × 14 in   |
 | ledger                | 11 × 17 in    |
+
+{{% /table %}}
 
 ### CSS variables
 
