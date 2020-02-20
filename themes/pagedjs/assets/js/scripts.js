@@ -24,14 +24,14 @@ function print() {
   window.PagedPolyfill.preview();
 }
 
-if (document.querySelectorAll("#TableOfContents")) {
-document.querySelectorAll("#TableOfContents").forEach(toc => {
-  toc.classList.add("table-of-contents");
-  toc.id = "";
-  linkPrepend = toc.previousElementSibling.querySelector("a").getAttribute("href");
-  toc.querySelectorAll("a").forEach(item => {
-      let link = item.getAttribute("href");
-      item.setAttribute("href", linkPrepend + link) 
-  })
-})
-}
+// if (document.querySelectorAll("#TableOfContents")) {
+// document.querySelectorAll("#TableOfContents").forEach(toc => {
+//   toc.classList.add("table-of-contents");
+//   toc.id = "";
+//   linkPrepend = toc.previousElementSibling.querySelector("a").getAttribute("href");
+//   toc.querySelectorAll("a").forEach(item => {
+//       let link = item.getAttribute("href");
+//       item.setAttribute("href", linkPrepend + link) 
+//   })
+// })
+// }

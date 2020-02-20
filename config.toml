@@ -31,6 +31,8 @@ id = 17
   # category = "categories"
   tag = "tags"
 
+[permalinks]
+  # posts = "/:year/:month/:title/"
 
 [menu]
 
