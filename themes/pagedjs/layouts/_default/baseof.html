@@ -5,9 +5,7 @@
     <meta charset="utf-8">
     <meta name="description" content="The home of paged.js, the library to turn HTML into PDF">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ block "title" . }}
-      {{ .Site.Title }}
-      {{ end }}</title>
+    <title>Paged.js — {{ .Page.Title }} </title>
     {{ $css := resources.Get "./css/main.css" | resources.PostCSS (dict "config" "./assets/css/postcss.config.js" "noMap" true) | minify  | resources.Fingerprint "md5" }}
     <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}">
     {{/*  set up paged.js polyfull to preview the print version  */}}
