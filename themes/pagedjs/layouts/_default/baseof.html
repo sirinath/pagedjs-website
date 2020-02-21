@@ -8,7 +8,7 @@
     <title>Paged.js — {{ .Page.Title }} </title>
     {{ $css := resources.Get "./css/main.css" | resources.PostCSS (dict "config" "./assets/css/postcss.config.js" "noMap" true) | minify  | resources.Fingerprint "md5" }}
     <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}">
-    {{/*  set up paged.js polyfull to preview the print version  */}}
+    {{/*  set up paged.js polyfill to preview the print version  */}}
     {{ $pagegjs := resources.Get "js/paged.polyfill.js" | resources.Fingerprint "md5" }}
     <script src="{{ $pagegjs.Permalink }}" type="module" type="application/javascript"></script>
     <script>
@@ -27,7 +27,7 @@
     {{ block "print" .}}
     {{/*  print button  */}}
     {{  if or (.Params.print) (eq .Page.Section "documentation") (eq .Page.Section "posts")}}
-    <button id="print">{{ partial "print-icon.html" . }}</button>
+    {{ partial "print-button.html" . }}
     {{ end }}
     {{ end }}
     {{ partial "cropmarks.html" }}
