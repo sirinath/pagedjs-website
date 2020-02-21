@@ -3,6 +3,7 @@ title: "Handlers, Hooks and custom javascript"
 date: 2020-01-28T16:16:50+01:00
 draft: false
 weight: 12
+part: 10
 intro: "You’re now fluent in paged media specs, that quite awesome :). But you may want to do more with the scripts. Here is how you can update some of the script to do what you’d like to do."
 ---
 

@@ -2,6 +2,7 @@
 title: "Module vs Polyfill"
 date: 2020-01-25T00:31:19+01:00
 draft: true
+part: 13
 ---
 
 `paged.polyfill.js` script you can add to your HTML will start right away when the page is loaded and

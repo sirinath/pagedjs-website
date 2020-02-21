@@ -3,6 +3,7 @@ title: "Cross References"
 date: 2020-01-28T15:56:05+01:00
 draft: false
 weight: 10
+part: 9
 intro: "References and links inside the book: send the reader to another page using hyperlinks"
 ---
 

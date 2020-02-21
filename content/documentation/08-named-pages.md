@@ -4,6 +4,7 @@ date: 2020-01-28T15:54:01+01:00
 draft: false
 intro: "How to setup the page master based on the content of your html: the named page"
 weight: 8
+part: 8
 ---
 
 

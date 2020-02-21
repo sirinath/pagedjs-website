@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="list content">
     <ul>
-        {{ range .Pages.ByDate }}
+        {{ range .Pages.ByParam "part" }}
         <li class="article">
             <h2><a href="{{ .Permalink }}"><span>{{ .Title }}</span></a></h2>
             {{ $link := printf "href=\"%s" .Permalink }}

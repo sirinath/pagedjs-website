@@ -104,6 +104,8 @@ article {
 
   .previous,
   .next {
+    max-width: 45%;
+    line-height: 1.5;
     &::before {
       content: "Previously ";
       display: block;
@@ -112,6 +114,7 @@ article {
       font-size: 0.7em;
       letter-spacing: 0.2ch;
       margin-bottom: 1em;
+
     }
   }
 

@@ -2,7 +2,7 @@
 title: "How Paged.js works"
 date: 2019-09-03T18:23:22+02:00
 draft: false
-part: 2
+part: 4
 weight: 4
 intro: "If you have ever tried to lay out a website for printing or to publish a book in HTML, you’ll have experienced the limitations of styling meant for displaying scrolling text on screens. Paged.js helps make it possible to produce paginated material from your browser."  
 ---

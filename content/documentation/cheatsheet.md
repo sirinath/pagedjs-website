@@ -1,21 +1,17 @@
 ---
 title: "Supported feature of the W3C specifications"
 date: 2019-09-03T18:23:22+02:00
-draft: true
-part: 7
+draft: false
 weight: 12
+part: 14
 ---
 
-
-<table>
-<thead>
-<tr>
-<th colspan="4">
 <h3>CSS Paged Media Module Level 3</h3>
 <p><a href="href="https://www.w3.org/TR/css3-page/">W3C Working Draft 14 March 2013</a></p>
 <p><a href="https://drafts.csswg.org/css-page/#marks">Editor’s Draft, 9 November 2017</a></p>
-</th>
-</tr>
+
+<table class="specs">
+<thead>
 <tr>
 <th colspan="4"><b>@page rules</b></th>
 </tr>
@@ -40,14 +36,14 @@ weight: 12
 <tr>
 <td>Marks</td>
 <td>marks: none | [ crop || cross ] ; </td>
-<td style="background: crimson;">no</td>
-<td></td>
+<td><a href="https://gitlab.pagedmedia.org/tools/pagedjs/blob/master/specs/marks/marks.html">HTML</a></td>
+<td><a href="https://gitlab.pagedmedia.org/tools/pagedjs/blob/master/specs/marks/__image_snapshots_linux__/marks-spec-js-marks-should-create-a-pdf-1-snap.png">Screenshot</a></td>
 </tr>
 <tr>
 <td>Bleed</td>
 <td>bleed: &lt;length&gt; ;</td>
-<td>no</td>
-<td></td>
+<td> <a href="https://gitlab.pagedmedia.org/tools/pagedjs/blob/master/specs/bleed/bleed.html">HTML</a>  </td>
+<td><a href="https://gitlab.pagedmedia.org/tools/pagedjs/blob/master/specs/bleed/__image_snapshots_mac__/bleed-spec-js-bleed-should-create-a-pdf-1-snap.png">screenshot</a></td>
 </tr>
 <tr>
 <td rowspan="3">Margins</td>
@@ -233,14 +229,18 @@ weight: 12
 <td><a href="https://gitlab.pagedmedia.org/tools/pagedjs/issues/29">issue#29</a></td>
 <td></td>
 </tr>
+
 </tbody>
-<thead>
-<tr>
-<td colspan="4">
+
+</table>
+
+
 <h3>CSS Fragmentation Module Level 3</h3>
 <p><a href="https://www.w3.org/TR/css-break-3/">W3C Candidate Recommendation, 9 February 2017</a></p>
-</td>
-</tr>
+
+<table>
+<thead>
+
 <tr>
 <th colspan="4"><b>Breaks Between Boxes</b></th>
 </tr>
@@ -347,14 +347,12 @@ weight: 12
 <tr>
 <td>Orphans</td>
 <td>orphans: &lt;integer&gt; ;</td>
-<td style="background: crimson;">no</td>
-<td></td>
+<td colspan="2">Chrome and blink browsers supports <code>orphans</code> out of the box. Firefox doen't. Check support from <a href="https://caniuse.com/#search=widows">caniuse.com</a></td>
 </tr>
 <tr>
 <td>Widows</td>
 <td>widows: &lt;integer&gt; ;</td>
-<td style="background: crimson;">no</td>
-<td></td>
+<td colspan="2">Chrome and blink browsers supports <code>widows</code> out of the box. Firefox doen't. Check support from <a href="https://caniuse.com/#search=widows">caniuse.com</a></td>
 </tr>
 </tbody>
 <thead>
@@ -365,19 +363,20 @@ weight: 12
 <tbody>
 <tr>
 <td>box-decorations</td>
-<td>box-decoration-break: slice | clone ;</td>
-<td style="background: crimson;">no</td>
+<td>box-decoration-break: slice | clone ;</td>
+<td>no</td>
 <td></td>
 </tr>
 </tbody>
-<thead>
-<tr>
-<th colspan="4"> 
+</table>
+
 <h3>CSS Generated Content for Paged Media Module</h3>
 <p><a href="https://www.w3.org/TR/css-gcpm-3/">W3C Working Draft, 13 May 2014</a></p>
-</th>
-</tr>
-<tr>
+
+
+<table>
+<thead>
+    <tr>
 <th colspan="4"><b>Named strings</b></th>
 </tr>
 </thead>
@@ -438,17 +437,17 @@ weight: 12
 <tr>
 <td rowspan="4"><i>&lt;keyword&gt;</i>=</td>
 <td>first</td>
-<td><a href="https://gitlab.pagedmedia.org/tools/pagedjs/issues/53">Issue#53</a></td>
+<td><a href="https://gitlab.pagedmedia.org/tools/pagedjs/merge_requests/84">Pending merge request</a></td>
 <td></td>
 </tr>
 <tr>
 <td>start</td>
-<td><a href="https://gitlab.pagedmedia.org/tools/pagedjs/issues/38">Issue#38</a></td>
+<td><a href="https://gitlab.pagedmedia.org/tools/pagedjs/merge_requests/84">Pending merge request</a></td>
 <td></td>
 </tr>
 <tr>
 <td>last</td>
-<td><a href="https://gitlab.pagedmedia.org/tools/pagedjs/issues/38">Issue#38</a></td>
+<td><a href="https://gitlab.pagedmedia.org/tools/pagedjs/merge_requests/84">Pending merge request</a></td>
 <td></td>
 </tr>
 <tr>
@@ -504,42 +503,42 @@ weight: 12
 <tr>
 <td>Footnotes area</td>
 <td>@footnote{ float: bottom ; }</td>
-<td style="background: crimson;">no</td>
+<td>no</td>
 <td></td>
 </tr>
 <tr>
 <td>Footnote element</td>
 <td>.note { float: footnote ; }</td>
-<td style="background: crimson;">no</td>
+<td>no</td>
 <td></td>
 </tr>
 <tr>
 <td>Footnote type</td>
 <td>footnote-display: block | inline | compact ;</td>
-<td style="background: crimson;">no</td>
+<td>no</td>
 <td></td>
 </tr>
 <tr>
 <td>Rendering footnotes</td>
 <td>footnote-policy: auto | line | block ;</td>
-<td style="background: crimson;">no</td>
+<td>no</td>
 <td></td>
 </tr>
 <tr>
 <td rowspan="2">Footnotes counters</td>
 <td>::footnote-call { }<br><i>::footnote-call { content: counter(footnote <br>[, &lt;counter-style&gt;, &lt;string&gt;] ; }</i></td>
-<td style="background: crimson;">no</td>
+<td>no</td>
 <td></td>
 </tr>
 <tr>
 <td>::footnote-marker { }<br><i>::footnote-marker { content: counter(footnote <br>[, &lt;counter-style&gt;, &lt;string&gt;] ; }</i></td>
-<td style="background: crimson;">no</td>
+<td>no</td>
 <td></td>
 </tr>
 <tr>
 <td>Reset footnotes</td>
 <td>@page { counter-reset: footnote ; }</td>
-<td style="background: crimson;">no</td>
+<td>no</td>
 <td></td>
 </tr>
 </thead>
@@ -550,28 +549,28 @@ weight: 12
 <tr>
 <td>leaders</td>
 <td>content : leader(&lt;type&gt;) ;</td>
-<td style="background: crimson;">no</td>
+<td>no</td>
 <td></td>
 </tr>
 <tr>
 <td rowspan="4"><i>&lt;type&gt;</i>=</td>
 <td>dotted</td>
-<td style="background: crimson;">no</td>
+<td>no</td>
 <td></td>
 </tr>
 <tr>
 <td>solid</td>
-<td style="background: crimson;">no</td>
+<td>no</td>
 <td></td>
 </tr>
 <tr>
 <td>space</td>
-<td style="background: crimson;">no</td>
+<td>no</td>
 <td></td>
 </tr>
 <tr>
 <td>&lt;string&gt;</td>
-<td style="background: crimson;">no</td>
+<td>no</td>
 <td></td>
 </tr>
 </thead>
@@ -604,18 +603,15 @@ weight: 12
 </tr>
 <tr>
 <td>before</td>
-<td>no</td>
-<td></td>
+<td colspan="2"><a href="https://gitlab.pagedmedia.org/JulieBlanc/refs-specifications/tree/master/target/target-text/target-text-content">HTML</a></td>
 </tr>
 <tr>
 <td>after</td>
-<td>no</td>
-<td></td>
+<td colspan="2"><a href="https://gitlab.pagedmedia.org/JulieBlanc/refs-specifications/tree/master/target/target-text/target-text-content">HTML</a></td>
 </tr>
 <tr>
 <td>first-letter</td>
-<td>no</td>
-<td></td>
+<td colspan="2"><a href="https://gitlab.pagedmedia.org/JulieBlanc/refs-specifications/tree/master/target/target-text/target-text-content">HTML</a></td>
 </tr>
 </thead>
 <thead>
@@ -628,18 +624,18 @@ weight: 12
 <td rowspan="3">Bookmarks</td>
 <td>bookmark-level: &lt;integer&gt; ;
 </td>
-<td style="background: crimson;">no</td>
+<td>no</td>
 <td></td>
 </tr>
 <tr>
 <td>bookmark-label: &lt;content-list&gt;
 </td>
-<td style="background: crimson;">no</td>
+<td>no</td>
 <td></td>
 </tr>
 <tr>
 <td>bookmark-state: open | close ;</td>
-<td style="background: crimson;">no</td>
+<td>no</td>
 <td></td>
 </tr>
 </tbody>

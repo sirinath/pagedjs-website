@@ -3,6 +3,7 @@ title: "Command Line Interface"
 date: 2020-01-24T15:48:36+01:00
 draft: false
 weight: 14
+part: 12
 ---
 
 The command line version of Paged.js uses a headless browser (a browser without any graphical interface) to generate a PDF. It can be run on the server to launch a headless Chromium in fully automated workflows. With the command line version, you don't need to call the Paged.js script in your document: it will be done automatically.

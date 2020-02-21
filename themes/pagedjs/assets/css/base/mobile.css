@@ -200,7 +200,9 @@
     align-items: center;
     font-size: 1.5em;
     line-height: 1.2;
-
+    .next, .previous {
+      max-width: unset;
+    }
     .next {
       width: 100%;
       text-align: center;

@@ -8,13 +8,14 @@ weight: 7
 # colorPrimary: "#aaa"
 # colorHeading: "white"
 intro: "Running headers, footnotes, stuff in margins and so on."
+part: 7
 ---
 
 ## Margin boxes of a page
 
 A page box consists of two types of area: page area and page margin boxes.
 
-The **page area** is the content area of a page box. It is the  space into which all your HTML content will flow. When this content runs out of room, another page will be automatically created. It's what the chuncker part of Paged.js do.
+The **page area** is the content area of a page box. It is the  space into which all your HTML content will flow. When this content runs out of room, another page will be automatically created. It's what the chunker part of Paged.js do.
 
 The margins of a page are divided into sixteen boxes where you can put generated content like page number and running heads. These boxes are called **margin boxes**. 
 

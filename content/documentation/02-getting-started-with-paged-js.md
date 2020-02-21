@@ -2,7 +2,7 @@
 title: "Getting Started with Paged.js"
 date: 2019-09-03T18:23:22+02:00
 draft: false
-part: 1 
+part: 2 
 weight: 2
 intro: "The basics to run Paged.js" 
 cover: "images/chuncker-1.png"

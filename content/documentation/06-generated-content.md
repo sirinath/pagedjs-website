@@ -4,6 +4,7 @@ date: 2019-09-03T18:23:22+02:00
 draft: false
 intro: "The content property in CSS is one powerfull way to add structure to your content, without fixing it in the HTML. Let’s check how the web manage those automatically created properties before we get to what Paged.js can create automatically"  
 weight: 6
+part: 6
 ---
 
 
