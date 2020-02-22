@@ -22,7 +22,6 @@
     font-family: var(--font-sans);
     font-size: 0.7em;
     width: 5ch;
-    background: var(--color-lightest-grey);
   }
 
   @top-left  {
@@ -39,11 +38,10 @@
   margin-bottom: 25mm;
 
   @top-left  {
-    content: counter(pages);
+    content: counter(page);
     font-family: var(--font-sans);
     font-size: 0.7em;
     width: 5ch;
-    background: var(--color-lightest-grey);
   }
 
   @top-right  {
@@ -71,11 +69,14 @@
 
 @media print {
   body {
+    --color-body: black;
     display: block;
     margin: 0;
     padding: 0;
     max-width: unset;
     width: unset;
+    widows: 2;
+    orphans: 2;
   }
 
   footer {
@@ -97,11 +98,7 @@
     font-size: 3em !important;
   }
 
-  body {
-    --color-body: black;
-    widows: 3;
-    orphans: 3;
-  }
+
 
   .intro {
     page-break-after: always;
@@ -126,7 +123,6 @@
   }
 
   main {
-    /* display: block; */
     width: unset;
     height: unset;
     margin: 0;
@@ -141,7 +137,7 @@
   }
 
   article h2,
-  h3 {
+  article h3 {
     padding-top: 0;
     margin-top: 2em;
   }
@@ -182,7 +178,7 @@
     width: 14ch;
   }
 
-  .running-head .back-home svg  path {
+  .running-head .back-home svg path {
     fill: black;
   }
 }
