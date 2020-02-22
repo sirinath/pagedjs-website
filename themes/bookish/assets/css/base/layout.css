@@ -1,0 +1,174 @@
+html {
+  /* background: url(http://www.emoisetbois.com/wp-content/uploads/2015/02/aratika-Parquet-EmoisetBois_V.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+  scroll-behavior: smooth;
+  background: var(--color-background);
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  overflow-y: scroll;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: [left] 20% [main] 60% [right] 20% [end];
+  width: 80%;
+  grid-gap: 0vw;
+  padding: 0em;
+  background: var(--color-background);
+  margin: 0;
+  /* min-height: 100vh; */
+  max-width: 1000px;
+  margin: 4em auto;
+  position: relative;
+  z-index: 0;
+  /* background: red; */
+  padding: 3em;
+}
+
+article {
+  grid-column: left / end;
+}
+
+.crop-marks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+
+/* cropmarks 
+----------------------------------------*/
+.crop-mark {
+  position: absolute;
+  border: solid var(--color-cropmark);
+}
+
+.crop-mark.vertical {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  right: 20px;
+  bottom: -15px;
+  border-width: 0 1px;
+}
+
+.crop-mark.horizontal {
+  position: absolute;
+  top: 20px;
+  left: -15px;
+  right: -15px;
+  bottom: 20px;
+  border-width: 1px 0;
+}
+
+.paper {
+  background: var(--color-paper);
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  left: 2px;
+  position: absolute;
+  z-index: 0;
+}
+
+
+/* mobile */
+
+
+
+.paginator {
+  /* border-top: 1px solid var(--color-grey); */
+  margin-top: 4em;
+  padding-top: 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  grid-column: left/end;
+
+  &.both {
+    justify-content: space-between;
+  }
+
+  a {
+    font-style: normal;
+    background: var(--color-paper);
+  }
+
+  .previous,
+  .next {
+    max-width: 45%;
+    line-height: 1.5;
+    &::before {
+      content: "Previously ";
+      display: block;
+      font-family: var(--font-sans);
+      text-transform: uppercase;
+      font-size: 0.7em;
+      letter-spacing: 0.2ch;
+      margin-bottom: 1em;
+
+    }
+  }
+
+  .next::before {
+    content: "Next";
+    text-align: right;
+  }
+
+  .next {
+    border-right: 2px solid black;
+    padding-right: 2ch;
+  }
+
+  .previous {
+    border-left: 2px solid black;
+    padding-left: 2ch;
+  }
+}
+
+.menu-call {
+  display: none;
+}
+
+
+/* matomo */
+
+.MatomoOptout {
+  grid-column: main/end;
+  text-align: center;
+
+  button {
+    border: 2px solid var(--color-grey);
+    padding: 1em 1em;
+    margin: 2em;
+  }
+}
+
+
+.not-found {
+  --color-paper: white;
+  .background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0.5;
+    z-index: -1;
+    
+  }
+  
+  h1, p, #title {
+    max-width: max-content;
+    padding: 0.4em;
+    background: white;
+  }
+}

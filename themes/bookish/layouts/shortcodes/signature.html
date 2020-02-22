@@ -1,0 +1,10 @@
+<div class="signature">
+    {{ if .Get "image" }}
+        <img {{ with .Get "image" }}
+         src="{{ . }}" {{ end }}
+        {{with .Get "name" }} alt="portrait of {{.}}, author of the article" {{end}} />
+    {{ end}}
+    <p class="name">This post was written by {{ .Get "name" }}</p>
+    {{ .Inner | markdownify }}
+</div>
+            

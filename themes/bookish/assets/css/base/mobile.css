@@ -1,0 +1,274 @@
+@media screen and (max-width: 570px) {
+  body {
+    /* grid-template-columns: [sidebar] 0 [main] 100% [right] 0 [end]; */
+    width: 100%;
+    padding: 0;
+
+    .article {
+      grid-template-columns: [left] 2% [main] 96% 2%[end];
+    }
+
+    .crop-marks {
+      /* display: none; */
+    }
+  }
+}
+
+
+/* 0
+@media screen and (max-width: 767px) {
+  article header  {
+    font-size: 0.7em;
+  }
+  article {
+    grid-template-columns: [left] 5% [main] 90% 5%[end];
+  }
+  body footer {
+    max-width: unset ;
+  }
+} */
+@media screen and (max-width: 1540px) {
+  .symbol-text {
+    display: none;
+  }
+
+  body {
+    padding: 1.5em;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    padding: 1.5em;
+    margin: 1em;
+    width: auto;
+  }
+  /* .symbol-text {
+    display: none;
+  } */
+  .running-head {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding-top: 0;
+    width: 100%;
+    /* border-bottom: none; */
+    background: white;
+  }
+
+  article {
+    grid-template-columns: [left] 10% [main] 80% 10% [end];
+  }
+
+  .menu {
+    width: 100%;
+  }
+
+  .menu ul {
+    justify-content: space-around;
+    padding: 0;
+
+    li {
+      margin: 0 1ch;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    --font-size: 17px;
+  }
+
+  .homepage #paged-logo {
+    display: block;
+    
+  }
+  .homepage {
+    min-height: 80vh;
+    height: 90vh;
+    margin: 5%;
+    padding-bottom: 5vh;
+    .running-head {
+      height: auto;
+      border-bottom: 0 solid transparent;
+      margin-bottom: 3em;
+      justify-content: flex-start;
+      padding-top: 4em;
+    }
+    .menu {
+      align-items: flex-start;
+    }
+  }
+
+  article {
+    grid-template-columns: [left] 5% [main] 90% 5%[end];
+    margin-top: 0.5em;
+
+  }
+
+  body {
+    padding: 0em;
+    margin: 1em;
+    width: auto;
+    grid-template-columns: 5% [left] 5% [main] 80% [right] 5% [end] 5%;
+  }
+
+  .running-head {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding-top: 0;
+    width: 100%;
+    /* border-bottom: none; */
+    background: white;
+    position: fixed;
+
+    .back-home {
+      position: unset;
+      background: 0 0;
+      padding-top: 1em;
+      width: 100%;
+      background: #fff;
+      padding: 1.5em 73% .5em 0;
+    }
+
+      .menu-call {
+        display: block;
+        z-index: 3000;
+      }
+
+    .menu {
+      margin-top: 0;
+      transition: all .6s;
+      opacity: 1;
+      padding-top: 0;
+      /* margin-bottom: 2em; */
+      display: flex;
+      flex-direction: column;
+      /* height: auto; */
+    }
+
+    .menu.hide {
+      display: none;
+      /* opacity: 0; */
+      /* margin-top: -50vh; */
+      /* background: red; */
+      /* height: 0; */
+    }
+
+    .menu ul {
+      padding: 0;
+      text-align: center;
+      /* display: none; */
+      flex-direction: column;
+
+      li {
+        margin: 0;
+        border-bottom: 1px solid grey;
+        padding: 1em;
+
+        &:last-of-type {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  header {
+    grid-column: main/main;
+    margin-top: 4em;
+
+    #title {
+      font-size: 3.25em;
+    }
+  }
+
+  .intro {
+    grid-column: main/main;
+  }
+
+  .symbol-text {
+    display: none;
+  }
+
+  .paginator {
+    grid-column: main;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5em;
+    line-height: 1.2;
+    .next, .previous {
+      max-width: unset;
+    }
+    .next {
+      width: 100%;
+      text-align: center;
+      border: none;
+      padding: 0;
+      margin-top: 2em;
+
+      &::before {
+        font-size: 0.3em;
+        text-align: center;
+      }
+    }
+
+    .previous {
+      text-align: center;
+      width: 100%;
+      border: none;
+      padding: 0;
+
+      &::before {
+        font-size: 0.3em;
+        text-align: center;
+      }
+    }
+
+    .alone {
+    }
+  }
+
+  footer {
+    padding: 0 5em 3em;
+    text-align: center;
+
+    a {
+      white-space: pre;
+    }
+  }
+
+  /* list */
+  body .article {
+    grid-template-columns: [left] 2% [main] 96% 2%[end];
+  }
+
+  .list {
+    grid-column: main/main;
+    .article .intro {
+      margin-top: 0.5em;
+      font-size: 1.1em;
+    } 
+    ul {
+      padding-left: 0;
+    }
+    .article .meta {
+      font-size: 0.8em;
+    }
+  }
+
+  #print {
+    display: none;
+  }
+
+  .crop-marks {
+    display: none;
+  }
+}
+
+.hide {
+  display: none;
+}

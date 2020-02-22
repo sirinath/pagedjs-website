@@ -1,0 +1,186 @@
+
+
+
+
+/* breadcrumb */
+#breadcrumbs {
+  font-family: var(--font-sans);
+
+  .delimiter {
+    color: inherit;
+    font-weight: 400;
+  }
+  padding-bottom: .7em;
+  color: var(--color-grey);
+
+  a {
+    color: inherit;
+    background: var(--color-paper);
+
+    &::after {
+      content: none;
+    }
+
+    &:last-child {
+      color: var(--color-body);
+    }
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+}
+
+article .note {
+  font-size: 0.8em;
+  font-family: var(--font-sans);
+  grid-column: main/main;
+  width: 70%;
+  position: relative;
+  margin-top: 2em;
+  background: white;
+  padding: 2px 3px;
+  &::before {
+    z-index: -1;
+    content: " ";
+    width: 2em;
+    height: 2em;
+    background: var(--color-lightest-grey);
+    display: block;
+    position: absolute;
+    left: -2ch;
+    top: -.7em;
+    border-radius: 50%;
+    background: linear-gradient(34deg, #f6f6f6, var(--color-lightest-grey));
+  }
+
+  :first-child {
+    padding-top: 0;
+  }
+}
+
+article {
+  display: grid;
+  grid-template-columns: [left] 20% [main] 70% 10%[end];
+
+  .top {
+    grid-column: left/end;
+  }
+
+  #breadcrumbs {
+    grid-column: left/end;
+  }
+
+  header {
+    grid-column: left/end;
+  }
+
+  figure {
+    grid-column: left/end;
+  }
+
+  p,
+  ul,
+  ol,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  blockquote {
+    grid-column: main/main;
+  }
+
+  pre,
+  table,
+  .highlight,
+  .talkyard-comments {
+    grid-column: left/end;
+  }
+
+  .signature {
+    max-width: 50ch;
+    grid-column: main/end;
+    font-family: var(--font-sans);
+    margin-top: 2em;
+    font-size: 0.8em;
+    /* max-width: 60%; */
+    /* margin: 5em 0 auto auto; */
+    line-height: 1.6em;
+    color: var(--color-primary);
+
+    .name {
+      /* border-bottom: 2px dotted var(--color-lightest-grey); */
+      margin-left: -3em;
+      padding-left: 3em;
+      max-width: max-content;
+      padding-right: .3ch;
+    }
+  }
+
+  .signature img {
+    border: 2px solid var(--color-lightest-grey);
+    float: left;
+    display: block;
+    width: 73px;
+    margin-left: -90px;
+    height: auto;
+    margin-right: 1em;
+    border-radius: 50%;
+    padding: 5px;
+    background: var(--color-paper);
+    margin-top: -6px;
+    /* box-shadow: 0 0 0 5px var(--color-primary); */
+  }
+}
+
+.tags-wrap {
+  margin-top: 1em;
+  font-size: 0.8em;
+}
+
+a.tag {
+  font-family: var(--font-sans);
+  margin-right: 2ch;
+  text-decoration: underline;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 1em;
+}
+
+.talkyard-comments {
+  margin-top: 100px !important;
+}
+
+.symbol-text {
+  font-family: var(--font-sans);
+  font-size: 1em;
+  position: absolute;
+  color: grey;
+  width: 20ch;
+  background: var(--color-paper);
+  padding-right: 1em;
+  left: -33ch;
+  margin-top: 3em;
+  text-align: right;
+
+  a {
+    text-decoration: underline;
+    /* word-break: none;  */
+    white-space: nowrap;
+  }
+
+  &::before {
+    content: " ";
+    transform: rotate(-11deg);
+    height: 1px;
+    background: grey;
+    display: block;
+    right: -52px;
+    width: 11ch;
+    position: absolute;
+    z-index: -1;
+    top: 11px;
+  }
+}

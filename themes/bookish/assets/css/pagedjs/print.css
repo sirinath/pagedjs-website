@@ -1,0 +1,191 @@
+
+
+/* paged.js style */
+
+
+@page  {
+  size: A5;
+
+
+
+  @bottom-center  {
+    content: element(footer);
+  }
+
+
+}
+
+
+
+
+@page :right {
+  margin-top: 15mm;
+  margin-left: 20mm;
+  margin-right: 15mm;
+  margin-bottom: 25mm;
+  @top-right  {
+    content: counter(page);
+    font-family: var(--font-sans);
+    font-size: 0.7em;
+    width: 5ch;
+    background: var(--color-lightest-grey);
+  }
+  @top-left {
+    content: string(title);
+    font-family: var(--font-sans);
+    font-size: 0.7em;
+
+  }
+}
+@page :left {
+  margin-top: 15mm;
+  margin-left: 15mm;
+  margin-right: 20mm;
+  margin-bottom: 25mm;
+  @top-left  {
+    content: counter(pages);
+    font-family: var(--font-sans);
+    font-size: 0.7em;
+    width: 5ch;
+    background: var(--color-lightest-grey);
+  }
+  @top-right {
+    content: string(title);
+    font-family: var(--font-sans);
+    font-size: 0.7em;
+
+  }
+}
+@page :first {
+  background: var(--color-lightest-grey);
+
+  @bottom-left  {
+    content: element(logo);
+  }
+  @top-left {
+    content: none;
+  }
+
+  @top-right  {
+    content: none;
+  }
+}
+
+
+@media print {
+  body {
+    display: block;
+    margin: 0;
+    padding: 0;
+    max-width: unset;
+    width: unset;
+  }
+
+
+  footer {
+    position: running(footer);
+    font-size: .65em;
+    margin: 0;
+    }
+    .paginator {
+      display: none;
+    }
+  #print {
+    display: none;
+  }
+
+  #title {
+    string-set: title content(text);
+    font-size: 3em !important;
+  }
+
+  body {
+    --color-body: black;
+    widows: 3;
+    orphans: 3;
+  }
+
+  .intro {
+    page-break-after: always;
+    break-after: page;
+
+  }
+
+  #print {
+    display: none;
+  }
+
+  #tableOfContents {
+    font-size: 10pt;
+  }
+
+  .list .content {
+    grid-column: left/end;
+    font-size: 0.8em;
+
+    li {
+      break-inside: avoid;
+    }
+  }
+
+  main {
+    /* display: block; */
+    width: unset;
+    height: unset;
+    margin: 0;
+    padding: 0;
+  }
+
+  article {
+    padding: 0;
+    margin: 0;
+    display: block;
+    font-size: 14px;
+    h2, h3 {
+      padding-top: 0;
+      margin-top: 2em;
+    }
+  
+  }
+
+  .menu.hide, .menu {
+    display: none;
+  }
+
+  .running-head {
+    border: 0px solid transparent;
+  }
+
+  .crop-marks {
+    display: none;
+  }
+
+  header {
+
+    .intro {
+      margin-bottom: 0;
+    }
+  }
+
+
+  .running-head {
+    position: running(logo);
+    background: unset;
+    box-shadow: none;
+    display: block;
+
+    menu {
+      display: none;
+    }
+    .running-head .back-home  {
+      display: block;
+    }
+    .back-home svg {
+      width: 14ch;
+
+      path {
+        fill: black;
+      }
+    }
+  } 
+}

@@ -1,0 +1,64 @@
+.homepage {
+  .menu {
+    transform: none;
+    padding-bottom: 2em;
+
+    &::before {
+      background: var(--color-paper);
+    }
+  }
+
+  main {
+    margin-top: 5em;
+  }
+
+  article {
+    /* padding: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; */
+  }
+
+  .text {
+    margin-left: 4ch;
+    max-width: 30ch;
+  }
+
+  .print-machine {
+    background: var(--color-paper);
+    height: 50vh;
+
+    img {
+      mix-blend-mode: multiply;
+      height: 100%;
+    }
+  }
+
+  .menu svg path {
+    fill: var(--color-primary, var(--color-body));
+  }
+
+  .baseline {
+    color: var(--color-primary);
+  }
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  .homepage article {
+    flex-direction: column;
+  }
+
+  .homepage {
+    img {
+      object-fit: contain;
+    }
+
+    .text {
+      margin-left: 0;
+      max-width: 100%;
+    }
+  }
+}

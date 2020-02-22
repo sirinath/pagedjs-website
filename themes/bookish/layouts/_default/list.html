@@ -1,0 +1,29 @@
+{{ define "main" }}
+        <div class="list content">
+        <ul>
+        {{ range .Pages.ByDate.Reverse }}
+            <li class="article">
+                <h2><a href="{{ .Permalink }}"><span>{{ .Title }}</span></a></h2>
+                
+                {{ if .Params.intro }}
+                <div class="meta">
+                    {{ if .Params.author }}Written by <span class="author"> {{ .Params.author }}</span>, {{ end }}
+                    {{ if and .Params.author .Date }}  {{ end }}
+                    {{ if .Params.date }} <span class="date"> {{ dateFormat "2 january 2006" .Date }} </span> {{ end }}
+                <span class="intro"> {{ .Params.intro }} </span>
+                {{end}}
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+
+    </div>
+
+
+    {{ end }}
+
+
+    {{ define "print"}}
+    <!--  -->
+{{ end }}
+

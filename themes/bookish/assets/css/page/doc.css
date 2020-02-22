@@ -1,0 +1,19 @@
+.documentation {
+  /* --tint: calc(360 - 200);
+  --light: 20%;
+  --saturation: 50%;
+  --color-primary: hsl(var(--tint), var(--light), var(--saturation));
+  --color-accent: var(--color-primary); */
+  counter-reset: doc;
+
+
+  .list .content .article  {
+    ul ul{
+      font-size: 1em;
+      /* font-size: 0.9em; */
+      color: red;
+    }
+  }
+}
+
+

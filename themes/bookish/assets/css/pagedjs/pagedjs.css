@@ -1,0 +1,12 @@
+#print {
+    width: 60px;
+    position: fixed;
+    z-index: 20000;
+    background: var(--color-body);
+    fill: white;
+    padding: 1em;
+    right: 0;
+    top: 0;
+  }
+  
+  

@@ -1,0 +1,143 @@
+.list {
+  counter-reset: doc;
+  grid-column: main/end;
+
+  a {
+    text-decoration: none;
+    background: none;
+    font-style: normal;
+  }
+
+  * {
+    max-width: unset;
+  }
+
+  ul ul {
+    padding-left: 2ch;
+    border-left: 1px solid var(--color-lightest-grey);
+    margin-left: 2ch;
+    font-size: 1em;
+  }
+
+  nav:not(".menu") > ul {
+    margin-left: 5ch;
+  }
+
+  ul li {
+    list-style-type: none;
+    font-size: 1em;
+
+    > ul {
+      margin-bottom: 0.5em;
+      margin-left: 1ch;
+      padding-left: 1ch;
+      font-size: 1em;
+
+      border-left: 1px solid var(--color-lightest-grey);
+    }
+
+    &::before {
+      content: none;
+    }
+
+    &:hover {
+      &::before {
+        color: var(--color-accent);
+      }
+    }
+  }
+
+  p {
+    max-width: 45ch;
+    font-size: 1em;
+    font-family: var(--font-sans);
+  }
+
+  .article {
+    margin-left: 0;
+    margin-top: 3em;
+    .meta {
+      font-family: var(--font-sans);
+      font-size: 0.7em;
+      margin-bottom: 0;
+    }
+    
+    .intro {
+      font-family: var(--font-sans);
+      font-size: 1.4em;
+      line-height: 1.5;
+      max-width: 50ch;
+      margin-top: 0.3em;
+      color: var(--color-primary);
+      padding-left: 1em;
+      /* border-left: 2px solid currentcolor; */
+    border-left: 2px solid var(--color-grey);
+
+      max-width: 51ch;
+      display: block;
+      font-family: var(--font-serif);
+      margin-left: 3ch;
+      
+      /* align-self: flex-end; */
+    }
+    h2 {
+      width: 100%;
+      font-size: 1.5em;
+      font-weight: 400;
+      margin-top: 0;
+      position: relative;
+      border-color: transparent;
+      margin-bottom: 0;
+      line-height: 1.1;
+
+      &::before {
+        content: ".................................................................................................................................................";
+        text-align: right;
+        color: #ccc;
+        font-size: 0.8em;
+        bottom: 2px;
+        position: absolute;
+        width: 98%;
+        padding-left: 5px;
+        letter-spacing: 2px;
+        overflow: hidden;
+      }
+
+      a {
+        counter-increment: doc;
+        position: relative;
+        z-index: 100;
+        padding-right: 0.5ch;
+        font-style: italic;
+        line-height: 1.1;
+
+        span {
+          background: var(--color-paper);
+          /* max-width: 70%; */
+          display: inline;
+          padding-right: 1ch;
+        }
+
+        &::after {
+          padding-left: 1ch;
+          content: counter(doc);
+          float: right;
+          background: var(--color-paper);
+          /* font-family: var(--font-sans); */
+          font-style: normal;
+          font-size: 0.8em;
+          bottom: 0;
+          position: relative;
+          top: 0.2em;
+        }
+      }
+    }
+
+    .toc-emoji {
+      float: right;
+      position: relative;
+      background: var(--color-paper);
+      padding-left: 1ch;
+    }
+  }
+}

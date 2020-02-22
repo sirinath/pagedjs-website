@@ -1,0 +1,3 @@
+<figure  class="halftone {{ with .Get "class" }} {{.}} {{ end }}"  {{ with .Get "id" }} id="{{ . }}" {{ end }}>
+    <img src="{{ .Get "src" }}" {{ if or (.Get "alt") (.Get "caption") }} alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}"{{ end }} />      
+    </figure>
