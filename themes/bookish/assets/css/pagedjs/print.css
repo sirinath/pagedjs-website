@@ -6,63 +6,61 @@
 @page  {
   size: A5;
 
-
-
   @bottom-center  {
     content: element(footer);
   }
-
-
 }
-
-
-
 
 @page :right {
   margin-top: 15mm;
   margin-left: 20mm;
   margin-right: 15mm;
   margin-bottom: 25mm;
+
   @top-right  {
     content: counter(page);
     font-family: var(--font-sans);
     font-size: 0.7em;
     width: 5ch;
-    background: var(--color-lightest-grey);
+    background: var(--color-lightest-grey);
   }
-  @top-left {
+
+  @top-left  {
     content: string(title);
     font-family: var(--font-sans);
     font-size: 0.7em;
-
   }
 }
+
 @page :left {
   margin-top: 15mm;
   margin-left: 15mm;
   margin-right: 20mm;
   margin-bottom: 25mm;
+
   @top-left  {
     content: counter(pages);
     font-family: var(--font-sans);
     font-size: 0.7em;
     width: 5ch;
-    background: var(--color-lightest-grey);
+    background: var(--color-lightest-grey);
   }
-  @top-right {
+
+  @top-right  {
     content: string(title);
     font-family: var(--font-sans);
     font-size: 0.7em;
-
   }
 }
+
 @page :first {
   background: var(--color-lightest-grey);
 
   @bottom-left  {
     content: element(logo);
   }
-  @top-left {
+
+  @top-left  {
     content: none;
   }
 
@@ -70,7 +68,6 @@
     content: none;
   }
 }
-
 
 @media print {
   body {
@@ -81,15 +78,16 @@
     width: unset;
   }
 
-
   footer {
     position: running(footer);
     font-size: .65em;
     margin: 0;
-    }
-    .paginator {
-      display: none;
-    }
+  }
+
+  footer .paginator {
+    display: none;
+  }
+
   #print {
     display: none;
   }
@@ -108,7 +106,6 @@
   .intro {
     page-break-after: always;
     break-after: page;
-
   }
 
   #print {
@@ -122,10 +119,10 @@
   .list .content {
     grid-column: left/end;
     font-size: 0.8em;
+  }
 
-    li {
-      break-inside: avoid;
-    }
+  .list .content li {
+    break-inside: avoid;
   }
 
   main {
@@ -141,14 +138,16 @@
     margin: 0;
     display: block;
     font-size: 14px;
-    h2, h3 {
-      padding-top: 0;
-      margin-top: 2em;
-    }
-  
   }
 
-  .menu.hide, .menu {
+  article h2,
+  h3 {
+    padding-top: 0;
+    margin-top: 2em;
+  }
+
+  .menu.hide,
+  .menu {
     display: none;
   }
 
@@ -160,32 +159,30 @@
     display: none;
   }
 
-  header {
-
-    .intro {
-      margin-bottom: 0;
-    }
+  header .intro {
+    margin-bottom: 0;
   }
-
 
   .running-head {
     position: running(logo);
     background: unset;
     box-shadow: none;
     display: block;
+  }
 
-    menu {
-      display: none;
-    }
-    .running-head .back-home  {
-      display: block;
-    }
-    .back-home svg {
-      width: 14ch;
+  .running-head  menu {
+    display: none;
+  }
 
-      path {
-        fill: black;
-      }
-    }
-  } 
+  .running-head .back-home {
+    display: block;
+  }
+
+  .running-head .back-home svg {
+    width: 14ch;
+  }
+
+  .running-head .back-home svg  path {
+    fill: black;
+  }
 }
