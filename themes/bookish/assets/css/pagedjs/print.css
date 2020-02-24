@@ -84,8 +84,7 @@
     font-size: .65em;
     margin: 0;
   }
-
-  footer .paginator {
+ .paginator {
     display: none;
   }
 
