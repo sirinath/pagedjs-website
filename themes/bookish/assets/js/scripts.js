@@ -16,13 +16,14 @@ document.querySelector('.toc .title').addEventListener("click", function() {
 document.querySelector(".menu-call").addEventListener("click", function() {document.querySelector(".menu").classList.toggle("hide")});
 
 
-if (document.querySelector('#print')) {
-document.querySelector('#print').addEventListener("click", print);
-}
+// remove print from bookish theme coz we’re gettin’ it from the paged.js theme 
+// if (document.querySelector('#print')) {
+// document.querySelector('#print').addEventListener("click", preview);
+// }
 
-function print() {
-  window.PagedPolyfill.preview();
-}
+// function preview() {
+//   window.PagedPolyfill.preview();
+// }
 
 // if (document.querySelectorAll("#TableOfContents")) {
 // document.querySelectorAll("#TableOfContents").forEach(toc => {
