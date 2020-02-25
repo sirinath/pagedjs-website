@@ -23,23 +23,23 @@ This is a minor release which includes one item:
 
 ## Additional items:
 
-- Thomas Parisot and Fred set up an automated workflow to publish new versions when the codebase on gitlab gets updated. This will help us provide a better support to the people who implement Paged.js in other tools or workflows.
+- Thomas Parisot and Fred set up an automated workflow to publish new versions when the gitlab codebase is updated. This will help us provide better support to the people who implement Paged.js in other tools or workflows.
 
 - Pagedjs-CLI (now in its version 0.0.10) is updated to support post-processing PDF. As a first feature, we’re now able to define the crop box and the margin boxes of the PDF. Also if you use the CLI your PDF will now be tagged!
 
-- We’re also documenting the roadmap for the coming months in order to give you an overview of where we’re going, and how you could help if you want to. We’ll share it soon!
+- We’re also documenting the roadmap for the coming months to give you a better overview of where we’re going, and how you could help if you want to. We’ll share it soon!
 
 ## Updated Documentation
 
-We have updated the list of the Paged media feature that paged.js supports. It contains links to some examples we made and to the W3C specifications. You’ll find everything in our documentation. Please drop us a line if there is something unclear, we’ll be happy to make a tutorial for that.
+We have updated the list of the Paged media features that paged.js supports. It contains links to some examples we made and to the W3C specifications. You’ll find everything in our documentation. Please drop us a line if something is unclear, we’ll be happy to make a tutorial for it.
 
 ## Hugo Component
 
-For those who never heard of it, Hugo is an open source static site generator written in Go, blazing fast and pretty efficient. It’s packed up with a ton of features and ideas so smart that building paged.js website with it has been a pleasure. One of the feature we need for the website, is Paged.js integration to make book out of the HTML. Thus, we made an implementation of Paged.js for Hugo. Hugo has a really well thought theme engine: to be able to use the print script and the button, you only need to add the information in your config theme, et voilà. It’s still early and experimental, but if you hit the top right button on this page, you can see what it does. Feel free to raise issue if you find any.
+For those who never heard of it, Hugo is an open source static site generator written in Go, blazing fast and pretty efficient. It’s packed with a ton of features and ideas so smart that building the paged.js website with it has been a pleasure. One of the features we need for the website is Paged.js integration to make books out of the HTML. Thus, we made an implementation of Paged.js for Hugo. Hugo has a really well thought out theme engine: to be able to use the print script you only need to add the information in your config theme, et voilà. It’s still early and experimental, but if you hit the top right button on this page, you can see what it does. Feel free to raise a GitLab issue if you find any.
 
 ## Paged.js on Reddit
 
-Last week, we were mentioned on Reddit! We ended up answering some questions as an improvised Q&A sessions. Since keeping tracks on things on Reddit is not an easy things, here are a quick overview of the questions we got and how we answered those.
+Last week, we were mentioned on Reddit! We ended up answering some questions as an improvised Q&A session. Since keeping track of things on Reddit is not easy here are a quick overview of some questions and our responses.
 
 ### From /u/HarmonicAscendant
 
@@ -93,7 +93,7 @@ But we’re now upgrading the library core to handle multiple flows and float-to
 
 ## One more for the road
 
-The excellent [Hugo “Kitty” Giraudel](https://hugogiraudel.com) made a tool to turn any CSS selector into proper english. If you don’t understand why your CSS properties are not being applied, or if you only want to get better at targeting elements with precision, this is the webpage to consult: https://hugogiraudel.github.io/selectors-explained/. It also includes the selector specificity score. A nice tool to have on the road to the no more `!important` stylesheet.
+The excellent [Hugo “Kitty” Giraudel](https://hugogiraudel.com) made a tool to turn any CSS selector into proper english. If you don’t understand why your CSS properties are not being applied, or if you only want to get better at targeting elements with precision, this is the webpage to consult: https://hugogiraudel.github.io/selectors-explained/. It also includes the selector specificity score. 
 
 {{< figure src="img/selectorTranslator.png">}}
 
