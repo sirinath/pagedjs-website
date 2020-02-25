@@ -43,7 +43,7 @@ Last week, we were mentioned on Reddit! We ended up answering some questions as 
 
 ### From /u/HarmonicAscendant
 
-I am wondering how it could best work with markdown > pandoc to HTML > paged.js to PDF with Chromium.
+> “I am wondering how it could best work with markdown > pandoc to HTML > paged.js to PDF with Chromium”.
 
 Paged.js is a js library, you can use it in any workflow :) For instance, the paged.js website is developed using Hugo, documentation is written in Markdown, and the result is a website, to which we added a button to run paged.js, preview the book in the browser and make a PDF by printing the page. And yes, using CSS for the layout is easier than going with Tex :) You can make a PDF with any HTML source :)
 
