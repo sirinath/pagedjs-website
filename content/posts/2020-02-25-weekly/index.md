@@ -95,8 +95,6 @@ But we’re now upgrading the library core to handle multiple flows and float-to
 
 The excellent [Hugo “Kitty” Giraudel](https://hugogiraudel.com) made a tool to turn any CSS selector into proper english. If you don’t understand why your CSS properties are not being applied, or if you only want to get better at targeting elements with precision, this is the webpage to consult: https://hugogiraudel.github.io/selectors-explained/. It also includes the selector specificity score. 
 
-{{< figure src="img/selectorTranslator.png">}}
-
 And that’s all for this time folks, but we keep working.
 
 Stay tuned!
