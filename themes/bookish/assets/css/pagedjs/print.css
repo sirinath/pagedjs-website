@@ -186,8 +186,9 @@
   size: A4;
 }
 
-section {
-  break-before : page;
+section, header {
+  break-after : page;
+  page-break-after: always;
 }
 
 h2 {
