@@ -11,9 +11,10 @@
     {{ $css := resources.Get "./css/main.css" | resources.PostCSS (dict "config" "./assets/css/postcss.config.js" "noMap" true) | minify  | resources.Fingerprint "md5" }}
     <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}">
  
-    {{ partial "pagedjs-header.html" . }}
 
     {{ block "htmlhead" .}}
+    {{ partial "pagedjs-header.html" . }}
+
     {{ end }}
   </head>
 

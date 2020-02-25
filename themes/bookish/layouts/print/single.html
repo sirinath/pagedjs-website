@@ -1,0 +1,46 @@
+
+
+
+
+ {{ define "main" }}
+<article>
+<section class="toc">
+    <header>
+        <h1 id="title">Table of contents</h1>
+    </header>
+<nav class="list content">
+    <ul>
+        {{ range .Site.Pages.ByParam "part" }}
+         {{ if and (eq .Section "documentation")  (eq .Kind "page" ) }}
+         {{ if isset .Params "part" }}
+        <li class="article">
+            <h2><a href="{{ .Permalink }}"><span>{{ .Title }}</span></a></h2>
+            {{ $link := printf `href=\"%s` .Permalink }}
+        </li>
+        {{ end }}
+        {{ end }}
+        {{ end }}
+    </ul>
+</nav>
+
+
+</section>
+
+{{ range .Site.Pages.ByParam "part" }}
+{{ if and (eq .Section "documentation")  (eq .Kind "page" ) }}
+{{ if isset .Params "part" }}
+
+    <section class="article">
+        
+        <header>
+             <h1 id="title">{{ .Title }}</h1>
+          </header>
+          {{ .Content }}
+
+    </section>
+    {{ end}}
+{{ end }}
+{{ end}}
+
+</article>
+{{ end }}

@@ -4,7 +4,6 @@
 
 
 @page  {
-  size: A5;
 
   @bottom-center  {
     content: element(footer);
@@ -180,4 +179,17 @@
   .running-head .back-home svg path {
     fill: black;
   }
+}
+
+
+@page {
+  size: A4;
+}
+
+section {
+  break-before : page;
+}
+
+h2 {
+  break-after: avoid;
 }

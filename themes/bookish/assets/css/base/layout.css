@@ -172,3 +172,7 @@ article {
     background: white;
   }
 }
+
+section {
+  grid-column: left / end;
+}
