@@ -4,12 +4,12 @@ date: 2020-02-25T12:25:19+01:00
 draft: false 
 author: "the paged.js team" 
 class:
-# intro: We just released a new version of Paged.js! The 0.1.38 is now available to download from [https://unpkg.com](https://unpkg.com/browse/pagedjs@0.1.38/dist/) or install it using [npm](https://www.npmjs.com/package/pagedjs).
+intro: We just released a new version of Paged.js! The 0.1.38 is now available to download from [unpkg](https://unpkg.com) or [npm](https://www.npmjs.com/package/pagedjs).
 
 # intro: What’s new in Paged.js
 ---
 
-We just released a new version of Paged.js! The 0.1.38 is now available to download from [https://unpkg.com](https://unpkg.com/browse/pagedjs@0.1.38/dist/) or install it using [npm](https://www.npmjs.com/package/pagedjs).
+<!-- We just released a new version of Paged.js! The 0.1.38 is now available to download from [https://unpkg.com](https://unpkg.com/browse/pagedjs@0.1.38/dist/) or you can install it using [npm](https://www.npmjs.com/package/pagedjs). -->
 
 
 
@@ -31,15 +31,15 @@ This is a minor release which includes one item:
 
 ## Updated Documentation
 
-We have updated the list of the Paged media features that paged.js supports. It contains links to some examples we made and to the W3C specifications. You’ll find everything in our documentation. Please drop us a line if something is unclear, we’ll be happy to make a tutorial for it.
+We have updated the list of the Paged media features that paged.js supports. It contains links to some examples we made and to the W3C specifications. You’ll find everything in our [documentation](http://localhost:1313/documentation/cheatsheet/). Please drop us a line if something is unclear, we’ll be happy to make a tutorial for it.
 
 ## Hugo Component
 
-For those who never heard of it, Hugo is an open source static site generator written in Go, blazing fast and pretty efficient. It’s packed with a ton of features and ideas so smart that building the paged.js website with it has been a pleasure. One of the features we need for the website is Paged.js integration to make books out of the HTML. Thus, we made an implementation of Paged.js for Hugo. Hugo has a really well thought out theme engine: to be able to use the print script you only need to add the information in your config theme, et voilà. It’s still early and experimental, but if you hit the top right button on this page, you can see what it does. Feel free to raise a GitLab issue if you find any.
+For those who never heard of it, Hugo is an open source static site generator written in Go, blazing fast and pretty efficient. It’s packed with a ton of features and ideas so smart that building the paged.js website with it has been a pleasure. One of the features we need for the website is Paged.js integration to make books out of the HTML. Thus, we made an implementation of [Paged.js for Hugo](https://gitlab.pagedmedia.org/julientaq/pagedjs-hugo). Hugo has a really well thought out theme engine: to be able to use the print script you only need to add the information in your config theme, *et voilà*. It’s still early and experimental, but if you hit the top right button on this page, you can see what it does. Feel free to raise a GitLab issue if you find any.
 
 ## Paged.js on Reddit
 
-Last week, we were mentioned on Reddit! We ended up answering some questions as an improvised Q&A session. Since keeping track of things on Reddit is not easy here are a quick overview of some questions and our responses.
+Last week, we were mentioned on [Reddit](https://www.reddit.com/r/javascript/comments/f5syqi/pagedjs_a_free_and_open_source_javascript_library/)! We ended up answering some questions as an improvised Q&A session. Since keeping track of things on Reddit is not easy here are a quick overview of some questions and our responses.
 
 ### From /u/HarmonicAscendant
 
