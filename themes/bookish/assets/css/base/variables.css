@@ -22,6 +22,8 @@
   --color-accent: var(--color-primary);
   --color-primary: var(--color-body);
   --color-grey: #ddd;
+  --color-darkest-grey: #999;
+
   /* --font-serif: "Minipax Variable", serif; */
   /* --font-serif: "Fanwood Text", serif; */
   --font-serif: "Linden Hill", serif;

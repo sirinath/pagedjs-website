@@ -76,30 +76,32 @@ article {
     /* margin-left: 0; */
     font-size: 0.9em;
     width: auto;
-    padding: 0.5em 1em 1em;
-    /* margin-left: 4ch; */
+    padding: .5em 1.5em 1.5em;
     margin: 1em 4ch 1em 4ch;
     font-family: var(--font-sans);
     /* border-left: 0.5ch solid lightgrey; */
-
     position: relative;
-
+    max-width: 70%;
+    background: #fafaf5;
+    box-shadow: 0 0 0 .8em inset white;
     &::before {
       content: "「";
       position: absolute;
       font-size: 1em;
-      color: var(--color-grey);
+      color: var(--color-darkest-grey);
       top: 0;
-      left: -1ch;
+      left: -.5ch;
+      
     }
 
     &::after {
       content: "」";
       position: absolute;
       font-size: 1em;
-      color: var(--color-grey);
+      color: var(--color-darkest-grey);
       bottom: 0;
-      right: -1ch;
+      right: -.5ch;
+      
     }
   }
   /* list */
