@@ -1,12 +1,78 @@
 #print {
-    width: 60px;
-    position: fixed;
-    z-index: 20000;
-    background: var(--color-body);
-    fill: white;
-    padding: 1em;
-    right: 0;
-    top: 0;
+  --color-body: var(--color-lightest-grey);
+  /* height: 60px; */
+  position: fixed;
+  z-index: 20000;
+  /* background: var(--color-lightest-grey); */
+  background: transparent;
+  /* fill: white; */
+  padding: 0.7em;
+  right: 10px;
+  top: 10px;
+  border: none;
+  z-index: 90000000;
+  /* border-radius: 50%; */
+  display: flex;
+  transition: 2s;
+}
+
+#print span {
+  font-family: var(--font-sans);
+  font-size: 0.9em;
+  margin-left: .5em;
+  color: var(--color-body);
+  line-height: .7;
+
+}
+
+#print:hover {
+  --color-body: black;
+}
+
+#print:hover span {
+  font-family: var(--font-sans);
+  font-size: 0.9em;
+  margin-left: .5em;
+  text-decoration: underline;
+
+}
+
+
+#print svg {
+  width: 20px;
+}
+
+#print svg path {
+  fill: var(--color-body);
+}
+
+
+@media screen and (max-width: 1350px)  {
+  #print {
+    writing-mode: vertical-rl;
+    /* text-orientation: upright; */
+    /* text-transform: uppercase; */
+    top: 20vh;
+   
   }
-  
-  
+  #print svg {
+  transform: rotate(90deg);
+
+  }
+  #print:hover {
+    border-bottom: none;
+  }
+  #print svg {
+    margin-bottom: 1em;
+  }
+  #print span {
+    /* background: orange; */
+    line-height: .6;
+  }
+}
+
+@media screen and (max-width: 700px)  {
+  #print {
+    display: none;
+  }
+}

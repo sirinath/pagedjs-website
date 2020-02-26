@@ -44,6 +44,7 @@
     margin: 1em;
     width: auto;
   }
+
   /* .symbol-text {
     display: none;
   } */
@@ -56,6 +57,7 @@
     width: 100%;
     /* border-bottom: none; */
     background: white;
+  
   }
 
   article {
@@ -124,7 +126,6 @@
     width: 100%;
     /* border-bottom: none; */
     background: white;
-    position: fixed;
 
     .back-home {
       position: unset;
