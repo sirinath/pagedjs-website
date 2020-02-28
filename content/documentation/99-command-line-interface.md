@@ -11,9 +11,7 @@ The command line version of Paged.js uses a headless browser (a browser without 
 First, download and install `pagedjs-cli` with your terminal (you need to have `git`, `node` and `npm` installed):
 
 ```bash 
-$ git clone https://gitlab.pagedmedia.org/tools/pagedjs-cli.git
-$ cd pagedjs-cli
-$ npm install -g pagedjs-cli
+$ npm install -g pagedjs-cli pagedjs
 ```
 
 Then, in a new terminal window, go to the folder where the code of your document is located (use the `cd` command) and generate your PDF with the following command:
