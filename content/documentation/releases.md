@@ -10,7 +10,7 @@ intro: "Download the library here!"
 
 ### Master branch 
 
-This was built on the 2nd march 2020.
+2 march 2020
 
 
 
