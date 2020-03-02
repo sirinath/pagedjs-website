@@ -15,6 +15,9 @@ intro: We just released a new version of Paged.js! The 0.1.38 is now available t
 
 ## New in this release:
 
+*Somehow, the release has been made before the code for the string-update feature was merged. Since the release , it will be part of the 0.1.39. If you want to use that code today, you can download it from [here](/documentation/releases)*
+
+
 This is a minor release which includes one item:
 
 - updated our support for the string-set property. Following the W3C specs, you have now more options to define which title will appear on the page. Here is the schema that helped us implement it, courtesy of Julie Blanc.

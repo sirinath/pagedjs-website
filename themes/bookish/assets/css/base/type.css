@@ -237,7 +237,7 @@ article {
   /* table */
 
   .table {
-   
+    
     flex-direction: column;
     width: 80%;
     margin: 2em auto;
@@ -438,3 +438,6 @@ header {
   }
 }
 
+.downloads table {
+  grid-column: main/main;
+}
