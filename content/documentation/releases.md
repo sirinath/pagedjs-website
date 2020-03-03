@@ -8,21 +8,31 @@ intro: "Download the library here!"
 ---
 
 
-### Master branch 
+## Master branch 
 
-2 march 2020
-
-
+3 march 2020
 
 | |                 |
 |----------:|:--------------------|
 | The library | [paged.js](/releases/master/paged.js) |
 | The polyfill | [paged.polyfill.js](/releases/master/paged.polyfill.js) |
 | ESM | [paged.esm.js](/releases/master/paged.esm.js) |
+| The library (legacy) | [paged.legacy.js](/releases/master/paged.legacy.js) |
+| The polyfill (legacy) | [paged.legacy.polyfill.js](/releases/master/paged.legacy.polyfill.js) |
+
+## Releases
+
+### 0.1.39
+| |                 |
+|----------:|:--------------------|
+| The library | [paged.js](/releases/0-1-39/paged.js) |
+| The polyfill | [paged.polyfill.js](/releases/0-1-39/paged.polyfill.js) |
+| ESM | [paged.esm.js](/releases/0-1-39/paged.esm.js) |
+| The library (legacy) | [paged.legacy.js](/releases/0-1-39/paged.legacy.js) |
+| The polyfill (legacy) | [paged.legacy.polyfill.js](/releases/0-1-39/paged.legacy.polyfill.js) |
 
 
-
-### Latest release (0.1.38)
+### 0.1.38
 
 | |                 |
 |----------:|:--------------------|
