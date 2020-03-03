@@ -1,6 +1,6 @@
 ---
 title: "Welcome to paged.js 0.1.38" 
-date: 2020-02-25T12:25:19+01:00 
+date: 2020-02-25T12:25:19+01:00
 draft: false 
 author: "the paged.js team" 
 class:

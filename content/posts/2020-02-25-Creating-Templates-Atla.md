@@ -1,6 +1,6 @@
 ---
 title: "Creating Templates: Atla"
-date: 2020-02-26T16:53:38+01:00
+date: 2019-08-25T16:53:38+01:00
 draft: true
 author: "Julien"
 intro: >
@@ -34,7 +34,20 @@ What happens next is never a nice and easy sequence of steps that we can follow 
 
 Typesetting is the act of putting letters on paper in an way that gracefully mix legibility and aesthetics, in order to offer the best reading experience of a content.
 
-The quest for the right family of letters start with the licence. Atla and Coko are generously offering the template to anyone who’d like to use it, so we can’t force people to buy a font. 
+The quest for the right family of letters start with the licence. Atla and Coko are generously offering the template to anyone who’d like to use it, so we won’t force people to buy a font. When we started to look at fonts, we found the nice [Brill](https://brill.com/page/1228?language=en) typeface, designed by the folks at [Tiro Typeworks](http://www.tiro.com/) and while it would have been a great choice, the end user licence agreement makes it pretty impossible in an open source project.
+
+Thanksfully, over the last 20 years, there have been a lot of movement in the world of open source type foundries, and there is even a specific license, the SIL Open Font License (OFL), around since 2005. There are a lot of foundries out there, and a lot of distributors, who offer font hosting, or tool to build webfonts kits to self host.
+
+
+
+So let’s see what we found on the road, and why we made our choices.
+
+#### The letter forms
+
+Atla 
+
+
+
 
 
 
