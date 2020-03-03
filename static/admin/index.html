@@ -7,8 +7,7 @@
   <!-- netlify identity widget -->  
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
-   {{ $css := resources.Get "./css/main.css" | resources.PostCSS (dict "config" "./assets/css/postcss.config.js" "noMap" true) | minify  | resources.Fingerprint "md5" }}
-   CMS.registerPreviewStyle({{ $css.Permalink }});
+  //  CMS.registerPreviewStyle({{  }});
   </script>
   </head>
   <body>
