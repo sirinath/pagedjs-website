@@ -16,7 +16,7 @@ Paged.js follows the Paged Media standards published by the W3C (ie the Paged Me
 After years of trying a lot of solutions to make books out of HTML, and frustrated by the issues we found with each one of them, we ended up by building one of our own, following some mandatory principles.
 
 1. We’ll follow the standards of the W3C. Standards  are  in the DNA of what we’re doing. If we want to add some feature, we’ll write down the specifications and discuss with all the members of the W3C to see how it would make sense for them and we are open to anyone who want to share their thoughts. This project will be over when we are happy with the browsers’ implementation of the W3C specification for print.
-2. Paged.js is a community driven project, we’ll make sure that anyone feels just like at home, newcomers and old friends alike. We’ll always put the community needs first: we have a [Mattermost](https://mattermost.gitlab.foundation) that we use to discuss everything and the development is hosted on our gitlab. All the issues are read and answered as fast as possible.
+2. Paged.js is a community driven project, we’ll make sure that anyone feels just like at home, newcomers and old friends alike. We’ll always put the community needs first: we have a [Mattermost](https://mattermost.pagedmedia.org) that we use to discuss everything and the development is hosted on our gitlab. All the issues are read and answered as fast as possible.
 3. Paged.js comes either as a paginated preview or as a command line interface (<small>CLI</small>) to produce the pdf.
 
 Welcome around :)
