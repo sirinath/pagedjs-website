@@ -1,0 +1,14 @@
+<div id="search">
+    <label for="search">Search</label>
+    <input name="search" type="text" placeholder="running heads, page-number, polyfill…"  id="searchInput"/>
+    <ul id="searchResults">
+    </ul>
+</div>
+ <!-- download and copy over fuse.js file from fusejs.io -->
+<!-- <script src="/js/search.js"></script> --> 
+
+
+{{ $fuse := resources.Get "js/fuse.js" }}
+<script src="{{ $fuse.Permalink }}" type="application/javascript"></script>
+
+ {{ $search := resources.Get "js/search.js" }} <script src="{{ $search.Permalink }}" type="application/javascript"></script> 

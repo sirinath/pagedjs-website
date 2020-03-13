@@ -12,6 +12,9 @@ theme = ["bookish", "pagedjs", "matomo"]
 url = "https://stats.coko.foundation"
 id = 17
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -46,14 +49,19 @@ id = 17
     identifier = "blog"
     name = "Journal"
     url = "/posts/"
-    weight= 1
+    weight= 2
 
   [[menu.main]]
     identifier = "documentation"
     name = "Documentation"
     url = "/documentation/"
-    weight= 2
+    weight= 3
 
+  [[menu.main]]
+    identifier = "search"
+    name = "search"
+    url = "/search/"
+    weight= 4
   # [[menu.main]]
   #   identifier = "cookbook"
   #   name = "Cook book"

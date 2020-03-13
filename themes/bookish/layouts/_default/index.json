@@ -1,0 +1,9 @@
+{{- $.Scratch.Add "index" slice -}}
+{{- range .Site.RegularPages -}}
+    {{- if isset .Params "hide" -}}
+    {{- else -}}
+    {{ $intro := .Params.intro | markdownify }}
+    {{- $.Scratch.Add "index" (dict "title" .Title "intro" $intro "tags" .Params.tags "type" .Type "content" .Plain "permalink" .Permalink) -}}
+    {{- end -}}
+{{- end -}}
+{{- $.Scratch.Get "index" | jsonify -}}
