@@ -57,6 +57,12 @@
     {{ if .Params.intro  }}<p class="intro">{{ .Params.intro | markdownify }} <br/><span class="tags">      {{ partial "tag-coma.html" . }}</span></p>{{end}} 
 
       {{ .Content }}
+
+      {{ block "comments" . }}
+      {{ partial "comments.html" .}}
+      {{ end }}
+
+
       {{block "aside" .}}
       <aside class="paginator {{ if and .NextInSection .PrevInSection }} both {{ end }}">
         {{ with .NextInSection }}
@@ -75,9 +81,15 @@
       {{ end }}
     </article>
     {{ end }}
+    
+
+    
     {{ block "footer" . }}
     {{ partial "footer.html" . }}
     {{ end }}
+
+
+
     {{ block "script" . }}
     {{ $js := resources.Get "/js/scripts.js" }}
     <script src="{{$js.Permalink}}"></script>

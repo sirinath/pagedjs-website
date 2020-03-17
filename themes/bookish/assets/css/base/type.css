@@ -431,3 +431,8 @@ header {
 .downloads table {
   grid-column: main/main;
 }
+
+#discourse-comments {
+  margin-top: 5em;
+  grid-column: main/main;
+}
