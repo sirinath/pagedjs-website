@@ -59,7 +59,10 @@
       {{ .Content }}
 
  
-
+      {{ block "comments" . }}
+      {{ partial "comments.html" .}}
+      {{ end }}
+  
       {{block "aside" .}}
       <aside class="paginator {{ if and .NextInSection .PrevInSection }} both {{ end }}">
         {{ with .NextInSection }}
@@ -79,9 +82,6 @@
     </article>
     {{ end }}
     
-    {{ block "comments" . }}
-    {{ partial "comments.html" .}}
-    {{ end }}
 
     
     {{ block "footer" . }}
