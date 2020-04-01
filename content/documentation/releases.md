@@ -10,7 +10,7 @@ hide: true
 
 ## Master branch 
 
-3 march 2020 
+1 april 2020 
 
 | |                 |
 |----------:|:--------------------|
@@ -19,6 +19,7 @@ hide: true
 | ESM | [paged.esm.js](/releases/master/paged.esm.js) |
 | The library (legacy) | [paged.legacy.js](/releases/master/paged.legacy.js) |
 | The polyfill (legacy) | [paged.legacy.polyfill.js](/releases/master/paged.legacy.polyfill.js) |
+
 
 ## Releases
 
