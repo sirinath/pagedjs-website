@@ -10,7 +10,7 @@ hide: true
 
 ## Master branch 
 
-3 march 2020
+3 march 2020 
 
 | |                 |
 |----------:|:--------------------|
@@ -21,6 +21,16 @@ hide: true
 | The polyfill (legacy) | [paged.legacy.polyfill.js](/releases/master/paged.legacy.polyfill.js) |
 
 ## Releases
+
+### 0.1.40
+
+| |                 |
+|----------:|:--------------------|
+| The library | [paged.js](/releases/0-1-40/paged.js) |
+| The polyfill | [paged.polyfill.js](/releases/0-1-40/paged.polyfill.js) |
+| ESM | [paged.esm.js](/releases/0-1-40/paged.esm.js) |
+| The library (legacy) | [paged.legacy.js](/releases/0-1-40/paged.legacy.js) |
+| The polyfill (legacy) | [paged.legacy.polyfill.js](/releases/0-1-40/paged.legacy.polyfill.js) |
 
 ### 0.1.39
 | |                 |

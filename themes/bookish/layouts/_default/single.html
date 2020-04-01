@@ -3,8 +3,7 @@
       {{ if eq .Page.Section "documentation" }}
        <h1 id="title">{{ .Title }}</h1>
        {{ else }}
-      
-      <h1 id="title">{{ .Title }}</h1>
+      <h1 id="title"><span class="top-title">{{ .Params.toptitle }} </span> {{ .Title }}</h1>
       <p class="meta">
         written by <span class="author">{{ .Params.author }}</span> on 
         <span class="date">{{ dateFormat "2  January 2006" .Date  }}</span>
