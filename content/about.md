@@ -35,7 +35,3 @@ The Paged.js website was designed and built by [Adam Hyde](https://www.adamhyde.
 
 The website is mainly using the [Jost*](https://indestructibletype.com/Jost.html) font from Indestructible type and [Fanwood Text](https://www.theleagueofmoveabletype.com/fanwood) from the league of moveable type, both free and open source fonts. When it comes to code, we’re also using [Victor Mono](https://rubjo.github.io/victor-mono/), designed by Rune B, which is also free and open source.
 
-<!-- 
-## Privacy
-
-{{< matomo-optout >}} -->
