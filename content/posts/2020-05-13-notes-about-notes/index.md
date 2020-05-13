@@ -49,7 +49,7 @@ The W3C specifications only allow the creation of footnotes, but designers and e
 
 You can find some example of layouts with footnotes in a [dedicated W3C page](https://www.w3.org/XML/2015/02/footnote-examples/).
 
-To make use of notes easier, we would like to propose some CSS syntax which would allow all of these kinds of notes. This article is a quick tour of a proposed specification that is described in more detail in an issue on the CSS Print Community Group repo. The article explores the existing specifications and proposes some new CSS declarations for building notes for both continuous reading (screen) and paged media. This proposal is a working draft, a place to start a discussion. Do not hesitate to give your opinion directly as a comment of this article, or if you feel more comfortable, in the GitHub issue.
+To make use of notes easier, we would like to propose some CSS syntax which would allow all of these kinds of notes. This article is a quick tour of a proposed specification that is described in more detail in an issue on the CSS Print Community Group repo. The article explores the existing specifications and proposes some new CSS declarations for building notes for both continuous reading (screen) and paged media. This proposal is a working draft, a place to start a discussion. Do not hesitate to give your opinion directly as a comment of this article, or if you feel more comfortable, in the [issue](https://github.com/w3c/css-print/issues/3) we've opened on CSS Print Community Group.
 
 
 
@@ -365,7 +365,7 @@ Here are some examples of the CSS layout facilities used to layout notes areas o
 
 
 
-This article is an overview of the specifications imagined for the notes, and is an extract from [the issue published in the GitHub of the CSS print community group](). That issue provides more detail than the few properties we have presented here and a few others (note policy for example). You are invited to take a look at this more complete document and comment on it. The specifications are a community work and it is only together that we will be able to improve them.
+This article is an overview of the specifications imagined for the notes, and is an extract from the [issue](https://github.com/w3c/css-print/issues/3) published in the GitHub of the CSS print community group. That issue provides more detail than the few properties we have presented here and a few others (note policy for example). You are invited to take a look at this more complete document and comment on it. The specifications are a community work and it is only together that we will be able to improve them.
 
 
 
